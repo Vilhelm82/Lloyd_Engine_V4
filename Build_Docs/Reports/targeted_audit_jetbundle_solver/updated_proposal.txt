@@ -1,0 +1,104 @@
+My updated call:
+Do not build JetBundle next.Do not build a new solver next.Build Directional AlphaProbe first.
+The report’s strongest finding is that the trustworthy substrate for α-aware solver design is narrower than the current full V4 surface:
+safe:coreProjectiveRatioStratifiedQuadraticRootsexact quadratic projectiontyped_valuetyped_collectiontyped_finite_differencetyped_log_log_slopecandidate/reference only:metrologybranchrefineryhistorycurrent solver
+That means Claude’s Option B is now source-supported: the next solver should not depend on the current BranchFingerprint/refinery/history/solver stack as hard substrate. Those modules are useful evidence and examples, but the next genuinely Lloyd-native solver should be built from certified primitives plus α evidence.
+The report also confirms the key technical gap:
+typed_log_log_slope can recover α−1,but α is not yet a first-class directional/probe-specific object.
+So the next primitive is not JetBundle. It is the thing JetBundle must consume.
+Updated proposal
+The next serious build sequence should be:
+Task 018: Directional AlphaProbe primitiveTask 019: Alpha-aware JetBundle primitiveTask 020: JetBundle-to-local-model providerTask 021: AlphaProjectionSolver MVP
+The old idea of “Task 017 audit hardening first” is now less urgent because Codex already produced the targeted audit. There are still cleanup items, but they should be folded into Task 018 acceptance criteria rather than blocking the α work.
+The cleanup items to fold in:
+1. Document precision_floor as status-only finite-precision evidence.2. Add/keep audit coverage for precision_floor, unit_roundoff, cancellation_ratio, etc.3. Clarify that contextual transition callables have runtime authority over static mapped_statuses.4. Do not rely on current branch/refinery/history/solver as solver substrate yet.
+Why AlphaProbe comes before JetBundle
+JetBundle without α becomes a typed AD bundle:
+valuegradienthessianranksignature
+Useful, but not uniquely V4.
+The report confirms that α recovery is where V4’s moat is. The current Task 016 machinery can recover α−1 from transfer observations, but it is currently just fitted slope evidence over a supplied observation set. It is not yet a typed object that says:
+this α was measured along this probefrom these samplesunder this precision pathwith these transfer traceswith this cancellation statuswith this stability behavior
+That is exactly what AlphaProbe should provide.
+So:
+AlphaProbe = typed directional asymptotic exponent evidence.JetBundle = local measurement bundle that may include AlphaProbe evidence.Solver = typed navigator that consumes projection + AlphaProbe/JetBundle evidence.
+No α, no proper Lloyd solver. We’d just be building Newton with receipts and a very handsome filing cabinet.
+Task 018 should be Directional AlphaProbe
+I’d define it as a Layer 1 / primitive-transfer object, probably under the existing primitives package unless you want a new transfer/ package later.
+Suggested location:
+src/lloyd_v4/primitives/directional_alpha_probe.py
+or, if you want to cleanly separate transfer primitives:
+src/lloyd_v4/transfer/directional_alpha_probe.py
+Given the current repo already has typed_finite_difference.py and typed_log_log_slope.py under primitives, I’d keep it under primitives for now. Avoid directory theatre until the thing works.
+Core API
+Something like:
+directional_alpha_probe(    observable: Callable[[float], float],    f_values: Sequence[float],    delta_policy: AlphaDeltaPolicy,    *,    probe_id: str,    precision: str = "raw_python",    declared_alpha_models: Sequence[DeclaredAlphaModel] = (),    declared_alpha_band: float | None = None,    require_stable_windows: bool = False,) -> AlphaProbeResult
+But I would be careful with f_values: this is not arbitrary x-space yet. This is the controlled approach coordinate f -> 0+. For first task, keep it scalar and explicit.
+No multidimensional point/direction yet. That belongs to JetBundle or LocalModelProvider.
+So the first primitive should measure:
+g(f) along supplied positive f-values
+not:
+F(x + t u) in arbitrary Rⁿ
+That comes later.
+AlphaProbe value shape
+I’d want something like:
+@dataclass(frozen=True)class AlphaProbeValue:    probe_id: str    f_values: tuple[float, ...]    delta_values: tuple[float, ...]    transfer_trace_ids: tuple[str, ...]    slope_trace_id: str | None    observed_slope: float | None    observed_alpha: float | None    r_squared: float | None    standard_error: float | None    cancellation_dominated_count: int    observed_transfer_count: int    rejected_transfer_count: int    declared_alpha_models: tuple[DeclaredAlphaModel, ...]    declared_alpha_band: float | None    selected_alpha_model: str | None    nested_window_trace_ids: tuple[str, ...]    window_stability: str | None
+The important thing is that α is not naked. It must carry the probe identity, sample coordinates, transfer parents, slope parent, and cancellation evidence.
+No scalar α wandering the halls unsupervised.
+Alpha statuses
+The report suggests a minimal set. I’d slightly expand it so future solver dispatch is clean:
+alpha_observedalpha_model_unique_matchalpha_model_ambiguousalpha_model_no_matchalpha_fractionalalpha_integer_degeneratealpha_negativealpha_unstable_windowalpha_cancellation_dominatedalpha_insufficient_dataalpha_domain_refusedalpha_nonfinitealpha_indeterminate
+But there’s a design choice here.
+alpha_fractional, alpha_integer_degenerate, and alpha_negative are classifications of observed α. alpha_model_unique_match, alpha_model_ambiguous, and alpha_model_no_match are model-comparison statuses.
+To avoid mixing two concepts too early, Task 018 could use:
+alpha_observedalpha_model_unique_matchalpha_model_ambiguousalpha_model_no_matchalpha_unstable_windowalpha_cancellation_dominatedalpha_insufficient_dataalpha_domain_refusedalpha_nonfinitealpha_indeterminate
+and store alpha_regime inside the value:
+integer_positiveinteger_degeneratefractional_positivenegativezerounknown
+But my preference is to let the status name carry the solver-relevant stratum:
+alpha_regular_integeralpha_degenerate_integeralpha_fractional_branchalpha_negative_singularityalpha_non_algebraic_driftalpha_model_ambiguousalpha_model_no_matchalpha_cancellation_dominatedalpha_insufficient_dataalpha_domain_refusedalpha_nonfinitealpha_indeterminate
+That makes the solver simpler later: it can dispatch on α-status directly.
+Important acceptance rules
+Task 018 must not do hidden model fitting magic.
+It should use existing typed_finite_difference and typed_log_log_slope, but wrap them as first-class α evidence.
+Rules:
+1. f-values must be finite and positive.2. delta values must be finite and nonzero.3. Transfer observations must be typed results.4. Cancellation-dominated transfers are preserved but cannot support α acceptance.5. Slope is computed only from observed transfer evidence.6. observed_alpha = observed_slope + 1.7. declared_alpha_band is explicit caller evidence.8. Model matching uses declared band only.9. No hidden closeness-to-integer rule.10. Nested-window stability, if implemented, must use explicit windows and explicit stability band.11. AlphaProbe must never alter computed transfer values.12. AlphaProbe must preserve transfer and slope parent trace IDs.
+That last cluster is the anti-goblin fence.
+Precision floor handling
+The report’s precision-floor finding is acceptable:
+precision_floor changes status only.It does not clamp transfer.It does not change computed values.
+So it can stay. But Task 018 should explicitly document it.
+Add a report note:
+Build_Docs/Reports/task018/precision_floor_decision.md
+or include it in design_decisions.md.
+The wording should be:
+The raw-python precision floor is finite-precision observability evidence.It may classify transfer evidence as cancellation-dominated.It must not change transfer values, denominators, scalarizations, roots, projections, or α values.It is not a denominator floor, rescue constant, clamp, or hidden tolerance.
+Also add the audit:
+rg "precision_floor|roundoff_floor|unit_roundoff|machine_epsilon|cancellation_ratio|2\\.0\\s*\\*\\*\\s*-52|sys\\.float_info\\.epsilon|np\\.finfo" src tests Build_Docs -n
+Do not add bare floor globally. That would catch noise_floor and mathematical Floors. The audit goblin gets a scalpel, not a lawnmower.
+Projection transition ambiguity
+The report says apply_status_transition uses the contextual callable before mapped_statuses, so runtime behavior is correct.
+Still, I’d fix the reader trap in the next cleanup-bearing task.
+For Task 018, include a source-purity or transition-rule test/comment that says:
+For contextual transition rules, transition callable output is authoritative.Static mapped_statuses are branch-compatible coverage hints only.
+This does not need to block AlphaProbe, but it should be recorded.
+Layer 2+ stance
+This is the major design correction:
+metrology: candidate substratebranch: reference onlyrefinery: reference onlyhistory: candidate substratesolver: reference only
+So for the next solver design, do not say:
+Solver depends on current BranchFingerprint, Refinery, History, and Solver.
+Say:
+Solver may later consume certified/rebuilt versions of those gates.The MVP depends only on certified primitive/projection/alpha evidence.
+That gives us a cleaner path:
+AlphaProbe proves α measurement.JetBundle packages local geometry + α evidence.AlphaProjectionSolver proves typed acceptance using projection + α.Then we can certify and add metrology/history/refinery/branch gates one by one.
+Updated minimal solver acceptance law
+For the future solver, after AlphaProbe exists:
+A candidate step may advance only if:1. Candidate evidence is protocol-valid.2. Projection evidence is defined and advance-valid.3. AlphaProbe evidence is observed or classified into an accepted alpha stratum.4. Candidate generator is compatible with that alpha stratum.5. No unhandled status transition occurs.6. Residual decrease may only break ties after typed geometry has permitted all tied candidates.7. If tied candidates remain indistinguishable under declared typed evidence, emit a typed tie-refusal.
+That is the smallest proof that the solver is not residual descent in costume.
+The first killer tests:
+1. A residual-improving candidate is rejected because α evidence is unstable or incompatible.2. A slower candidate is accepted because it preserves projection and α evidence.3. Two candidates tied under projection and α evidence return typed candidate-tie refusal, not a hidden branch-order or residual-score choice.
+My updated recommendation
+Create Task 018 now:
+Task 018: Directional AlphaProbe primitive
+Not JetBundle. Not solver. Not Layer 2 refactor. AlphaProbe.
+The one-paragraph scope:
+Implement Directional AlphaProbe as a V4 primitive-transfer result that samples a scalar callable along explicit positive approach coordinates, constructs typed finite-difference transfer observations, consumes typed log-log slope evidence, and emits first-class alpha statuses with full provenance. AlphaProbe must preserve transfer/slope parent traces, classify cancellation-dominated and insufficient evidence without altering computed values, support explicit declared alpha models/bands, and optionally report nested-window instability if implemented. It must not implement JetBundle, solver behavior, branch fingerprints, refinery, history gates, parser support, or V1/V3 runtime dependencies.
+This is the right next brick. It turns Task 016’s α recovery from “a test result” into “an engine object.” Once α is an object, JetBundle can be designed properly. Then the solver can navigate geometry instead of chasing residuals like a caffeinated ferret.

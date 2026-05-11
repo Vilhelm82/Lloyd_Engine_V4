@@ -1,0 +1,12 @@
+# Task 007 Status Transition Rules
+
+| rule | input protocol | output protocol | input family | output family | accepted statuses | refused statuses | mapped statuses | context keys | notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `refinery.projective_ratio.status_preservation` | `refinery.observation` | `refinery.observation` | `ProjectiveRatioStatus` | `ProjectiveRatioStatus` | all `ProjectiveRatioStatus` values | none | none | `reference_status`, `candidate_status`, `reference_snapshot`, `candidate_snapshot`, `scenario_id` | Used only after family validation. Candidate status must match reference status before a lower-slag claim. |
+| `refinery.quadratic_roots.status_preservation` | `refinery.observation` | `refinery.observation` | `QuadraticRootStatus` | `QuadraticRootStatus` | all `QuadraticRootStatus` values | none | none | `reference_status`, `candidate_status`, `reference_snapshot`, `candidate_snapshot`, `scenario_id` | Preserves root-state status and branch label evidence. |
+| `refinery.projection.status_preservation` | `refinery.observation` | `refinery.observation` | `ProjectionStatus` | `ProjectionStatus` | all `ProjectionStatus` values | none | none | `reference_status`, `candidate_status`, `reference_snapshot`, `candidate_snapshot`, `scenario_id` | Preserves projection status before branch and flag geometry checks. |
+| `refinery.metrology.status_preservation` | `refinery.observation` | `refinery.observation` | `MetrologyStatus` | `MetrologyStatus` | all `MetrologyStatus` values | none | none | `reference_status`, `candidate_status`, `reference_snapshot`, `candidate_snapshot`, `scenario_id` | Preserves metrology role and comparison/calibration status. |
+| `refinery.branch_fingerprint.status_preservation` | `refinery.observation` | `refinery.observation` | `BranchFingerprintStatus` | `BranchFingerprintStatus` | all `BranchFingerprintStatus` values | none | none | `reference_status`, `candidate_status`, `reference_snapshot`, `candidate_snapshot`, `scenario_id` | Preserves fingerprint status before model, observable-kind, branch, and proxy evidence checks. |
+| `refinery.decision.require_accepted` | `refinery.decision` | `refinery.accepted_rewrite` | `RefineryStatus` | `RefineryStatus` | `rewrite_accepted_same_geometry_lower_slag` | all other `RefineryStatus` values | none | none | Enforced by `require_accepted_rewrite`. |
+
+Generic mixed-family joins remain conservative. Task 007 adds named preservation rules instead of a universal mixed-family join.

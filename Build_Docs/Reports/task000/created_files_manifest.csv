@@ -1,0 +1,34 @@
+path,kind,purpose
+README.md,documentation,Introduce Lloyd V4 as a typed numerical geometry kernel
+pyproject.toml,configuration,Minimal package metadata and pytest configuration
+Build_Docs/Architecture/AXIOMS.md,architecture,Define foundational V4 axioms
+Build_Docs/Architecture/DESIGN_THESIS.md,architecture,Define V4 layered architecture and M0 boundary
+Build_Docs/Architecture/STATUS_CALCULUS.md,architecture,Define M0 status categories and composition rules
+Build_Docs/Architecture/PROTOCOL_CONTRACTS.md,architecture,Define producer and consumer protocol contracts
+Build_Docs/Architecture/PROVENANCE_MODEL.md,architecture,Define structural provenance and compaction strategy
+Build_Docs/Architecture/RESULT_TYPES.md,architecture,Define intended typed result objects
+Build_Docs/Architecture/METROLOGY_PRINCIPLES.md,architecture,Define finite-precision and proxy calibration principles
+Build_Docs/Architecture/V3_REFERENCE_LEDGER.md,architecture,Define V3 as reference-only evidence
+Build_Docs/Architecture/ROADMAP.md,architecture,Define M0-M8 roadmap
+Build_Docs/Reports/task000/task000_summary.md,report,Summarize Task 000 work and verification
+Build_Docs/Reports/task000/created_files_manifest.csv,report,List created files and purposes
+Build_Docs/Reports/task000/design_decisions.md,report,Record key M0 design decisions
+Build_Docs/Reports/task000/task001_scope_projective_ratio.md,report,Scope Task 001 ProjectiveRatio
+src/lloyd_v4/__init__.py,source,Package marker and version
+src/lloyd_v4/core/__init__.py,source,Core substrate package marker
+src/lloyd_v4/core/status.py,source,Define M0 status enums and primitive placeholders
+src/lloyd_v4/core/validity.py,source,Define immutable validity carrier
+src/lloyd_v4/core/conditioning.py,source,Define immutable conditioning carrier
+src/lloyd_v4/core/provenance.py,source,Define immutable provenance carrier and trace ID
+src/lloyd_v4/core/result.py,source,Define TypedResult and TypedRefusal
+src/lloyd_v4/core/protocols.py,source,Define protocol declarations and runtime validation
+src/lloyd_v4/core/calculus.py,source,Define conservative status composition helpers
+src/lloyd_v4/core/serialization.py,source,Define strict JSON-safe serialization
+src/lloyd_v4/core/errors.py,source,Define core substrate errors
+src/lloyd_v4/primitives/__init__.py,source,Primitive package marker
+src/lloyd_v4/metrology/__init__.py,source,Metrology package marker
+src/lloyd_v4/refinery/__init__.py,source,Refinery package marker
+tests/test_task000_docs_exist.py,test,Protect required architecture docs and reports
+tests/test_task000_no_v3_dependency.py,test,Protect no V3 runtime dependency and no legacy source mechanisms
+tests/test_task000_core_smoke.py,test,Protect core typed result/protocol/status smoke behavior
+tests/test_task000_strict_serialization.py,test,Protect strict non-finite JSON serialization

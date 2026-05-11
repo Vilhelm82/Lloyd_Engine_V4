@@ -1,0 +1,422 @@
+So the V4 solver should be designed around this principle:
+
+JetBundle measures the local geometry.
+The solver navigates typed geometric state.
+Residual decrease is only one observable, not the acceptance law.
+
+That is the difference between a Lloyd-native solver and another Newton costume party.
+
+V1 already had the correct instinct: no domain formula should be primary when the same quantity can be recovered from the local jet or surface transport. The uploaded V1 core states that directly, and its Halley/transport layer already used geometry-aware route selection rather than residual-only motion. V4 should preserve that instinct, but replace V1’s scalar scores, tolerance checks, and dict statuses with typed strata, protocols, provenance, metrology, branch evidence, and history.
+
+The design I’d aim for is:
+
+JetBundle = local measurement instrument
+Solver = protocol-governed navigator over measured geometry
+
+Not:
+
+JetBundle = derivative helper
+Solver = Newton/Halley loop
+
+The key novelty is to make the solver’s step acceptance depend on geometric coherence, not just residual improvement.
+
+A standard solver asks:
+
+Did |F(x)| get smaller?
+
+A Lloyd V4 solver should ask:
+
+Did the candidate preserve or lawfully transition the typed geometry,
+remain observable,
+stay on a coherent branch,
+avoid projection degeneracy,
+and reduce explicit diagnostic burden?
+
+That is the engine’s actual advantage.
+
+The JetBundle should produce a typed local object, probably something like:
+
+JetBundleValue:
+    point
+    f_value
+    gradient
+    hessian
+    gradient_norm
+    hessian_rank
+    hessian_signature
+    local_scale_evidence
+    expression_path
+    backend
+    precision
+    operation_trace
+
+with statuses along these lines:
+
+jet_regular
+jet_constant
+jet_gradient_singular
+jet_hessian_degenerate
+jet_nonsmooth
+jet_domain_refused
+jet_nonfinite
+jet_unsupported_operation
+jet_indeterminate
+
+The important thing is that JetBundle must not silently turn derivative failure into zero. In V1, ad_abs deliberately treated the second derivative of abs(x) at the origin as zero to keep the pipeline alive. That was pragmatic prototype engineering, but V4 should not inherit it as behavior. At a nonsmooth point, V4 should emit jet_nonsmooth or jet_derivative_refused, preserve evidence, and let the solver decide whether any protocol can consume it.
+
+JetBundle should also not immediately compute “the step.” It should compute the local geometry from which several candidate steps may be derived.
+
+For a scalar constraint, JetBundle can derive a local quadratic model:
+
+F(x + s) ≈ F0 + g·s + 1/2 sᵀHs
+
+For a one-dimensional step direction u, it can produce:
+
+a = 1/2 uᵀHu
+b = g·u
+c = F0
+
+Then Task 002/003 already know what to do: classify the quadratic root state, select the requested branch, and produce projection evidence. The solver should not solve the quadratic itself. It should consume the typed root/projection pipeline you already built.
+
+That gives the solver this shape:
+
+1. JetBundle measures local geometry.
+2. Candidate direction policy proposes one or more directions.
+3. JetBundle projects the 2-jet into local quadratic step models.
+4. StratifiedQuadraticRoots classifies the step equation.
+5. ProjectionResultV4 decides whether a selected root is advance-valid.
+6. Metrology decides whether residual/progress is observable.
+7. BranchFingerprint checks whether transfer behavior matches the branch model.
+8. History checks whether status evolution is stable or lawfully transitioned.
+9. Refinery compares candidate paths: same geometry first, lower slag second.
+10. Solver accepts, refuses, or terminates with a typed SolverStatus.
+
+That is a Lloyd solver. Newton is only one possible candidate generator skulking in the corner.
+
+The current Task 009 solver is already the right first skeleton: it consumes caller-supplied LocalQuadraticStepModel values, uses Task 002 roots and Task 003 projection, uses Task 004 metrology for convergence, optional Task 006 BranchFingerprint, optional Task 007 refinery, and Task 008 history for projection coherence. It deliberately does not generate local models, parse expressions, port V1 transport, or run multistart search.
+
+So JetBundle is not replacing Task 009. It is giving Task 009 eyes.
+
+The way to avoid “Newton but fancier” is to make candidate generation plural and candidate acceptance typed.
+
+Candidate generators could include:
+
+normal projection candidate
+gradient descent candidate
+Newton candidate
+Halley-like candidate
+quadratic projection candidate
+tangent-plane correction candidate
+curvature-principal-direction candidate
+branch-model-consistent candidate
+
+But none of those gets to declare victory. They merely propose.
+
+The acceptance layer should be:
+
+projection status permits advance
+metrology says progress/residual is observable or explicitly below-detection
+branch fingerprint is complete or policy allows incomplete evidence
+history trace remains stable or transitions through a named rule
+refinery accepts same-geometry lower-slag candidate
+
+That means a Newton step can lose to a slower candidate if the Newton step crosses a stratum, changes branch evidence, destabilizes history, or “improves” residual by destroying geometry. That’s the whole point. The crown goes to the evidence contract, not to the update formula.
+
+I’d make JetBundle more ambitious than just value/gradient/hessian.
+
+Use the V1 and N-var lessons. Your N-variable engine already treats the projected shape operator as primary and extracts principal curvatures, symmetric polynomial floors, Gauss-Kronecker curvature, coupling graph evidence, effective curvature rank, flat directions, coupling class, and geometric degeneracy. Your decomposition module also has the curvature split K_G = κ_c + κ_s + κ_int, with coupling/self/interaction components and dominant source evidence.
+
+In V4, do not dump all of that into one monster JetBundle ticket. But design the JetBundle interface so it can grow into that.
+
+I’d split it into layers:
+
+JetBundle:
+raw local 2-jet evidence
+
+JetChart:
+normal/tangent frame, local chart invertibility, chart status
+
+ShapeOperator:
+projected Hessian, principal curvatures, curvature status
+
+CurvatureDecomposition:
+self/coupling/interaction evidence
+
+SingularityLadder:
+rank, nullity, signature, Morse/fold/higher-degeneracy evidence
+
+LocalModelProvider:
+turns JetBundle + direction policy into LocalQuadraticStepModel values
+
+That separation prevents JetBundle from becoming V1’s “god object” again. V1 was powerful, but it was a cathedral packed into one file. V4 should be a set of typed instruments on a rail.
+
+The solver should consume LocalModelProvider output, not raw JetBundle directly, except for optional evidence gates.
+
+A clean architecture would be:
+
+src/lloyd_v4/jet/
+    jet_bundle.py
+    elementary_ops.py
+    local_models.py
+
+src/lloyd_v4/geometry/
+    shape_operator.py
+    singularity_ladder.py
+    curvature_decomposition.py
+
+src/lloyd_v4/solver/
+    typed_projection_solver.py
+    candidate_policies.py
+    acceptance.py
+
+The first JetBundle task should stay small:
+
+Task 018: JetBundle primitive
+
+Goal:
+Evaluate finite scalar callables with typed first/second derivative evidence.
+
+Must produce:
+- JetBundleStatus
+- JetBundleValue
+- typed value, gradient, Hessian
+- domain/refusal statuses
+- provenance with expression_path/backend/precision/input trace IDs
+- strict serialization
+- no parser, no V1 import, no domain formulas
+
+Then:
+
+Task 019: Local quadratic model provider
+
+Goal:
+Convert JetBundle evidence into LocalQuadraticStepModel values for Task 009 solver.
+
+Must produce:
+- direction evidence
+- projected scalar coefficients a, b, c
+- model status
+- branch-selection compatibility evidence
+- no step acceptance policy
+
+Then:
+
+Task 020: Geometry-aware solver candidate policies
+
+Goal:
+Generate multiple candidate local models from JetBundle geometry:
+normal, gradient, principal curvature direction, and caller-provided direction.
+
+Must not:
+- score candidates by hidden weighted sum
+- choose by residual alone
+
+The genuinely novel method appears at Task 020 or 021:
+
+Task 021: Geometric-coherence solver selection
+
+This is where the solver chooses among candidate update paths using typed evidence. The selection rule should look like:
+
+Reject any candidate with:
+- non-advance-valid projection
+- unhandled status transition
+- branch fingerprint regression
+- metrology indeterminacy when policy requires observability
+- refinery geometry mismatch
+- unstable projection history
+
+Among remaining candidates:
+- prefer same-status stable history
+- prefer complete branch fingerprint over unidentified
+- prefer lower componentwise slag
+- prefer smaller model residual only after typed geometry ties
+
+Notice where residual lands: near the bottom. It is still useful, just not sovereign.
+
+The high-accuracy geometric measurement becomes useful in three places.
+
+First, JetBundle makes the local geometry measurable: gradient, Hessian, curvature, rank, singularity, chart invertibility.
+
+Second, BranchFingerprint makes the branch behavior measurable through slope-flow and α−1 transfer evidence. Task 006 already made slope segment ratios ProjectiveRatio-backed and explicitly avoided hidden log offsets.
+
+Third, history makes the trajectory measurable: not just where one step lands, but whether the typed geometry remains stable across the route.
+
+That gives you a solver that can distinguish:
+
+true convergence
+below-detection convergence
+identity-zero convergence
+tangent contact
+wrong branch
+branch ambiguity
+proxy instability
+nonsmooth local model
+singular chart
+curvature-rank collapse
+arithmetic cancellation dominance
+history instability
+
+A Newton solver sees most of those as “bad convergence.” V4 can name them. That is the moat.
+
+The acceptance philosophy should be written down as a solver axiom:
+
+Residual decrease is neither necessary nor sufficient for solver progress.
+A solver step is valid only if its typed geometric transition is protocol-valid.
+
+That sounds extreme, but it is exactly what makes the method yours.
+
+A residual may temporarily increase along a correct geometric path, especially near branch transitions or tangent contact. Conversely, a residual may decrease while the solver crosses to the wrong branch. V4 should not be hypnotized by a smaller scalar.
+
+The solver’s core loop should look like this:
+
+for k in step_budget:
+    jet = measure_jet(F, x_k)
+
+    local_models = propose_local_models(
+        jet=jet,
+        policies=direction_policies,
+    )
+
+    step_evidence = [
+        evaluate_solver_step(model, noise_floor, policy, gates)
+        for model in local_models
+    ]
+
+    admissible = [
+        step for step in step_evidence
+        if step.status is protocol_admissible
+    ]
+
+    decision = refine_candidate_steps(
+        reference=current_observation_suite,
+        candidates=admissible,
+    )
+
+    history = record_solver_history(decision)
+
+    if converged(decision, metrology, history):
+        return converged_solver_result
+
+    if no_admissible_step:
+        return typed_refusal_or_block
+
+    x_k = accepted_candidate.next_state
+
+But the real core is not the loop. It is the observation suite each candidate carries:
+
+candidate step
+projection result
+metrology result
+branch fingerprint result
+history transition
+refinery decision
+provenance lineage
+
+That observation suite is what lets V4 choose geometrically, not numerically.
+
+I would also deliberately avoid a single scalar “quality” score. V1 used route scores because it had to. V4 has the machinery to do better.
+
+Use lexicographic/protocol ordering:
+
+1. protocol-valid candidates only
+2. advance-valid projection only
+3. required metrology observable
+4. required branch fingerprint complete
+5. stable history
+6. refinery accepted
+7. componentwise lower slag
+8. scalar residual/model residual as tie-breaker only
+
+No hidden score. No “0.7 geometry plus 0.3 residual.” That would be V1 sneaking back in wearing cologne.
+
+For JetBundle itself, I’d require each elementary operation to carry derivative-domain semantics.
+
+Examples:
+
+log(x <= 0)       -> jet_domain_refused
+sqrt(x < 0)       -> jet_domain_refused
+sqrt(x == 0)      -> jet_singular_derivative
+abs(x == 0)       -> jet_nonsmooth
+division by zero  -> ProjectiveRatio evidence or jet_domain_refused, depending context
+constant function -> jet_constant
+nonfinite output  -> jet_nonfinite
+
+The tricky one is division inside automatic differentiation. Do not simply raise and lose evidence. Where possible, wrap quotient value/derivative denominators as ProjectiveRatio states. If full AD quotient propagation becomes too much for the first task, refuse explicitly with evidence. But don’t quietly patch.
+
+I’d also make JetBundle callable-based first, not expression-parser-based. The old V1 had a safe AST evaluator, but parser work is a swamp with nice shoes. A V4 JetBundle can start with Python callables over typed differentiable values. Symbolic parsing can be a later consumer or convenience layer.
+
+The design slogan:
+
+JetBundle should not know equations.
+JetBundle should know differentiable measurement.
+
+Then the solver design slogan:
+
+The solver should not chase roots.
+The solver should navigate typed state.
+
+There is a novel method here, and I’d name it carefully.
+
+Something like:
+
+Stratified Jet-Projection Solver
+
+or:
+
+History-Stable Geometric Projection Solver
+
+The method is:
+
+Use typed second-order local geometry to generate candidate projections;
+accept steps only when projection, metrology, branch fingerprint, refinery,
+and history evidence agree that the typed geometric state remains coherent.
+
+That is not Newton. It is not Halley. It can use Newton or Halley as proposal mechanisms, but its correctness criterion is different.
+
+The paper-friendly formulation:
+
+A solver iteration is a partial map between typed local jet states.
+The update is admissible only when the induced status transition is accepted
+by the solver protocol and the observation suite preserves declared geometry.
+
+That’s the grown-up mathematical version. The cheeky version:
+
+Newton follows the slope.
+V4 asks whether the slope is legally allowed to speak.
+
+My concrete recommendation for the next design sequence:
+
+Task 018:
+JetBundle primitive, scalar callable, first/second derivative evidence, typed domain/refusal statuses.
+
+Task 019:
+JetBundle-to-LocalQuadraticStepModel provider, with direction evidence and no acceptance policy.
+
+Task 020:
+Candidate policy layer: normal, gradient, caller direction, principal-curvature direction if shape evidence exists.
+
+Task 021:
+Geometric-coherence solver selection: multiple candidates, no scalar score, protocol/refinery/history-based acceptance.
+
+Task 022:
+ShapeOperator and SingularityRankLadder, consumed by candidate policies and solver diagnostics.
+
+Task 023:
+Centrifuge/role-transposition consumer, now using solver history and BranchFingerprint.
+
+That sequence uses the uniqueness of the engine properly. It does not turn V4 into scipy-with-receipts.
+
+The killer test for whether we’re doing this right is simple:
+
+Can the solver reject a residual-improving step because it changes typed branch geometry?
+
+If yes, you have a Lloyd solver.
+
+And the second killer test:
+
+Can the solver accept a slower step because it preserves projection status,
+branch fingerprint, metrology observability, and stable history?
+
+If yes, you are no longer building a residual solver. You are building a typed geometric navigator.
+
+That’s the beast we want.

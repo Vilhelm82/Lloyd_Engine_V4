@@ -1,0 +1,606 @@
+Yes. We have enough to draft V4 design ideas, and the clean foundation is not “a better V3.” It is:
+
+> **A typed, stratified geometry kernel where every computation is a partial geometric map with explicit domain, stratum, validity, conditioning, and provenance.**
+
+That is the right starting point.
+
+Not diagnostics.
+Not bearings.
+Not aerospace.
+Not betting scanners.
+Not V3 flow.
+Not even “branch classifier.”
+
+Those are applications.
+
+The V4 foundation should be **a calculator for geometric truth**.
+
+A normal calculator says:
+
+[
+1/0 = \text{error}
+]
+
+or explodes or returns infinity depending on the language.
+
+V4 should say:
+
+[
+\frac{a}{b}
+]
+
+is not always a scalar. It is a **projective state** with strata:
+
+[
+b\neq0,\quad b=0,a\neq0,\quad a=0,b=0.
+]
+
+That is the level of primitive I think you want. Start there. Smaller than roots. Smaller than projection. Smaller than branch diagnostics.
+
+The pasted note nails the category shift: the engine moved from “produce a number with confidence interval” to “produce a typed result with mechanism attribution,” and typed results compose by protocols rather than ordinary scalar arithmetic. That should be the V4 birth certificate.
+
+## The foundation: stratified typed numerical geometry
+
+I would define Lloyd_V4 around this core idea:
+
+[
+\text{Computation} = \text{partial map between typed geometric spaces}.
+]
+
+A computation does not merely return a number. It returns a typed result:
+
+[
+\mathcal R =
+(\text{value},\ \text{space},\ \text{domain status},\ \text{stratum},\ \text{validity},\ \text{conditioning},\ \text{provenance})
+]
+
+The value may be a scalar, vector, root pair, subspace, projector, branch fingerprint, projective coordinate, or “no scalar exists here.”
+
+That last part matters. V4 should be allowed to say:
+
+> “There is no honest scalar answer at this point.”
+
+Not NaN.
+Not epsilon.
+Not clamp.
+Not “trust me bro, I stabilized it.”
+A typed refusal.
+
+Beautiful. Annoying. Correct.
+
+## The first axioms
+
+I would start V4 with explicit axioms. Something like this.
+
+**Axiom 1: Geometry precedes scalarization.**
+
+A scalar is not the default truth. A scalar is a valid projection of a geometric state only when the domain and stratum permit it.
+
+So a ratio is not always a float. A root problem is not always a root. An eigenvector is not always identifiable. A projection is not always advanceable.
+
+**Axiom 2: Degeneracy is a stratum, not a failure.**
+
+A zero denominator, repeated eigenvalue, vanishing discriminant, tangent contact, no-real-root condition, and underdetermined identity are not bugs. They are exact regions of the geometry.
+
+V4 should represent them directly.
+
+**Axiom 3: No hidden guard rails.**
+
+No invisible epsilons.
+No clamp floors.
+No discriminant laundering.
+No denominator duct tape.
+No silent threshold foam.
+
+A tolerance may exist only as a declared measurement resolution or policy parameter, never as a secret mathematical rescue operation.
+
+**Axiom 4: Validity is multi-field, never one boolean.**
+
+No universal `safe_mask`.
+
+Instead:
+
+[
+\text{defined}
+\neq
+\text{finite}
+\neq
+\text{selectable}
+\neq
+\text{advanceable}
+\neq
+\text{trusted}
+\neq
+\text{policy-accepted}.
+]
+
+For projection, you already discovered the correct split:
+
+[
+\text{root_exists},\quad
+\text{projection_defined},\quad
+\text{selected_root_valid},\quad
+\text{advance_valid}.
+]
+
+That style should become universal.
+
+**Axiom 5: Numerical representation is a path, not the object.**
+
+Two algebraically equivalent expressions may preserve geometry but differ in arithmetic visibility:
+
+[
+C_{p,k}=a+u_p b_k.
+]
+
+V4 should treat expression path (k), precision (p), and backend as provenance, not irrelevant implementation trivia.
+
+**Axiom 6: Zero must be measured.**
+
+No more saying:
+
+[
+b_k=0
+]
+
+unless the instrument can justify it.
+
+The honest statuses should be:
+
+```text
+detected
+below_limit_of_detection
+indeterminate
+identity_zero
+```
+
+A clean engine does not mistake blindness for purity.
+
+**Axiom 7: Proxies are guilty until calibrated.**
+
+If V4 measures a proxy observable (Y_q), it must not assume it equals transfer geometry. It must check:
+
+[
+K_q(f)=\frac{Y_q(f)}{T(f)}
+]
+
+and
+
+[
+D\log K_q(f)\to0.
+]
+
+Otherwise the result is:
+
+```text
+proxy_uncalibrated
+```
+
+not “branch detected.”
+
+**Axiom 8: Typed results compose by protocols.**
+
+A primitive emits a typed result. A consumer declares which statuses it can consume. If a consumer receives an unhandled stratum, that is a protocol violation, not a numerical surprise.
+
+That is how V4 avoids becoming V3 with fancier enums.
+
+## The correct first primitive
+
+I would not start V4 with `stratified_quadratic_roots`.
+
+That is a proven ingot, but it is not the most primitive object.
+
+I would start with **projective ratio state**.
+
+Why? Because division is where numerical dishonesty begins.
+
+A ratio:
+
+[
+r=\frac{n}{d}
+]
+
+should be represented as:
+
+[
+[n:d]
+]
+
+with exact strata:
+
+```text
+finite_ratio        d != 0
+infinite_direction  d = 0, n != 0
+indeterminate       n = 0, d = 0
+signed_zero         n = 0, d != 0
+```
+
+Then scalarization is an explicit operation:
+
+```text
+ProjectiveRatio -> Scalar
+```
+
+and it may fail or return a typed non-scalar status.
+
+That gives you the purest possible first move: V4 refuses to pretend every ratio is a number.
+
+From this, many later primitives become cleaner:
+
+curvature ratios,
+
+residual normalization,
+
+odds/edge transforms,
+
+eigenvalue gaps,
+
+condition measures,
+
+gradient ratios,
+
+branch observables,
+
+projected quantities,
+
+all stop needing fake denominator guards.
+
+So the first V4 primitive should be:
+
+```text
+ProjectiveRatio
+```
+
+Then:
+
+```text
+StratifiedQuadraticRoots
+```
+
+Then:
+
+```text
+SpectralGapState / ProjectorState
+```
+
+Then:
+
+```text
+BranchFingerprint
+```
+
+The quadratic root work becomes the second primitive family, not the foundation itself.
+
+## The V4 object model
+
+I would make the core object model tiny.
+
+Something like:
+
+```python
+TypedValue
+StatusTensor
+Stratum
+Validity
+Conditioning
+Provenance
+Protocol
+```
+
+A result object might look like:
+
+```python
+@dataclass(frozen=True)
+class TypedResult:
+    value: Any
+    space: Space
+    stratum: StatusTensor
+    validity: Validity
+    conditioning: Conditioning
+    provenance: Provenance
+```
+
+Where `Validity` is not one mask:
+
+```python
+@dataclass(frozen=True)
+class Validity:
+    defined: Tensor
+    finite: Tensor
+    selectable: Tensor | None
+    advanceable: Tensor | None
+    observable: Tensor | None
+```
+
+And `Provenance` carries:
+
+```python
+operation_id
+expression_path
+precision
+backend
+device
+measurement_resolution
+```
+
+This is where the “calculator” analogy becomes real. A calculator has buttons. V4 has typed primitives. But unlike an ordinary calculator, every button knows what geometric state it produced.
+
+## The V4 layers
+
+I would structure V4 in four layers.
+
+### Layer 0: Core typed substrate
+
+This is pure infrastructure:
+
+```text
+spaces
+statuses
+validity masks
+conditioning labels
+provenance
+protocol contracts
+strict serialization
+status calculus
+```
+
+No domains. No solvers. No V3.
+
+### Layer 1: Primitive geometric operations
+
+These are use-case agnostic:
+
+```text
+projective_ratio
+signed_difference
+norm_state
+stratified_sqrt
+stratified_quadratic_roots
+spectral_gap_state
+projector_state
+constraint_zero_state
+```
+
+Each primitive returns a typed result.
+
+### Layer 2: Metrology and transfer
+
+This is where the theorem enters:
+
+```text
+finite_eta_correction
+slope_flow
+precision_path_attribution
+b_k noise floor
+proxy calibration K_q
+branch fingerprint
+```
+
+This layer does not care whether the system is aerospace, finance, physics, or bookies. It only sees typed observables.
+
+### Layer 3: Consumers
+
+These are optional downstream tools:
+
+```text
+flow integrator
+branch classifier
+equation refinery
+fault detector
+optimizer
+simulator
+```
+
+They consume typed results through protocols.
+
+No consumer gets to pretend a typed result is “just a number” unless scalarization succeeded.
+
+## The first build milestones
+
+I would build V4 in this order.
+
+### V4-M0: Axioms and type kernel
+
+Deliverables:
+
+```text
+AXIOMS.md
+DESIGN.md
+src/lloyd_v4/core/status.py
+src/lloyd_v4/core/validity.py
+src/lloyd_v4/core/provenance.py
+src/lloyd_v4/core/result.py
+src/lloyd_v4/core/protocol.py
+```
+
+Tests should verify strict JSON serialization, tensor/device preservation, and no accidental scalar coercion.
+
+No domain code.
+
+### V4-M1: Projective ratio primitive
+
+First true primitive:
+
+```text
+projective_ratio(n, d)
+```
+
+with statuses:
+
+```text
+finite_ratio
+signed_zero
+infinite_direction
+indeterminate
+```
+
+and explicit scalarization:
+
+```text
+to_scalar(projective_ratio_result)
+```
+
+This is the first purity test. No eps. No denominator floor.
+
+### V4-M2: Stratified quadratic roots
+
+Port the proven Pass05-Pass11 work cleanly, but without legacy mode.
+
+Statuses:
+
+```text
+two_real_roots
+repeated_root
+no_real_root
+linear_root
+constant_identity
+constant_no_solution
+degenerate_input
+```
+
+No `safe_mask`.
+
+No `projection_mode="legacy"`.
+
+No old discriminant clamp.
+
+### V4-M3: Projection result protocol
+
+Define projection as a consumer of root states:
+
+```text
+root_exists
+projection_defined
+selected_root_valid
+advance_valid
+conditioning_status
+```
+
+This is where V4 proves it can do what V3 learned painfully.
+
+### V4-M4: Metrology
+
+Add:
+
+```text
+precision_path_attribution
+b_k noise-floor estimator
+limit-of-detection statuses
+finite_eta correction
+```
+
+No “zero slag” without sensitivity.
+
+### V4-M5: Branch fingerprint
+
+Add:
+
+```text
+slope_flow model comparison
+direct transfer observable
+proxy calibration K_q
+branch fingerprint result
+```
+
+This is where the theorem becomes engine-native.
+
+### V4-M6: Refinery
+
+Add:
+
+```text
+same_geometry_lower_slag gate
+status-preserving rewrite acceptance
+protocol-preserving rewrite acceptance
+```
+
+The refinery should test not only scalar equivalence, but status equivalence.
+
+## What V4 must not inherit
+
+No `safe_mask`.
+
+No default legacy mode.
+
+No `eps` as a rescue parameter.
+
+No clamps that change strata.
+
+No scalar-first result objects.
+
+No “confidence score” without mechanism.
+
+No proxy observable without calibration.
+
+No “clean rewrite” unless domain, stratum, status emissions, and geometry are preserved.
+
+No runtime dependency on V3.
+
+The only inheritance should be static:
+
+```text
+theorem documents
+target ledger
+known dirty equations
+known rejected rewrites
+frozen fixtures
+performance baselines
+intentional divergence notes
+```
+
+V3 becomes evidence, not infrastructure.
+
+## The deepest foundation
+
+The foundation is not “typed roots.”
+
+It is this:
+
+> **V4 treats numerical computation as navigation through stratified geometric spaces under finite-precision observation.**
+
+That one sentence carries the whole architecture.
+
+The computation may return a number.
+Or a subspace.
+Or a projective state.
+Or a branch fingerprint.
+Or a refusal to scalarize.
+Or a protocol violation.
+Or a status transition.
+
+That is what makes it domain agnostic.
+
+A bearing diagnostic, aerospace solver, bookies scanner, symbolic equation auditor, or numerical optimizer can all sit on top because the core does not know what any of them are. It only knows typed geometry, status propagation, and measured observability.
+
+## My call
+
+Start V4 with:
+
+```text
+Axioms
+TypedResult
+StatusTensor
+Validity
+Provenance
+Protocol
+ProjectiveRatio
+StratifiedQuadraticRoots
+```
+
+Do not start with a use case.
+
+Do not start with V3 flow.
+
+Do not start with the branch classifier.
+
+Do not start with performance.
+
+Start with the smallest object that refuses to lie:
+
+[
+\frac{n}{d}
+]
+
+as a projective geometric state, not a float wearing a helmet.
+
+That is the clean foundation, hotshot. Geometry first. Scalars only when earned.
