@@ -1,0 +1,1435 @@
+[
+  {
+    "comparison": "alpha-status agreement on alpha_fractional_branch; trace ids distinct",
+    "function_source": "f(x) = x**0.5",
+    "h_grid": [
+      1e-06,
+      1e-05,
+      0.0001,
+      0.001,
+      0.01,
+      0.1
+    ],
+    "label": "A",
+    "name": "pure algebraic positive",
+    "purpose": "Baseline sibling agreement on a known algebraic fractional branch.",
+    "scalar": {
+      "alpha_probe_trace_id": "e8c4a2db0e502721",
+      "alpha_status": "alpha_fractional_branch",
+      "conditioning_notes": [
+        "observed_alpha=0.5",
+        "alpha_status=alpha_fractional_branch",
+        "derivative_at_point=5.000e+02",
+        "h_used=1.000e-06"
+      ],
+      "conditioning_status": "well_conditioned",
+      "observed_alpha": 0.49999999997887246,
+      "observed_slope": -0.5000000000211275,
+      "provenance_trace_id": "0f6ba1f51b388d9b",
+      "slope_trace_id": "85f3462bb2f557aa",
+      "status": "scalar_jet_fractional_alpha_branch",
+      "transfer_trace_ids": [
+        "660f6ad52022611a",
+        "536b2477186cd8a0",
+        "02685ffbd1de30e9",
+        "fd3c9f7e43748693",
+        "0b8f98958c23f171",
+        "1555fce5a815d84b"
+      ],
+      "typed_result": {
+        "conditioning": {
+          "notes": [
+            "observed_alpha=0.5",
+            "alpha_status=alpha_fractional_branch",
+            "derivative_at_point=5.000e+02",
+            "h_used=1.000e-06"
+          ],
+          "status": "well_conditioned"
+        },
+        "protocol": "ok",
+        "provenance": {
+          "backend": "python",
+          "device": "cpu",
+          "expression_path": "scalar_alpha_jet_local_probe",
+          "inputs": [
+            "task023_A_scalar",
+            "task023_A_pure_algebraic_positive",
+            0.0,
+            [
+              1e-06,
+              1e-05,
+              0.0001,
+              0.001,
+              0.01,
+              0.1
+            ],
+            1e-06
+          ],
+          "measurement_resolution": null,
+          "operation_id": "scalar_alpha_jet_bundle",
+          "parents": [
+            "e8c4a2db0e502721"
+          ],
+          "precision": "raw_python",
+          "status": "complete",
+          "trace_id": "0f6ba1f51b388d9b"
+        },
+        "refusal": null,
+        "space": "ScalarAlphaJetBundleObservation",
+        "status": "scalar_jet_fractional_alpha_branch",
+        "validity": {
+          "advanceable": true,
+          "defined": true,
+          "finite": true,
+          "observable": true,
+          "selectable": true
+        },
+        "value": {
+          "alpha_probe_trace_id": "e8c4a2db0e502721",
+          "alpha_status": "alpha_fractional_branch",
+          "declared_alpha_band": null,
+          "declared_alpha_models": [],
+          "derivative_at_point": 499.9998750535722,
+          "derivative_h": 1e-06,
+          "derivative_transfer_trace_id": "660f6ad52022611a",
+          "eta": 1e-06,
+          "expression_path": "scalar_alpha_jet_local_probe",
+          "f_value": 0.0,
+          "function_label": "task023_A_pure_algebraic_positive",
+          "h_values": [
+            1e-06,
+            1e-05,
+            0.0001,
+            0.001,
+            0.01,
+            0.1
+          ],
+          "matching_alpha_model_names": [],
+          "observed_alpha": 0.49999999997887246,
+          "observed_slope": -0.5000000000211275,
+          "point": 0.0,
+          "probe_id": "task023_A_scalar",
+          "selected_alpha_model": null,
+          "slope_trace_id": "85f3462bb2f557aa",
+          "transfer_trace_ids": [
+            "660f6ad52022611a",
+            "536b2477186cd8a0",
+            "02685ffbd1de30e9",
+            "fd3c9f7e43748693",
+            "0b8f98958c23f171",
+            "1555fce5a815d84b"
+          ]
+        }
+      },
+      "validity": {
+        "advanceable": true,
+        "defined": true,
+        "finite": true,
+        "observable": true,
+        "selectable": true
+      }
+    },
+    "scalar_meaningful": true,
+    "sibling_alpha_probe_trace_ids_distinct": true,
+    "singular": {
+      "alpha_probe_trace_id": "a9c9f7be766a1acc",
+      "alpha_status": "alpha_fractional_branch",
+      "conditioning_notes": [
+        "observed_alpha=0.5",
+        "alpha_status=alpha_fractional_branch"
+      ],
+      "conditioning_status": "well_conditioned",
+      "observed_alpha": 0.49999999997887246,
+      "observed_slope": -0.5000000000211275,
+      "provenance_trace_id": "f1071efabc0528e3",
+      "slope_trace_id": "98353cadbafb3cd3",
+      "status": "singular_jet_fractional_alpha_branch",
+      "transfer_trace_ids": [
+        "5676812de6fd7e30",
+        "e96b8a0499879ac8",
+        "c5f3e3e50c10ed90",
+        "454c1ff5b47c0499",
+        "31400cfdae2b067d",
+        "829738919dbc85bd"
+      ],
+      "typed_result": {
+        "conditioning": {
+          "notes": [
+            "observed_alpha=0.5",
+            "alpha_status=alpha_fractional_branch"
+          ],
+          "status": "well_conditioned"
+        },
+        "protocol": "ok",
+        "provenance": {
+          "backend": "python",
+          "device": "cpu",
+          "expression_path": "singular_alpha_jet_singular_probe",
+          "inputs": [
+            "task023_A_singular",
+            "task023_A_pure_algebraic_positive",
+            0.0,
+            [
+              1e-06,
+              1e-05,
+              0.0001,
+              0.001,
+              0.01,
+              0.1
+            ],
+            1e-06
+          ],
+          "measurement_resolution": null,
+          "operation_id": "singular_alpha_jet_bundle",
+          "parents": [
+            "a9c9f7be766a1acc"
+          ],
+          "precision": "raw_python",
+          "status": "complete",
+          "trace_id": "f1071efabc0528e3"
+        },
+        "refusal": null,
+        "space": "SingularAlphaJetBundleObservation",
+        "status": "singular_jet_fractional_alpha_branch",
+        "validity": {
+          "advanceable": true,
+          "defined": true,
+          "finite": true,
+          "observable": true,
+          "selectable": true
+        },
+        "value": {
+          "alpha_probe_trace_id": "a9c9f7be766a1acc",
+          "alpha_status": "alpha_fractional_branch",
+          "declared_alpha_band": null,
+          "declared_alpha_models": [],
+          "eta": 1e-06,
+          "expression_path": "singular_alpha_jet_singular_probe",
+          "function_label": "task023_A_pure_algebraic_positive",
+          "h_values": [
+            1e-06,
+            1e-05,
+            0.0001,
+            0.001,
+            0.01,
+            0.1
+          ],
+          "matching_alpha_model_names": [],
+          "observed_alpha": 0.49999999997887246,
+          "observed_slope": -0.5000000000211275,
+          "point": 0.0,
+          "probe_id": "task023_A_singular",
+          "selected_alpha_model": null,
+          "slope_trace_id": "98353cadbafb3cd3",
+          "transfer_trace_ids": [
+            "5676812de6fd7e30",
+            "e96b8a0499879ac8",
+            "c5f3e3e50c10ed90",
+            "454c1ff5b47c0499",
+            "31400cfdae2b067d",
+            "829738919dbc85bd"
+          ]
+        }
+      },
+      "validity": {
+        "advanceable": true,
+        "defined": true,
+        "finite": true,
+        "observable": true,
+        "selectable": true
+      }
+    },
+    "singular_meaningful": true,
+    "theoretical": "alpha = 0.5; clean fractional branch; both bundles should classify cleanly.",
+    "x0": 0.0
+  },
+  {
+    "comparison": "informative disagreement: scalar emitted scalar_jet_domain_refused; singular emitted singular_jet_negative_alpha_singularity",
+    "function_source": "f(x) = 1.0 / x; raises at x == 0",
+    "h_grid": [
+      1e-06,
+      1e-05,
+      0.0001,
+      0.001,
+      0.01,
+      0.1
+    ],
+    "label": "B",
+    "name": "pure algebraic negative",
+    "purpose": "Canonical informative sibling disagreement.",
+    "scalar": {
+      "alpha_probe_trace_id": null,
+      "alpha_status": null,
+      "conditioning_notes": [
+        "alpha_status=pre_probe_refusal",
+        "reason=f(x0) raised ZeroDivisionError"
+      ],
+      "conditioning_status": "warning",
+      "observed_alpha": null,
+      "observed_slope": null,
+      "provenance_trace_id": "7f593a0a3050ad72",
+      "slope_trace_id": null,
+      "status": "scalar_jet_domain_refused",
+      "transfer_trace_ids": [],
+      "typed_result": {
+        "conditioning": {
+          "notes": [
+            "alpha_status=pre_probe_refusal",
+            "reason=f(x0) raised ZeroDivisionError"
+          ],
+          "status": "warning"
+        },
+        "protocol": "ok",
+        "provenance": {
+          "backend": "python",
+          "device": "cpu",
+          "expression_path": "scalar_alpha_jet_local_probe",
+          "inputs": [
+            "task023_B_scalar",
+            "task023_B_pure_algebraic_negative",
+            0.0,
+            [
+              1e-06,
+              1e-05,
+              0.0001,
+              0.001,
+              0.01,
+              0.1
+            ],
+            1e-06
+          ],
+          "measurement_resolution": null,
+          "operation_id": "scalar_alpha_jet_bundle",
+          "parents": [],
+          "precision": "raw_python",
+          "status": "complete",
+          "trace_id": "7f593a0a3050ad72"
+        },
+        "refusal": null,
+        "space": "ScalarAlphaJetBundleObservation",
+        "status": "scalar_jet_domain_refused",
+        "validity": {
+          "advanceable": false,
+          "defined": false,
+          "finite": false,
+          "observable": true,
+          "selectable": false
+        },
+        "value": {
+          "alpha_probe_trace_id": null,
+          "alpha_status": null,
+          "declared_alpha_band": null,
+          "declared_alpha_models": [],
+          "derivative_at_point": null,
+          "derivative_h": null,
+          "derivative_transfer_trace_id": null,
+          "eta": 1e-06,
+          "expression_path": "scalar_alpha_jet_local_probe",
+          "f_value": null,
+          "function_label": "task023_B_pure_algebraic_negative",
+          "h_values": [
+            1e-06,
+            1e-05,
+            0.0001,
+            0.001,
+            0.01,
+            0.1
+          ],
+          "matching_alpha_model_names": [],
+          "observed_alpha": null,
+          "observed_slope": null,
+          "point": 0.0,
+          "probe_id": "task023_B_scalar",
+          "selected_alpha_model": null,
+          "slope_trace_id": null,
+          "transfer_trace_ids": []
+        }
+      },
+      "validity": {
+        "advanceable": false,
+        "defined": false,
+        "finite": false,
+        "observable": true,
+        "selectable": false
+      }
+    },
+    "scalar_meaningful": false,
+    "sibling_alpha_probe_trace_ids_distinct": null,
+    "singular": {
+      "alpha_probe_trace_id": "cb917bd252caa7f9",
+      "alpha_status": "alpha_negative_singularity",
+      "conditioning_notes": [
+        "observed_alpha=-1",
+        "alpha_status=alpha_negative_singularity"
+      ],
+      "conditioning_status": "well_conditioned",
+      "observed_alpha": -0.9999999999985296,
+      "observed_slope": -1.9999999999985296,
+      "provenance_trace_id": "06a1af935c1b79b1",
+      "slope_trace_id": "f9a746f8f5faafb0",
+      "status": "singular_jet_negative_alpha_singularity",
+      "transfer_trace_ids": [
+        "6392d284c2c93786",
+        "1542140592ccd62a",
+        "1b313781360df1c3",
+        "d9c4f9c131e76e73",
+        "1b12de5963cb597d",
+        "bc538905695b453a"
+      ],
+      "typed_result": {
+        "conditioning": {
+          "notes": [
+            "observed_alpha=-1",
+            "alpha_status=alpha_negative_singularity"
+          ],
+          "status": "well_conditioned"
+        },
+        "protocol": "ok",
+        "provenance": {
+          "backend": "python",
+          "device": "cpu",
+          "expression_path": "singular_alpha_jet_singular_probe",
+          "inputs": [
+            "task023_B_singular",
+            "task023_B_pure_algebraic_negative",
+            0.0,
+            [
+              1e-06,
+              1e-05,
+              0.0001,
+              0.001,
+              0.01,
+              0.1
+            ],
+            1e-06
+          ],
+          "measurement_resolution": null,
+          "operation_id": "singular_alpha_jet_bundle",
+          "parents": [
+            "cb917bd252caa7f9"
+          ],
+          "precision": "raw_python",
+          "status": "complete",
+          "trace_id": "06a1af935c1b79b1"
+        },
+        "refusal": null,
+        "space": "SingularAlphaJetBundleObservation",
+        "status": "singular_jet_negative_alpha_singularity",
+        "validity": {
+          "advanceable": false,
+          "defined": true,
+          "finite": true,
+          "observable": true,
+          "selectable": true
+        },
+        "value": {
+          "alpha_probe_trace_id": "cb917bd252caa7f9",
+          "alpha_status": "alpha_negative_singularity",
+          "declared_alpha_band": null,
+          "declared_alpha_models": [],
+          "eta": 1e-06,
+          "expression_path": "singular_alpha_jet_singular_probe",
+          "function_label": "task023_B_pure_algebraic_negative",
+          "h_values": [
+            1e-06,
+            1e-05,
+            0.0001,
+            0.001,
+            0.01,
+            0.1
+          ],
+          "matching_alpha_model_names": [],
+          "observed_alpha": -0.9999999999985296,
+          "observed_slope": -1.9999999999985296,
+          "point": 0.0,
+          "probe_id": "task023_B_singular",
+          "selected_alpha_model": null,
+          "slope_trace_id": "f9a746f8f5faafb0",
+          "transfer_trace_ids": [
+            "6392d284c2c93786",
+            "1542140592ccd62a",
+            "1b313781360df1c3",
+            "d9c4f9c131e76e73",
+            "1b12de5963cb597d",
+            "bc538905695b453a"
+          ]
+        }
+      },
+      "validity": {
+        "advanceable": false,
+        "defined": true,
+        "finite": true,
+        "observable": true,
+        "selectable": true
+      }
+    },
+    "singular_meaningful": true,
+    "theoretical": "alpha = -1; scalar should refuse at x0 and singular should classify a negative singularity.",
+    "x0": 0.0
+  },
+  {
+    "comparison": "alpha-status agreement on alpha_fractional_branch; trace ids distinct",
+    "function_source": "f(x) = x**0.5 * (1 + 0.1 * x**0.1)",
+    "h_grid": [
+      0.01,
+      0.001,
+      0.0001,
+      1e-05,
+      1e-06,
+      1e-07,
+      1e-08
+    ],
+    "label": "C",
+    "name": "slow algebraic drift",
+    "purpose": "Check whether current strata expose or hide slow algebraic drift evidence.",
+    "scalar": {
+      "alpha_probe_trace_id": "26145e2679688c3d",
+      "alpha_status": "alpha_fractional_branch",
+      "conditioning_notes": [
+        "observed_alpha=0.50386",
+        "alpha_status=alpha_fractional_branch",
+        "derivative_at_point=5.095e+03",
+        "h_used=1.000e-08"
+      ],
+      "conditioning_status": "well_conditioned",
+      "observed_alpha": 0.5038604145993733,
+      "observed_slope": -0.4961395854006267,
+      "provenance_trace_id": "63edd61c4dfbdcd2",
+      "slope_trace_id": "cf71504556c07fcf",
+      "status": "scalar_jet_fractional_alpha_branch",
+      "transfer_trace_ids": [
+        "d5a985a7a2fbe13e",
+        "ae344681cb5793b5",
+        "ea0a4f3880451b0c",
+        "e1ce32902f629b19",
+        "efb2507a298fc786",
+        "3679e3dae3629ce9",
+        "d5672e46059c14dd"
+      ],
+      "typed_result": {
+        "conditioning": {
+          "notes": [
+            "observed_alpha=0.50386",
+            "alpha_status=alpha_fractional_branch",
+            "derivative_at_point=5.095e+03",
+            "h_used=1.000e-08"
+          ],
+          "status": "well_conditioned"
+        },
+        "protocol": "ok",
+        "provenance": {
+          "backend": "python",
+          "device": "cpu",
+          "expression_path": "scalar_alpha_jet_local_probe",
+          "inputs": [
+            "task023_C_scalar",
+            "task023_C_slow_algebraic_drift",
+            0.0,
+            [
+              0.01,
+              0.001,
+              0.0001,
+              1e-05,
+              1e-06,
+              1e-07,
+              1e-08
+            ],
+            1e-06
+          ],
+          "measurement_resolution": null,
+          "operation_id": "scalar_alpha_jet_bundle",
+          "parents": [
+            "26145e2679688c3d"
+          ],
+          "precision": "raw_python",
+          "status": "complete",
+          "trace_id": "63edd61c4dfbdcd2"
+        },
+        "refusal": null,
+        "space": "ScalarAlphaJetBundleObservation",
+        "status": "scalar_jet_fractional_alpha_branch",
+        "validity": {
+          "advanceable": true,
+          "defined": true,
+          "finite": true,
+          "observable": true,
+          "selectable": true
+        },
+        "value": {
+          "alpha_probe_trace_id": "26145e2679688c3d",
+          "alpha_status": "alpha_fractional_branch",
+          "declared_alpha_band": null,
+          "declared_alpha_models": [],
+          "derivative_at_point": 5095.092320869365,
+          "derivative_h": 1e-08,
+          "derivative_transfer_trace_id": "d5672e46059c14dd",
+          "eta": 1e-06,
+          "expression_path": "scalar_alpha_jet_local_probe",
+          "f_value": 0.0,
+          "function_label": "task023_C_slow_algebraic_drift",
+          "h_values": [
+            0.01,
+            0.001,
+            0.0001,
+            1e-05,
+            1e-06,
+            1e-07,
+            1e-08
+          ],
+          "matching_alpha_model_names": [],
+          "observed_alpha": 0.5038604145993733,
+          "observed_slope": -0.4961395854006267,
+          "point": 0.0,
+          "probe_id": "task023_C_scalar",
+          "selected_alpha_model": null,
+          "slope_trace_id": "cf71504556c07fcf",
+          "transfer_trace_ids": [
+            "d5a985a7a2fbe13e",
+            "ae344681cb5793b5",
+            "ea0a4f3880451b0c",
+            "e1ce32902f629b19",
+            "efb2507a298fc786",
+            "3679e3dae3629ce9",
+            "d5672e46059c14dd"
+          ]
+        }
+      },
+      "validity": {
+        "advanceable": true,
+        "defined": true,
+        "finite": true,
+        "observable": true,
+        "selectable": true
+      }
+    },
+    "scalar_meaningful": true,
+    "sibling_alpha_probe_trace_ids_distinct": true,
+    "singular": {
+      "alpha_probe_trace_id": "4738124ac87f8c7b",
+      "alpha_status": "alpha_fractional_branch",
+      "conditioning_notes": [
+        "observed_alpha=0.50386",
+        "alpha_status=alpha_fractional_branch"
+      ],
+      "conditioning_status": "well_conditioned",
+      "observed_alpha": 0.5038604145993733,
+      "observed_slope": -0.4961395854006267,
+      "provenance_trace_id": "c5cb594a3bcfdb8a",
+      "slope_trace_id": "68644cf5df8e0e03",
+      "status": "singular_jet_fractional_alpha_branch",
+      "transfer_trace_ids": [
+        "379bf010f2dd37bf",
+        "853bac77148db31d",
+        "3a8aaaf8413d9274",
+        "19b58e48794c6153",
+        "f60989dfe73d8458",
+        "29eec58abfe923e9",
+        "7aa93cd2b2a5c879"
+      ],
+      "typed_result": {
+        "conditioning": {
+          "notes": [
+            "observed_alpha=0.50386",
+            "alpha_status=alpha_fractional_branch"
+          ],
+          "status": "well_conditioned"
+        },
+        "protocol": "ok",
+        "provenance": {
+          "backend": "python",
+          "device": "cpu",
+          "expression_path": "singular_alpha_jet_singular_probe",
+          "inputs": [
+            "task023_C_singular",
+            "task023_C_slow_algebraic_drift",
+            0.0,
+            [
+              0.01,
+              0.001,
+              0.0001,
+              1e-05,
+              1e-06,
+              1e-07,
+              1e-08
+            ],
+            1e-06
+          ],
+          "measurement_resolution": null,
+          "operation_id": "singular_alpha_jet_bundle",
+          "parents": [
+            "4738124ac87f8c7b"
+          ],
+          "precision": "raw_python",
+          "status": "complete",
+          "trace_id": "c5cb594a3bcfdb8a"
+        },
+        "refusal": null,
+        "space": "SingularAlphaJetBundleObservation",
+        "status": "singular_jet_fractional_alpha_branch",
+        "validity": {
+          "advanceable": true,
+          "defined": true,
+          "finite": true,
+          "observable": true,
+          "selectable": true
+        },
+        "value": {
+          "alpha_probe_trace_id": "4738124ac87f8c7b",
+          "alpha_status": "alpha_fractional_branch",
+          "declared_alpha_band": null,
+          "declared_alpha_models": [],
+          "eta": 1e-06,
+          "expression_path": "singular_alpha_jet_singular_probe",
+          "function_label": "task023_C_slow_algebraic_drift",
+          "h_values": [
+            0.01,
+            0.001,
+            0.0001,
+            1e-05,
+            1e-06,
+            1e-07,
+            1e-08
+          ],
+          "matching_alpha_model_names": [],
+          "observed_alpha": 0.5038604145993733,
+          "observed_slope": -0.4961395854006267,
+          "point": 0.0,
+          "probe_id": "task023_C_singular",
+          "selected_alpha_model": null,
+          "slope_trace_id": "68644cf5df8e0e03",
+          "transfer_trace_ids": [
+            "379bf010f2dd37bf",
+            "853bac77148db31d",
+            "3a8aaaf8413d9274",
+            "19b58e48794c6153",
+            "f60989dfe73d8458",
+            "29eec58abfe923e9",
+            "7aa93cd2b2a5c879"
+          ]
+        }
+      },
+      "validity": {
+        "advanceable": true,
+        "defined": true,
+        "finite": true,
+        "observable": true,
+        "selectable": true
+      }
+    },
+    "singular_meaningful": true,
+    "theoretical": "leading alpha = 0.5 with finite-window drift from a subleading x**0.1 term.",
+    "x0": 0.0
+  },
+  {
+    "comparison": "informative disagreement: scalar emitted scalar_jet_domain_refused; singular emitted singular_jet_negative_alpha_singularity",
+    "function_source": "f(x) = -log(x)",
+    "h_grid": [
+      0.01,
+      0.001,
+      0.0001,
+      1e-05,
+      1e-06,
+      1e-07,
+      1e-08,
+      1e-09
+    ],
+    "label": "D",
+    "name": "logarithmic divergence",
+    "purpose": "Probe how AlphaProbe handles alpha approximately zero.",
+    "scalar": {
+      "alpha_probe_trace_id": null,
+      "alpha_status": null,
+      "conditioning_notes": [
+        "alpha_status=pre_probe_refusal",
+        "reason=f(x0) raised ValueError"
+      ],
+      "conditioning_status": "warning",
+      "observed_alpha": null,
+      "observed_slope": null,
+      "provenance_trace_id": "10edfe028adca353",
+      "slope_trace_id": null,
+      "status": "scalar_jet_domain_refused",
+      "transfer_trace_ids": [],
+      "typed_result": {
+        "conditioning": {
+          "notes": [
+            "alpha_status=pre_probe_refusal",
+            "reason=f(x0) raised ValueError"
+          ],
+          "status": "warning"
+        },
+        "protocol": "ok",
+        "provenance": {
+          "backend": "python",
+          "device": "cpu",
+          "expression_path": "scalar_alpha_jet_local_probe",
+          "inputs": [
+            "task023_D_scalar",
+            "task023_D_logarithmic_divergence",
+            0.0,
+            [
+              0.01,
+              0.001,
+              0.0001,
+              1e-05,
+              1e-06,
+              1e-07,
+              1e-08,
+              1e-09
+            ],
+            1e-06
+          ],
+          "measurement_resolution": null,
+          "operation_id": "scalar_alpha_jet_bundle",
+          "parents": [],
+          "precision": "raw_python",
+          "status": "complete",
+          "trace_id": "10edfe028adca353"
+        },
+        "refusal": null,
+        "space": "ScalarAlphaJetBundleObservation",
+        "status": "scalar_jet_domain_refused",
+        "validity": {
+          "advanceable": false,
+          "defined": false,
+          "finite": false,
+          "observable": true,
+          "selectable": false
+        },
+        "value": {
+          "alpha_probe_trace_id": null,
+          "alpha_status": null,
+          "declared_alpha_band": null,
+          "declared_alpha_models": [],
+          "derivative_at_point": null,
+          "derivative_h": null,
+          "derivative_transfer_trace_id": null,
+          "eta": 1e-06,
+          "expression_path": "scalar_alpha_jet_local_probe",
+          "f_value": null,
+          "function_label": "task023_D_logarithmic_divergence",
+          "h_values": [
+            0.01,
+            0.001,
+            0.0001,
+            1e-05,
+            1e-06,
+            1e-07,
+            1e-08,
+            1e-09
+          ],
+          "matching_alpha_model_names": [],
+          "observed_alpha": null,
+          "observed_slope": null,
+          "point": 0.0,
+          "probe_id": "task023_D_scalar",
+          "selected_alpha_model": null,
+          "slope_trace_id": null,
+          "transfer_trace_ids": []
+        }
+      },
+      "validity": {
+        "advanceable": false,
+        "defined": false,
+        "finite": false,
+        "observable": true,
+        "selectable": false
+      }
+    },
+    "scalar_meaningful": false,
+    "sibling_alpha_probe_trace_ids_distinct": null,
+    "singular": {
+      "alpha_probe_trace_id": "39c29b887c13438f",
+      "alpha_status": "alpha_negative_singularity",
+      "conditioning_notes": [
+        "observed_alpha=-5.96965e-11",
+        "alpha_status=alpha_negative_singularity"
+      ],
+      "conditioning_status": "well_conditioned",
+      "observed_alpha": -5.969646998948974e-11,
+      "observed_slope": -1.0000000000596965,
+      "provenance_trace_id": "bd6b8a9ce38b5c2b",
+      "slope_trace_id": "47642f39545853ff",
+      "status": "singular_jet_negative_alpha_singularity",
+      "transfer_trace_ids": [
+        "5c4e565072bd0619",
+        "749d0030c0d48324",
+        "df8cae5f5b2754c8",
+        "7359a6250f077958",
+        "8bc8faec55e496b9",
+        "a248de4cf44395e9",
+        "be463d504492ffcc",
+        "0183cd7a7450384e"
+      ],
+      "typed_result": {
+        "conditioning": {
+          "notes": [
+            "observed_alpha=-5.96965e-11",
+            "alpha_status=alpha_negative_singularity"
+          ],
+          "status": "well_conditioned"
+        },
+        "protocol": "ok",
+        "provenance": {
+          "backend": "python",
+          "device": "cpu",
+          "expression_path": "singular_alpha_jet_singular_probe",
+          "inputs": [
+            "task023_D_singular",
+            "task023_D_logarithmic_divergence",
+            0.0,
+            [
+              0.01,
+              0.001,
+              0.0001,
+              1e-05,
+              1e-06,
+              1e-07,
+              1e-08,
+              1e-09
+            ],
+            1e-06
+          ],
+          "measurement_resolution": null,
+          "operation_id": "singular_alpha_jet_bundle",
+          "parents": [
+            "39c29b887c13438f"
+          ],
+          "precision": "raw_python",
+          "status": "complete",
+          "trace_id": "bd6b8a9ce38b5c2b"
+        },
+        "refusal": null,
+        "space": "SingularAlphaJetBundleObservation",
+        "status": "singular_jet_negative_alpha_singularity",
+        "validity": {
+          "advanceable": false,
+          "defined": true,
+          "finite": true,
+          "observable": true,
+          "selectable": true
+        },
+        "value": {
+          "alpha_probe_trace_id": "39c29b887c13438f",
+          "alpha_status": "alpha_negative_singularity",
+          "declared_alpha_band": null,
+          "declared_alpha_models": [],
+          "eta": 1e-06,
+          "expression_path": "singular_alpha_jet_singular_probe",
+          "function_label": "task023_D_logarithmic_divergence",
+          "h_values": [
+            0.01,
+            0.001,
+            0.0001,
+            1e-05,
+            1e-06,
+            1e-07,
+            1e-08,
+            1e-09
+          ],
+          "matching_alpha_model_names": [],
+          "observed_alpha": -5.969646998948974e-11,
+          "observed_slope": -1.0000000000596965,
+          "point": 0.0,
+          "probe_id": "task023_D_singular",
+          "selected_alpha_model": null,
+          "slope_trace_id": "47642f39545853ff",
+          "transfer_trace_ids": [
+            "5c4e565072bd0619",
+            "749d0030c0d48324",
+            "df8cae5f5b2754c8",
+            "7359a6250f077958",
+            "8bc8faec55e496b9",
+            "a248de4cf44395e9",
+            "be463d504492ffcc",
+            "0183cd7a7450384e"
+          ]
+        }
+      },
+      "validity": {
+        "advanceable": false,
+        "defined": true,
+        "finite": true,
+        "observable": true,
+        "selectable": true
+      }
+    },
+    "singular_meaningful": true,
+    "theoretical": "asymptotic slope = -1 and observed alpha = 0; scalar should refuse at x0.",
+    "x0": 0.0
+  },
+  {
+    "comparison": "informative disagreement: scalar emitted scalar_jet_domain_refused; singular emitted singular_jet_fractional_alpha_branch",
+    "function_source": "f(x) = log(-log(x)) for 0 < x < 1",
+    "h_grid": [
+      0.01,
+      0.001,
+      0.0001,
+      1e-05,
+      1e-06,
+      1e-07,
+      1e-08,
+      1e-09,
+      1e-10,
+      1e-11
+    ],
+    "label": "E",
+    "name": "iterated logarithmic divergence",
+    "purpose": "Canonical non-algebraic drift case.",
+    "scalar": {
+      "alpha_probe_trace_id": null,
+      "alpha_status": null,
+      "conditioning_notes": [
+        "alpha_status=pre_probe_refusal",
+        "reason=f(x0) raised ValueError"
+      ],
+      "conditioning_status": "warning",
+      "observed_alpha": null,
+      "observed_slope": null,
+      "provenance_trace_id": "426b033135bdae45",
+      "slope_trace_id": null,
+      "status": "scalar_jet_domain_refused",
+      "transfer_trace_ids": [],
+      "typed_result": {
+        "conditioning": {
+          "notes": [
+            "alpha_status=pre_probe_refusal",
+            "reason=f(x0) raised ValueError"
+          ],
+          "status": "warning"
+        },
+        "protocol": "ok",
+        "provenance": {
+          "backend": "python",
+          "device": "cpu",
+          "expression_path": "scalar_alpha_jet_local_probe",
+          "inputs": [
+            "task023_E_scalar",
+            "task023_E_iterated_logarithmic_divergence",
+            0.0,
+            [
+              0.01,
+              0.001,
+              0.0001,
+              1e-05,
+              1e-06,
+              1e-07,
+              1e-08,
+              1e-09,
+              1e-10,
+              1e-11
+            ],
+            1e-06
+          ],
+          "measurement_resolution": null,
+          "operation_id": "scalar_alpha_jet_bundle",
+          "parents": [],
+          "precision": "raw_python",
+          "status": "complete",
+          "trace_id": "426b033135bdae45"
+        },
+        "refusal": null,
+        "space": "ScalarAlphaJetBundleObservation",
+        "status": "scalar_jet_domain_refused",
+        "validity": {
+          "advanceable": false,
+          "defined": false,
+          "finite": false,
+          "observable": true,
+          "selectable": false
+        },
+        "value": {
+          "alpha_probe_trace_id": null,
+          "alpha_status": null,
+          "declared_alpha_band": null,
+          "declared_alpha_models": [],
+          "derivative_at_point": null,
+          "derivative_h": null,
+          "derivative_transfer_trace_id": null,
+          "eta": 1e-06,
+          "expression_path": "scalar_alpha_jet_local_probe",
+          "f_value": null,
+          "function_label": "task023_E_iterated_logarithmic_divergence",
+          "h_values": [
+            0.01,
+            0.001,
+            0.0001,
+            1e-05,
+            1e-06,
+            1e-07,
+            1e-08,
+            1e-09,
+            1e-10,
+            1e-11
+          ],
+          "matching_alpha_model_names": [],
+          "observed_alpha": null,
+          "observed_slope": null,
+          "point": 0.0,
+          "probe_id": "task023_E_scalar",
+          "selected_alpha_model": null,
+          "slope_trace_id": null,
+          "transfer_trace_ids": []
+        }
+      },
+      "validity": {
+        "advanceable": false,
+        "defined": false,
+        "finite": false,
+        "observable": true,
+        "selectable": false
+      }
+    },
+    "scalar_meaningful": false,
+    "sibling_alpha_probe_trace_ids_distinct": null,
+    "singular": {
+      "alpha_probe_trace_id": "df713633b722a67c",
+      "alpha_status": "alpha_fractional_branch",
+      "conditioning_notes": [
+        "observed_alpha=0.0773554",
+        "alpha_status=alpha_fractional_branch"
+      ],
+      "conditioning_status": "well_conditioned",
+      "observed_alpha": 0.07735536576079116,
+      "observed_slope": -0.9226446342392088,
+      "provenance_trace_id": "64e65231c021752b",
+      "slope_trace_id": "1dd9063e4ae2c684",
+      "status": "singular_jet_fractional_alpha_branch",
+      "transfer_trace_ids": [
+        "e204210aaf67658d",
+        "7fbc5f40c8e87f5e",
+        "c713539ea27bb585",
+        "12447df6fbd19038",
+        "b0fc10f18f421615",
+        "557415d97fb68dff",
+        "699ae2b1902e0367",
+        "d2d2733da004d715",
+        "fe18da3c3f612552",
+        "be1c34eeef47bb37"
+      ],
+      "typed_result": {
+        "conditioning": {
+          "notes": [
+            "observed_alpha=0.0773554",
+            "alpha_status=alpha_fractional_branch"
+          ],
+          "status": "well_conditioned"
+        },
+        "protocol": "ok",
+        "provenance": {
+          "backend": "python",
+          "device": "cpu",
+          "expression_path": "singular_alpha_jet_singular_probe",
+          "inputs": [
+            "task023_E_singular",
+            "task023_E_iterated_logarithmic_divergence",
+            0.0,
+            [
+              0.01,
+              0.001,
+              0.0001,
+              1e-05,
+              1e-06,
+              1e-07,
+              1e-08,
+              1e-09,
+              1e-10,
+              1e-11
+            ],
+            1e-06
+          ],
+          "measurement_resolution": null,
+          "operation_id": "singular_alpha_jet_bundle",
+          "parents": [
+            "df713633b722a67c"
+          ],
+          "precision": "raw_python",
+          "status": "complete",
+          "trace_id": "64e65231c021752b"
+        },
+        "refusal": null,
+        "space": "SingularAlphaJetBundleObservation",
+        "status": "singular_jet_fractional_alpha_branch",
+        "validity": {
+          "advanceable": true,
+          "defined": true,
+          "finite": true,
+          "observable": true,
+          "selectable": true
+        },
+        "value": {
+          "alpha_probe_trace_id": "df713633b722a67c",
+          "alpha_status": "alpha_fractional_branch",
+          "declared_alpha_band": null,
+          "declared_alpha_models": [],
+          "eta": 1e-06,
+          "expression_path": "singular_alpha_jet_singular_probe",
+          "function_label": "task023_E_iterated_logarithmic_divergence",
+          "h_values": [
+            0.01,
+            0.001,
+            0.0001,
+            1e-05,
+            1e-06,
+            1e-07,
+            1e-08,
+            1e-09,
+            1e-10,
+            1e-11
+          ],
+          "matching_alpha_model_names": [],
+          "observed_alpha": 0.07735536576079116,
+          "observed_slope": -0.9226446342392088,
+          "point": 0.0,
+          "probe_id": "task023_E_singular",
+          "selected_alpha_model": null,
+          "slope_trace_id": "1dd9063e4ae2c684",
+          "transfer_trace_ids": [
+            "e204210aaf67658d",
+            "7fbc5f40c8e87f5e",
+            "c713539ea27bb585",
+            "12447df6fbd19038",
+            "b0fc10f18f421615",
+            "557415d97fb68dff",
+            "699ae2b1902e0367",
+            "d2d2733da004d715",
+            "fe18da3c3f612552",
+            "be1c34eeef47bb37"
+          ]
+        }
+      },
+      "validity": {
+        "advanceable": true,
+        "defined": true,
+        "finite": true,
+        "observable": true,
+        "selectable": true
+      }
+    },
+    "singular_meaningful": true,
+    "theoretical": "finite-window alpha drifts slowly from about 0.22 toward 0 as h shrinks.",
+    "x0": 0.0
+  },
+  {
+    "comparison": "alpha-status agreement on alpha_insufficient_data; trace ids distinct",
+    "function_source": "f(x) = exp(-1 / (x*x)); f(0) = 0",
+    "h_grid": [
+      0.001,
+      0.01,
+      0.1,
+      0.5
+    ],
+    "label": "F",
+    "name": "essential singularity stress test",
+    "purpose": "Stress cancellation and indeterminate strata on a non-power-law smooth flat function.",
+    "scalar": {
+      "alpha_probe_trace_id": "10a7f838486ed825",
+      "alpha_status": "alpha_insufficient_data",
+      "conditioning_notes": [
+        "alpha_status=alpha_insufficient_data",
+        "reason=alpha_status=alpha_insufficient_data"
+      ],
+      "conditioning_status": "warning",
+      "observed_alpha": null,
+      "observed_slope": null,
+      "provenance_trace_id": "1ea0d17e6c223529",
+      "slope_trace_id": "9a075efe2bd0c9de",
+      "status": "scalar_jet_alpha_indeterminate",
+      "transfer_trace_ids": [
+        "709cb4a3e77e8b09",
+        "85a3c707a436eeae",
+        "484de0ae8f56c4dd",
+        "1b7d279d3b8acb74"
+      ],
+      "typed_result": {
+        "conditioning": {
+          "notes": [
+            "alpha_status=alpha_insufficient_data",
+            "reason=alpha_status=alpha_insufficient_data"
+          ],
+          "status": "warning"
+        },
+        "protocol": "ok",
+        "provenance": {
+          "backend": "python",
+          "device": "cpu",
+          "expression_path": "scalar_alpha_jet_local_probe",
+          "inputs": [
+            "task023_F_scalar",
+            "task023_F_essential_singularity_stress_test",
+            0.0,
+            [
+              0.001,
+              0.01,
+              0.1,
+              0.5
+            ],
+            1e-06
+          ],
+          "measurement_resolution": null,
+          "operation_id": "scalar_alpha_jet_bundle",
+          "parents": [
+            "10a7f838486ed825"
+          ],
+          "precision": "raw_python",
+          "status": "complete",
+          "trace_id": "1ea0d17e6c223529"
+        },
+        "refusal": null,
+        "space": "ScalarAlphaJetBundleObservation",
+        "status": "scalar_jet_alpha_indeterminate",
+        "validity": {
+          "advanceable": false,
+          "defined": false,
+          "finite": false,
+          "observable": true,
+          "selectable": false
+        },
+        "value": {
+          "alpha_probe_trace_id": "10a7f838486ed825",
+          "alpha_status": "alpha_insufficient_data",
+          "declared_alpha_band": null,
+          "declared_alpha_models": [],
+          "derivative_at_point": 0.0,
+          "derivative_h": 0.001,
+          "derivative_transfer_trace_id": "709cb4a3e77e8b09",
+          "eta": 1e-06,
+          "expression_path": "scalar_alpha_jet_local_probe",
+          "f_value": 0.0,
+          "function_label": "task023_F_essential_singularity_stress_test",
+          "h_values": [
+            0.001,
+            0.01,
+            0.1,
+            0.5
+          ],
+          "matching_alpha_model_names": [],
+          "observed_alpha": null,
+          "observed_slope": null,
+          "point": 0.0,
+          "probe_id": "task023_F_scalar",
+          "selected_alpha_model": null,
+          "slope_trace_id": "9a075efe2bd0c9de",
+          "transfer_trace_ids": [
+            "709cb4a3e77e8b09",
+            "85a3c707a436eeae",
+            "484de0ae8f56c4dd",
+            "1b7d279d3b8acb74"
+          ]
+        }
+      },
+      "validity": {
+        "advanceable": false,
+        "defined": false,
+        "finite": false,
+        "observable": true,
+        "selectable": false
+      }
+    },
+    "scalar_meaningful": true,
+    "sibling_alpha_probe_trace_ids_distinct": true,
+    "singular": {
+      "alpha_probe_trace_id": "dba271e5e1d7511b",
+      "alpha_status": "alpha_insufficient_data",
+      "conditioning_notes": [
+        "alpha_status=alpha_insufficient_data",
+        "status=singular_jet_alpha_indeterminate"
+      ],
+      "conditioning_status": "warning",
+      "observed_alpha": null,
+      "observed_slope": null,
+      "provenance_trace_id": "960338aeca5b4f8d",
+      "slope_trace_id": "4a4a739ab4f71326",
+      "status": "singular_jet_alpha_indeterminate",
+      "transfer_trace_ids": [
+        "8b741a60334d2dea",
+        "964d40ab9713e273",
+        "0c6426915da1befb",
+        "2ed94d33968aa839"
+      ],
+      "typed_result": {
+        "conditioning": {
+          "notes": [
+            "alpha_status=alpha_insufficient_data",
+            "status=singular_jet_alpha_indeterminate"
+          ],
+          "status": "warning"
+        },
+        "protocol": "ok",
+        "provenance": {
+          "backend": "python",
+          "device": "cpu",
+          "expression_path": "singular_alpha_jet_singular_probe",
+          "inputs": [
+            "task023_F_singular",
+            "task023_F_essential_singularity_stress_test",
+            0.0,
+            [
+              0.001,
+              0.01,
+              0.1,
+              0.5
+            ],
+            1e-06
+          ],
+          "measurement_resolution": null,
+          "operation_id": "singular_alpha_jet_bundle",
+          "parents": [
+            "dba271e5e1d7511b"
+          ],
+          "precision": "raw_python",
+          "status": "complete",
+          "trace_id": "960338aeca5b4f8d"
+        },
+        "refusal": null,
+        "space": "SingularAlphaJetBundleObservation",
+        "status": "singular_jet_alpha_indeterminate",
+        "validity": {
+          "advanceable": false,
+          "defined": false,
+          "finite": false,
+          "observable": true,
+          "selectable": false
+        },
+        "value": {
+          "alpha_probe_trace_id": "dba271e5e1d7511b",
+          "alpha_status": "alpha_insufficient_data",
+          "declared_alpha_band": null,
+          "declared_alpha_models": [],
+          "eta": 1e-06,
+          "expression_path": "singular_alpha_jet_singular_probe",
+          "function_label": "task023_F_essential_singularity_stress_test",
+          "h_values": [
+            0.001,
+            0.01,
+            0.1,
+            0.5
+          ],
+          "matching_alpha_model_names": [],
+          "observed_alpha": null,
+          "observed_slope": null,
+          "point": 0.0,
+          "probe_id": "task023_F_singular",
+          "selected_alpha_model": null,
+          "slope_trace_id": "4a4a739ab4f71326",
+          "transfer_trace_ids": [
+            "8b741a60334d2dea",
+            "964d40ab9713e273",
+            "0c6426915da1befb",
+            "2ed94d33968aa839"
+          ]
+        }
+      },
+      "validity": {
+        "advanceable": false,
+        "defined": false,
+        "finite": false,
+        "observable": true,
+        "selectable": false
+      }
+    },
+    "singular_meaningful": true,
+    "theoretical": "flat at x0 with no power-law alpha; honest output should refuse or mark indeterminate/cancellation-dominated.",
+    "x0": 0.0
+  }
+]

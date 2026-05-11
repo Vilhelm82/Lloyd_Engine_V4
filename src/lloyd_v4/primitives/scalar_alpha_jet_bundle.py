@@ -11,7 +11,7 @@ from lloyd_v4.core.provenance import Provenance
 from lloyd_v4.core.result import TypedResult
 from lloyd_v4.core.status import AlphaProbeStatus, ConditioningStatus, ProtocolStatus, ScalarAlphaJetBundleStatus, TransferStatus
 from lloyd_v4.core.validity import Validity
-from lloyd_v4.primitives.directional_alpha_probe import DeclaredAlphaModel, directional_alpha_probe
+from lloyd_v4.primitives.directional_alpha_probe import AlphaProbeObservation, DeclaredAlphaModel, directional_alpha_probe
 from lloyd_v4.primitives.typed_finite_difference import typed_finite_difference
 
 
@@ -50,6 +50,7 @@ class ScalarAlphaJetBundleObservation:
     function_label: str
     h_values: tuple[float, ...]
     eta: float
+    alpha_probe_observation: AlphaProbeObservation | None
     alpha_probe_trace_id: str | None
     transfer_trace_ids: tuple[str, ...]
     slope_trace_id: str | None
@@ -75,6 +76,7 @@ class ScalarAlphaJetBundleObservation:
             "function_label": self.function_label,
             "h_values": list(self.h_values),
             "eta": self.eta,
+            "alpha_probe_observation": to_json_safe(self.alpha_probe_observation),
             "alpha_probe_trace_id": self.alpha_probe_trace_id,
             "transfer_trace_ids": list(self.transfer_trace_ids),
             "slope_trace_id": self.slope_trace_id,
@@ -279,6 +281,7 @@ def scalar_alpha_jet_bundle(
         device,
         measurement_resolution,
         f"alpha_status={alpha_probe_result.status.value}",
+        alpha_probe_observation=alpha_probe_result.value,
     )
 
 
@@ -317,7 +320,7 @@ def _validate_inputs(
         or not math.isfinite(declared_alpha_band)
         or declared_alpha_band <= 0
     ):
-        raise ProtocolViolationError("declared_alpha_band must be finite and positive")
+        raise ValueError("declared_alpha_band must be finite and positive")
     names: set[str] = set()
     for model in declared_alpha_models:
         if not isinstance(model, DeclaredAlphaModel):
@@ -347,6 +350,10 @@ def _status_from_alpha_status(status: AlphaProbeStatus) -> ScalarAlphaJetBundleS
         return ScalarAlphaJetBundleStatus.SCALAR_JET_ALPHA_CANCELLATION_DOMINATED
     if status in {AlphaProbeStatus.ALPHA_INSUFFICIENT_DATA, AlphaProbeStatus.ALPHA_INDETERMINATE}:
         return ScalarAlphaJetBundleStatus.SCALAR_JET_ALPHA_INDETERMINATE
+    if status is AlphaProbeStatus.ALPHA_ZERO_BOUNDARY:
+        return ScalarAlphaJetBundleStatus.SCALAR_JET_ALPHA_ZERO_BOUNDARY
+    if status is AlphaProbeStatus.ALPHA_UNSTABLE_WINDOW:
+        return ScalarAlphaJetBundleStatus.SCALAR_JET_ALPHA_UNSTABLE_WINDOW
     if status is AlphaProbeStatus.ALPHA_DOMAIN_REFUSED:
         return ScalarAlphaJetBundleStatus.SCALAR_JET_DOMAIN_REFUSED
     if status is AlphaProbeStatus.ALPHA_NONFINITE:
@@ -381,6 +388,7 @@ def _result(
     device: str,
     measurement_resolution: Any | None,
     reason: str,
+    alpha_probe_observation: AlphaProbeObservation | None = None,
 ) -> ScalarAlphaJetBundleResult:
     value = ScalarAlphaJetBundleObservation(
         point=point,
@@ -389,6 +397,7 @@ def _result(
         function_label=function_label,
         h_values=h_values,
         eta=eta,
+        alpha_probe_observation=alpha_probe_observation,
         alpha_probe_trace_id=alpha_probe_trace_id,
         transfer_trace_ids=transfer_trace_ids,
         slope_trace_id=slope_trace_id,
@@ -433,7 +442,11 @@ def _validity_for_status(status: ScalarAlphaJetBundleStatus) -> Validity:
         return Validity(defined=True, finite=True, selectable=True, advanceable=True, observable=True)
     if status is ScalarAlphaJetBundleStatus.SCALAR_JET_NEGATIVE_ALPHA_SINGULARITY:
         return Validity(defined=True, finite=True, selectable=True, advanceable=False, observable=True)
-    if status is ScalarAlphaJetBundleStatus.SCALAR_JET_ALPHA_MODEL_REFUSED:
+    if status in {
+        ScalarAlphaJetBundleStatus.SCALAR_JET_ALPHA_MODEL_REFUSED,
+        ScalarAlphaJetBundleStatus.SCALAR_JET_ALPHA_ZERO_BOUNDARY,
+        ScalarAlphaJetBundleStatus.SCALAR_JET_ALPHA_UNSTABLE_WINDOW,
+    }:
         return Validity(defined=True, finite=True, selectable=False, advanceable=False, observable=True)
     if status is ScalarAlphaJetBundleStatus.SCALAR_JET_NONFINITE:
         return Validity(defined=True, finite=False, selectable=False, advanceable=False, observable=True)
@@ -451,7 +464,11 @@ def _conditioning_for_status(status: ScalarAlphaJetBundleStatus, value: ScalarAl
                 f"h_used={_format_optional(value.derivative_h, '.3e')}",
             ),
         )
-    if status is ScalarAlphaJetBundleStatus.SCALAR_JET_ALPHA_MODEL_REFUSED:
+    if status in {
+        ScalarAlphaJetBundleStatus.SCALAR_JET_ALPHA_MODEL_REFUSED,
+        ScalarAlphaJetBundleStatus.SCALAR_JET_ALPHA_ZERO_BOUNDARY,
+        ScalarAlphaJetBundleStatus.SCALAR_JET_ALPHA_UNSTABLE_WINDOW,
+    }:
         return Conditioning(
             status=ConditioningStatus.WARNING,
             notes=(

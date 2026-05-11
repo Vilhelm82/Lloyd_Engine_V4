@@ -118,6 +118,8 @@ class AlphaProbeStatus(StrEnum):
     ALPHA_DOMAIN_REFUSED = "alpha_domain_refused"
     ALPHA_NONFINITE = "alpha_nonfinite"
     ALPHA_INDETERMINATE = "alpha_indeterminate"
+    ALPHA_ZERO_BOUNDARY = "alpha_zero_boundary"
+    ALPHA_UNSTABLE_WINDOW = "alpha_unstable_window"
 
 
 class ScalarAlphaJetBundleStatus(StrEnum):
@@ -127,6 +129,8 @@ class ScalarAlphaJetBundleStatus(StrEnum):
     SCALAR_JET_ALPHA_MODEL_REFUSED = "scalar_jet_alpha_model_refused"
     SCALAR_JET_ALPHA_CANCELLATION_DOMINATED = "scalar_jet_alpha_cancellation_dominated"
     SCALAR_JET_ALPHA_INDETERMINATE = "scalar_jet_alpha_indeterminate"
+    SCALAR_JET_ALPHA_ZERO_BOUNDARY = "scalar_jet_alpha_zero_boundary"
+    SCALAR_JET_ALPHA_UNSTABLE_WINDOW = "scalar_jet_alpha_unstable_window"
     SCALAR_JET_DOMAIN_REFUSED = "scalar_jet_domain_refused"
     SCALAR_JET_NONFINITE = "scalar_jet_nonfinite"
     SCALAR_JET_PROTOCOL_REFUSED = "scalar_jet_protocol_refused"
@@ -139,6 +143,8 @@ class SingularAlphaJetBundleStatus(StrEnum):
     SINGULAR_JET_ALPHA_MODEL_REFUSED = "singular_jet_alpha_model_refused"
     SINGULAR_JET_ALPHA_CANCELLATION_DOMINATED = "singular_jet_alpha_cancellation_dominated"
     SINGULAR_JET_ALPHA_INDETERMINATE = "singular_jet_alpha_indeterminate"
+    SINGULAR_JET_ALPHA_ZERO_BOUNDARY = "singular_jet_alpha_zero_boundary"
+    SINGULAR_JET_ALPHA_UNSTABLE_WINDOW = "singular_jet_alpha_unstable_window"
     SINGULAR_JET_DOMAIN_REFUSED = "singular_jet_domain_refused"
     SINGULAR_JET_NONFINITE = "singular_jet_nonfinite"
     SINGULAR_JET_PROTOCOL_REFUSED = "singular_jet_protocol_refused"

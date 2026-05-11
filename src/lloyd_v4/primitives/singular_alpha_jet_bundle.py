@@ -11,7 +11,7 @@ from lloyd_v4.core.provenance import Provenance
 from lloyd_v4.core.result import TypedResult
 from lloyd_v4.core.status import AlphaProbeStatus, ConditioningStatus, ProtocolStatus, SingularAlphaJetBundleStatus
 from lloyd_v4.core.validity import Validity
-from lloyd_v4.primitives.directional_alpha_probe import DeclaredAlphaModel, directional_alpha_probe
+from lloyd_v4.primitives.directional_alpha_probe import AlphaProbeObservation, DeclaredAlphaModel, directional_alpha_probe
 
 
 SINGULAR_ALPHA_JET_BUNDLE_SPACE = "SingularAlphaJetBundleObservation"
@@ -48,6 +48,7 @@ class SingularAlphaJetBundleObservation:
     function_label: str
     h_values: tuple[float, ...]
     eta: float
+    alpha_probe_observation: AlphaProbeObservation | None
     alpha_probe_trace_id: str | None
     transfer_trace_ids: tuple[str, ...]
     slope_trace_id: str | None
@@ -69,6 +70,7 @@ class SingularAlphaJetBundleObservation:
             "function_label": self.function_label,
             "h_values": list(self.h_values),
             "eta": self.eta,
+            "alpha_probe_observation": to_json_safe(self.alpha_probe_observation),
             "alpha_probe_trace_id": self.alpha_probe_trace_id,
             "transfer_trace_ids": list(self.transfer_trace_ids),
             "slope_trace_id": self.slope_trace_id,
@@ -132,6 +134,7 @@ def singular_alpha_jet_bundle(
         function_label=function_label,
         h_values=h_tuple,
         eta=eta,
+        alpha_probe_observation=alpha_probe_result.value,
         alpha_probe_trace_id=alpha_probe_result.provenance.trace_id,
         transfer_trace_ids=alpha_value.transfer_trace_ids,
         slope_trace_id=alpha_value.slope_trace_id,
@@ -199,7 +202,7 @@ def _validate_inputs(
         or not math.isfinite(declared_alpha_band)
         or declared_alpha_band <= 0
     ):
-        raise ProtocolViolationError("declared_alpha_band must be finite and positive")
+        raise ValueError("declared_alpha_band must be finite and positive")
     names: set[str] = set()
     for model in declared_alpha_models:
         if not isinstance(model, DeclaredAlphaModel):
@@ -225,6 +228,10 @@ def _status_from_alpha_status(status: AlphaProbeStatus) -> SingularAlphaJetBundl
         return SingularAlphaJetBundleStatus.SINGULAR_JET_ALPHA_CANCELLATION_DOMINATED
     if status in {AlphaProbeStatus.ALPHA_INSUFFICIENT_DATA, AlphaProbeStatus.ALPHA_INDETERMINATE}:
         return SingularAlphaJetBundleStatus.SINGULAR_JET_ALPHA_INDETERMINATE
+    if status is AlphaProbeStatus.ALPHA_ZERO_BOUNDARY:
+        return SingularAlphaJetBundleStatus.SINGULAR_JET_ALPHA_ZERO_BOUNDARY
+    if status is AlphaProbeStatus.ALPHA_UNSTABLE_WINDOW:
+        return SingularAlphaJetBundleStatus.SINGULAR_JET_ALPHA_UNSTABLE_WINDOW
     if status is AlphaProbeStatus.ALPHA_DOMAIN_REFUSED:
         return SingularAlphaJetBundleStatus.SINGULAR_JET_DOMAIN_REFUSED
     if status is AlphaProbeStatus.ALPHA_NONFINITE:
@@ -240,7 +247,11 @@ def _validity_for_status(status: SingularAlphaJetBundleStatus) -> Validity:
         return Validity(defined=True, finite=True, selectable=True, advanceable=True, observable=True)
     if status is SingularAlphaJetBundleStatus.SINGULAR_JET_NEGATIVE_ALPHA_SINGULARITY:
         return Validity(defined=True, finite=True, selectable=True, advanceable=False, observable=True)
-    if status is SingularAlphaJetBundleStatus.SINGULAR_JET_ALPHA_MODEL_REFUSED:
+    if status in {
+        SingularAlphaJetBundleStatus.SINGULAR_JET_ALPHA_MODEL_REFUSED,
+        SingularAlphaJetBundleStatus.SINGULAR_JET_ALPHA_ZERO_BOUNDARY,
+        SingularAlphaJetBundleStatus.SINGULAR_JET_ALPHA_UNSTABLE_WINDOW,
+    }:
         return Validity(defined=True, finite=True, selectable=False, advanceable=False, observable=True)
     if status is SingularAlphaJetBundleStatus.SINGULAR_JET_NONFINITE:
         return Validity(defined=True, finite=False, selectable=False, advanceable=False, observable=True)
@@ -257,7 +268,11 @@ def _conditioning_for_status(status: SingularAlphaJetBundleStatus, value: Singul
                 f"alpha_status={alpha_status}",
             ),
         )
-    if status is SingularAlphaJetBundleStatus.SINGULAR_JET_ALPHA_MODEL_REFUSED:
+    if status in {
+        SingularAlphaJetBundleStatus.SINGULAR_JET_ALPHA_MODEL_REFUSED,
+        SingularAlphaJetBundleStatus.SINGULAR_JET_ALPHA_ZERO_BOUNDARY,
+        SingularAlphaJetBundleStatus.SINGULAR_JET_ALPHA_UNSTABLE_WINDOW,
+    }:
         return Conditioning(
             status=ConditioningStatus.WARNING,
             notes=(

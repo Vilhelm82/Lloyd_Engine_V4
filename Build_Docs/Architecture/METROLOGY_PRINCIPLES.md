@@ -88,6 +88,53 @@ and a stability check such as `D log K_q(f)`. Until accepted by protocol, the pr
 
 Window length, step size, sweep resolution, and sampling path can create observable bias. These are metrology properties and must be represented in provenance or status rather than hidden in implementation.
 
+## AlphaProbe Boundary And Window Reliability
+
+Directional AlphaProbe classifies an observed alpha as a zero-boundary
+case when:
+
+```text
+abs(observed_alpha) <= max(K_BOUNDARY * standard_error, ALPHA_NUMERIC_FLOOR)
+```
+
+`K_BOUNDARY = 2.0` is the standard-error multiplier for the slope fit,
+and `ALPHA_NUMERIC_FLOOR = 1e-9` is the precision-tied absolute floor
+for alpha-near-zero observations. The boundary check is in alpha-space:
+alpha near zero corresponds to log-log transfer slope near `-1`.
+
+Nested-window reliability uses sequential-from-top windows. The full
+h-grid is fit first; then the largest h-value is dropped and the fit is
+recomputed until fewer than three h-points remain. At least three
+windows of at least three points each are required. Shorter grids record
+`alpha_stability_status = not_tested`.
+
+For tested windows, AlphaProbe records:
+
+```text
+alpha_window_span = alpha_window_max - alpha_window_min
+propagated_window_error = sqrt(sigma_min^2 + sigma_max^2)
+```
+
+Here `sigma_min` and `sigma_max` are the alpha standard errors of the
+windows producing `alpha_window_min` and `alpha_window_max`. This is the
+paired slope-difference propagation used in the transfer-paper
+Section 5 reliability comparison.
+
+The unstable-window rule fires only when both materiality and
+significance hold:
+
+```text
+alpha_window_span > materiality_threshold
+alpha_window_span > K_DRIFT * propagated_window_error
+```
+
+`K_DRIFT = 2.0`. The materiality threshold is the caller's
+`declared_alpha_band` when provided; otherwise it is
+`DEFAULT_ALPHA_MATERIALITY = 0.05`. Task 023b calibrated the default
+against the actual sequential-from-top evidence: Fixture C stayed stable
+with span about `1.5e-3`, while the iterated-log fixture on the
+`1e-1..1e-7` grid became unstable with span about `5.95e-2`.
+
 ## Direct Transfer Versus Proxy Observable
 
 Direct transfer evidence and proxy evidence are different statuses. A consumer requiring direct transfer must reject uncalibrated proxy results or mark them uncertain.
