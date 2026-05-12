@@ -1,0 +1,4 @@
+fixture,refined_F5_count,refined_F5_set,scale_removed,decimal_artifacts,sqrt_roundtrip_is_substrate_observation
+schwarzschild,3,P_compound_split P_distrib_sqrt_mul P_sign_c,P_scaled_2 P_scaled_half,P_scaled_2,True
+sr,7,P_compound_split P_compound_zero P_distrib_mul P_distrib_sqrt_mul P_scaled_half P_sign_a P_sign_c,,P_scaled_2,True
+pure_algebraic,3,P_compound_split P_factor_b P_sign_c,P_scaled_2 P_scaled_half,P_scaled_2,False

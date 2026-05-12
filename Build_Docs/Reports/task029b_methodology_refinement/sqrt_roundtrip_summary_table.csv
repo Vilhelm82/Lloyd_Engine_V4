@@ -1,0 +1,10 @@
+fixture,precision,n_cells_with_nonzero_residual,max_abs_residual,firing_cells_align_with_top_abs_residual
+schwarzschild,float32,0,0.0,True
+schwarzschild,float64,1,1.3877787807814457e-17,True
+schwarzschild,decimal_50,0,0.0,True
+sr,float32,0,0.0,True
+sr,float64,1,5.551115123125783e-17,True
+sr,decimal_50,1,1e-50,True
+pure_algebraic,float32,0,0.0,True
+pure_algebraic,float64,0,0.0,True
+pure_algebraic,decimal_50,0,0.0,True

@@ -1,0 +1,82 @@
+{
+  "campaign": "task029b_scale_invariant_vs_original",
+  "cut_threshold": 0.1,
+  "fixtures": [
+    "schwarzschild",
+    "sr",
+    "pure_algebraic"
+  ],
+  "per_fixture": {
+    "pure_algebraic": {
+      "added_F5_candidates": [],
+      "original_f1_f4_self_consistent": true,
+      "original_rank": 8,
+      "removed_F5_candidates": [
+        "P_scaled_2",
+        "P_scaled_half"
+      ],
+      "retained_F5_candidates": [
+        "P_compound_split",
+        "P_factor_b",
+        "P_sign_c"
+      ],
+      "scale_invariant_F5_candidates": [
+        "P_compound_split",
+        "P_factor_b",
+        "P_sign_c"
+      ],
+      "scale_invariant_f1_f4_self_consistent": true,
+      "scale_invariant_rank": 6
+    },
+    "schwarzschild": {
+      "added_F5_candidates": [],
+      "original_f1_f4_self_consistent": true,
+      "original_rank": 8,
+      "removed_F5_candidates": [
+        "P_scaled_2",
+        "P_scaled_half"
+      ],
+      "retained_F5_candidates": [
+        "P_compound_split",
+        "P_distrib_sqrt_mul",
+        "P_sign_c"
+      ],
+      "scale_invariant_F5_candidates": [
+        "P_compound_split",
+        "P_distrib_sqrt_mul",
+        "P_sign_c"
+      ],
+      "scale_invariant_f1_f4_self_consistent": true,
+      "scale_invariant_rank": 6
+    },
+    "sr": {
+      "added_F5_candidates": [],
+      "original_f1_f4_self_consistent": true,
+      "original_rank": 9,
+      "removed_F5_candidates": [],
+      "retained_F5_candidates": [
+        "P_compound_split",
+        "P_compound_zero",
+        "P_distrib_mul",
+        "P_distrib_sqrt_mul",
+        "P_scaled_2",
+        "P_scaled_half",
+        "P_sign_a",
+        "P_sign_c"
+      ],
+      "scale_invariant_F5_candidates": [
+        "P_compound_split",
+        "P_compound_zero",
+        "P_distrib_mul",
+        "P_distrib_sqrt_mul",
+        "P_scaled_2",
+        "P_scaled_half",
+        "P_sign_a",
+        "P_sign_c"
+      ],
+      "scale_invariant_f1_f4_self_consistent": true,
+      "scale_invariant_rank": 7
+    }
+  },
+  "scale_invariant_methodology_compromised": false
+}

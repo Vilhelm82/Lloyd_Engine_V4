@@ -1,0 +1,162 @@
+{
+  "campaign": "task029b_sqrt_roundtrip_residual",
+  "fixtures": {
+    "pure_algebraic": {
+      "by_precision": {
+        "decimal_50": {
+          "max_abs_residual": 0.0,
+          "n_cells_with_nonzero_residual": 0
+        },
+        "float32": {
+          "max_abs_residual": 0.0,
+          "n_cells_with_nonzero_residual": 0
+        },
+        "float64": {
+          "max_abs_residual": 0.0,
+          "n_cells_with_nonzero_residual": 0
+        }
+      },
+      "firing_cells_align_with_top_abs_residual": true,
+      "fixture": "pure_algebraic",
+      "p_distrib_sqrt_mul_firing_cells_float64": [],
+      "top_abs_residual_cells_float64": [
+        {
+          "abs_residual": 0.0,
+          "cell_index": 136,
+          "operand": 0.99,
+          "residual": 0.0
+        },
+        {
+          "abs_residual": 0.0,
+          "cell_index": 135,
+          "operand": 0.9827941176470588,
+          "residual": 0.0
+        },
+        {
+          "abs_residual": 0.0,
+          "cell_index": 134,
+          "operand": 0.9755882352941176,
+          "residual": 0.0
+        },
+        {
+          "abs_residual": 0.0,
+          "cell_index": 133,
+          "operand": 0.9683823529411765,
+          "residual": 0.0
+        },
+        {
+          "abs_residual": 0.0,
+          "cell_index": 132,
+          "operand": 0.9611764705882353,
+          "residual": 0.0
+        }
+      ]
+    },
+    "schwarzschild": {
+      "by_precision": {
+        "decimal_50": {
+          "max_abs_residual": 0.0,
+          "n_cells_with_nonzero_residual": 0
+        },
+        "float32": {
+          "max_abs_residual": 0.0,
+          "n_cells_with_nonzero_residual": 0
+        },
+        "float64": {
+          "max_abs_residual": 1.3877787807814457e-17,
+          "n_cells_with_nonzero_residual": 1
+        }
+      },
+      "firing_cells_align_with_top_abs_residual": true,
+      "fixture": "schwarzschild",
+      "p_distrib_sqrt_mul_firing_cells_float64": [
+        71
+      ],
+      "top_abs_residual_cells_float64": [
+        {
+          "abs_residual": 1.3877787807814457e-17,
+          "cell_index": 71,
+          "operand": 2.163793103448276,
+          "residual": -1.3877787807814457e-17
+        },
+        {
+          "abs_residual": 0.0,
+          "cell_index": 136,
+          "operand": 10.0,
+          "residual": 0.0
+        },
+        {
+          "abs_residual": 0.0,
+          "cell_index": 135,
+          "operand": 9.758620689655173,
+          "residual": 0.0
+        },
+        {
+          "abs_residual": 0.0,
+          "cell_index": 134,
+          "operand": 9.517241379310345,
+          "residual": 0.0
+        },
+        {
+          "abs_residual": 0.0,
+          "cell_index": 133,
+          "operand": 9.275862068965518,
+          "residual": 0.0
+        }
+      ]
+    },
+    "sr": {
+      "by_precision": {
+        "decimal_50": {
+          "max_abs_residual": 1e-50,
+          "n_cells_with_nonzero_residual": 1
+        },
+        "float32": {
+          "max_abs_residual": 0.0,
+          "n_cells_with_nonzero_residual": 0
+        },
+        "float64": {
+          "max_abs_residual": 5.551115123125783e-17,
+          "n_cells_with_nonzero_residual": 1
+        }
+      },
+      "firing_cells_align_with_top_abs_residual": true,
+      "fixture": "sr",
+      "p_distrib_sqrt_mul_firing_cells_float64": [
+        114
+      ],
+      "top_abs_residual_cells_float64": [
+        {
+          "abs_residual": 5.551115123125783e-17,
+          "cell_index": 114,
+          "operand": 0.8397691176470589,
+          "residual": -5.551115123125783e-17
+        },
+        {
+          "abs_residual": 0.0,
+          "cell_index": 136,
+          "operand": 0.9999,
+          "residual": 0.0
+        },
+        {
+          "abs_residual": 0.0,
+          "cell_index": 135,
+          "operand": 0.9926213235294118,
+          "residual": 0.0
+        },
+        {
+          "abs_residual": 0.0,
+          "cell_index": 134,
+          "operand": 0.9853426470588236,
+          "residual": 0.0
+        },
+        {
+          "abs_residual": 0.0,
+          "cell_index": 133,
+          "operand": 0.9780639705882354,
+          "residual": 0.0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "campaign": "task029b_refined_f5_report",
+  "cross_fixture_universal_refined_F5": [
+    "P_compound_split",
+    "P_sign_c"
+  ],
+  "cut_threshold": 0.1,
+  "decimal_audit_causes": {
+    "pure_algebraic": "decimal_multiplication_rounding",
+    "schwarzschild": "decimal_multiplication_rounding",
+    "sr": "decimal_multiplication_rounding"
+  },
+  "methodology_resolution": "mixed_resolution",
+  "minimum_defensible_F5_set": [
+    "P_compound_split",
+    "P_sign_c"
+  ],
+  "per_fixture": {
+    "pure_algebraic": {
+      "decimal_artifact_candidates": [
+        "P_scaled_2"
+      ],
+      "original_F5_candidates": [
+        "P_compound_split",
+        "P_factor_b",
+        "P_sign_c",
+        "P_scaled_2",
+        "P_scaled_half"
+      ],
+      "refined_F5_set": [
+        "P_compound_split",
+        "P_factor_b",
+        "P_sign_c"
+      ],
+      "scale_added_F5_candidates": [],
+      "scale_removed_F5_candidates": [
+        "P_scaled_2",
+        "P_scaled_half"
+      ],
+      "scale_retained_F5_candidates": [
+        "P_compound_split",
+        "P_factor_b",
+        "P_sign_c"
+      ],
+      "sqrt_roundtrip_firing_alignment": true,
+      "sqrt_roundtrip_is_substrate_observation": false
+    },
+    "schwarzschild": {
+      "decimal_artifact_candidates": [
+        "P_scaled_2"
+      ],
+      "original_F5_candidates": [
+        "P_compound_split",
+        "P_distrib_sqrt_mul",
+        "P_sign_c",
+        "P_scaled_2",
+        "P_scaled_half"
+      ],
+      "refined_F5_set": [
+        "P_compound_split",
+        "P_distrib_sqrt_mul",
+        "P_sign_c"
+      ],
+      "scale_added_F5_candidates": [],
+      "scale_removed_F5_candidates": [
+        "P_scaled_2",
+        "P_scaled_half"
+      ],
+      "scale_retained_F5_candidates": [
+        "P_compound_split",
+        "P_distrib_sqrt_mul",
+        "P_sign_c"
+      ],
+      "sqrt_roundtrip_firing_alignment": true,
+      "sqrt_roundtrip_is_substrate_observation": true
+    },
+    "sr": {
+      "decimal_artifact_candidates": [
+        "P_scaled_2"
+      ],
+      "original_F5_candidates": [
+        "P_compound_split",
+        "P_compound_zero",
+        "P_distrib_mul",
+        "P_distrib_sqrt_mul",
+        "P_scaled_2",
+        "P_scaled_half",
+        "P_sign_a",
+        "P_sign_c"
+      ],
+      "refined_F5_set": [
+        "P_compound_split",
+        "P_compound_zero",
+        "P_distrib_mul",
+        "P_distrib_sqrt_mul",
+        "P_scaled_half",
+        "P_sign_a",
+        "P_sign_c"
+      ],
+      "scale_added_F5_candidates": [],
+      "scale_removed_F5_candidates": [],
+      "scale_retained_F5_candidates": [
+        "P_compound_split",
+        "P_compound_zero",
+        "P_distrib_mul",
+        "P_distrib_sqrt_mul",
+        "P_scaled_2",
+        "P_scaled_half",
+        "P_sign_a",
+        "P_sign_c"
+      ],
+      "sqrt_roundtrip_firing_alignment": true,
+      "sqrt_roundtrip_is_substrate_observation": true
+    }
+  },
+  "scale_invariant_methodology_compromised": false
+}
