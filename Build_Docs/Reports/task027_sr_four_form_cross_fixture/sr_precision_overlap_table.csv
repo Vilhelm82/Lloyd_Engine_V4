@@ -1,0 +1,13 @@
+grid,pair,both_precision_cofire,same_relation_count,invariance_fraction,status
+reference,F1_F2,9,9,1.000000,reference_grid_confirmed
+reference,F1_F4,0,0,null,underpowered_grid
+reference,F2_F4,4,4,1.000000,grid_stability_rejected
+coarse_perturbation,F1_F2,13,13,1.000000,grid_stable_supported
+coarse_perturbation,F1_F4,1,1,1.000000,underpowered_grid
+coarse_perturbation,F2_F4,2,2,1.000000,grid_stability_rejected
+fine_perturbation,F1_F2,11,11,1.000000,grid_stable_supported
+fine_perturbation,F1_F4,2,2,1.000000,underpowered_grid
+fine_perturbation,F2_F4,3,3,1.000000,grid_stable_supported
+independent_uniform,F1_F2,9,9,1.000000,grid_stable_supported
+independent_uniform,F1_F4,0,0,null,underpowered_grid
+independent_uniform,F2_F4,2,2,1.000000,grid_stable_supported

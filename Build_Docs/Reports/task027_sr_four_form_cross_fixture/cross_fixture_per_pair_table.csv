@@ -1,0 +1,4 @@
+pair,schwarzschild_aggregate,sr_aggregate,same_aggregate
+F1_F2,grid_stable_polarity_coupling,grid_stable_polarity_coupling,True
+F1_F4,depolarized_invariant,open_underpowered,False
+F2_F4,open_underpowered,reference_grid_only,False
