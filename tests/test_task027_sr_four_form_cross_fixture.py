@@ -106,7 +106,7 @@ def test_cross_fixture_comparison_schema() -> None:
 
 def test_sterbenz_boundary_table_schema() -> None:
     rows = comparison.compare_fixtures()["sterbenz_boundary_comparison"]
-    assert len(rows) == 2
+    assert len(rows) >= 2
     for row in rows:
         assert {
             "f2_count_above_boundary",

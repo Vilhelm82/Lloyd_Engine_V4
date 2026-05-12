@@ -1,0 +1,414 @@
+{
+  "campaign": "task028_three_fixture_comparison",
+  "fixtures": [
+    "schwarzschild",
+    "sr",
+    "pure_algebraic"
+  ],
+  "headline_finding": "chain_property_supported",
+  "headline_reasons": [
+    "all requested substrate-level invariants agree across available fixtures"
+  ],
+  "lattice_grain_comparison": [
+    {
+      "form": "F1",
+      "precision": "float64",
+      "pure_algebraic_classification": "lattice_integer",
+      "pure_algebraic_distinct_levels": 2,
+      "pure_algebraic_integer_residual_max": 0.0,
+      "pure_algebraic_nonzero": 70,
+      "schwarzschild_classification": "lattice_integer",
+      "schwarzschild_distinct_levels": 2,
+      "schwarzschild_integer_residual_max": 0.0,
+      "schwarzschild_nonzero": 69,
+      "sr_classification": "lattice_integer",
+      "sr_distinct_levels": 3,
+      "sr_integer_residual_max": 0.0,
+      "sr_nonzero": 34
+    },
+    {
+      "form": "F2",
+      "precision": "float64",
+      "pure_algebraic_classification": "non_integer_lattice",
+      "pure_algebraic_distinct_levels": 8,
+      "pure_algebraic_integer_residual_max": 0.25,
+      "pure_algebraic_nonzero": 64,
+      "schwarzschild_classification": "non_integer_lattice",
+      "schwarzschild_distinct_levels": 5,
+      "schwarzschild_integer_residual_max": 0.5,
+      "schwarzschild_nonzero": 28,
+      "sr_classification": "non_integer_lattice",
+      "sr_distinct_levels": 5,
+      "sr_integer_residual_max": 0.5,
+      "sr_nonzero": 95
+    },
+    {
+      "form": "F3",
+      "precision": "float64",
+      "pure_algebraic_classification": "lattice_empty",
+      "pure_algebraic_distinct_levels": 0,
+      "pure_algebraic_integer_residual_max": 0.0,
+      "pure_algebraic_nonzero": 0,
+      "schwarzschild_classification": "lattice_empty",
+      "schwarzschild_distinct_levels": 0,
+      "schwarzschild_integer_residual_max": 0.0,
+      "schwarzschild_nonzero": 0,
+      "sr_classification": "lattice_empty",
+      "sr_distinct_levels": 0,
+      "sr_integer_residual_max": 0.0,
+      "sr_nonzero": 0
+    },
+    {
+      "form": "F4",
+      "precision": "float64",
+      "pure_algebraic_classification": "lattice_integer",
+      "pure_algebraic_distinct_levels": 11,
+      "pure_algebraic_integer_residual_max": 0.0,
+      "pure_algebraic_nonzero": 40,
+      "schwarzschild_classification": "lattice_integer",
+      "schwarzschild_distinct_levels": 35,
+      "schwarzschild_integer_residual_max": 0.0,
+      "schwarzschild_nonzero": 92,
+      "sr_classification": "lattice_integer",
+      "sr_distinct_levels": 10,
+      "sr_integer_residual_max": 0.0,
+      "sr_nonzero": 27
+    }
+  ],
+  "per_grid_per_precision_comparison": [
+    {
+      "grid": "coarse_perturbation",
+      "pair": "F1_F2",
+      "precision": "float32",
+      "pure_algebraic_cofire": 37,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 15,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 32,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "coarse_perturbation",
+      "pair": "F1_F4",
+      "precision": "float32",
+      "pure_algebraic_cofire": 21,
+      "pure_algebraic_same_fraction": 0.7619047619047619,
+      "schwarzschild_cofire": 29,
+      "schwarzschild_same_fraction": 0.5862068965517241,
+      "sr_cofire": 8,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "coarse_perturbation",
+      "pair": "F2_F4",
+      "precision": "float32",
+      "pure_algebraic_cofire": 17,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 4,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 17,
+      "sr_same_fraction": 0.8823529411764706
+    },
+    {
+      "grid": "coarse_perturbation",
+      "pair": "F1_F2",
+      "precision": "float64",
+      "pure_algebraic_cofire": 38,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 17,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 24,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "coarse_perturbation",
+      "pair": "F1_F4",
+      "precision": "float64",
+      "pure_algebraic_cofire": 15,
+      "pure_algebraic_same_fraction": 0.7333333333333333,
+      "schwarzschild_cofire": 34,
+      "schwarzschild_same_fraction": 0.5588235294117647,
+      "sr_cofire": 7,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "coarse_perturbation",
+      "pair": "F2_F4",
+      "precision": "float64",
+      "pure_algebraic_cofire": 8,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 3,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 21,
+      "sr_same_fraction": 0.9047619047619048
+    },
+    {
+      "grid": "fine_perturbation",
+      "pair": "F1_F2",
+      "precision": "float32",
+      "pure_algebraic_cofire": 41,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 12,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 33,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "fine_perturbation",
+      "pair": "F1_F4",
+      "precision": "float32",
+      "pure_algebraic_cofire": 22,
+      "pure_algebraic_same_fraction": 0.7272727272727273,
+      "schwarzschild_cofire": 45,
+      "schwarzschild_same_fraction": 0.4888888888888889,
+      "sr_cofire": 8,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "fine_perturbation",
+      "pair": "F2_F4",
+      "precision": "float32",
+      "pure_algebraic_cofire": 15,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 7,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 23,
+      "sr_same_fraction": 0.9130434782608695
+    },
+    {
+      "grid": "fine_perturbation",
+      "pair": "F1_F2",
+      "precision": "float64",
+      "pure_algebraic_cofire": 42,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 19,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 27,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "fine_perturbation",
+      "pair": "F1_F4",
+      "precision": "float64",
+      "pure_algebraic_cofire": 15,
+      "pure_algebraic_same_fraction": 0.7333333333333333,
+      "schwarzschild_cofire": 38,
+      "schwarzschild_same_fraction": 0.6578947368421053,
+      "sr_cofire": 11,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "fine_perturbation",
+      "pair": "F2_F4",
+      "precision": "float64",
+      "pure_algebraic_cofire": 15,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 8,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 26,
+      "sr_same_fraction": 0.9615384615384616
+    },
+    {
+      "grid": "independent_uniform",
+      "pair": "F1_F2",
+      "precision": "float32",
+      "pure_algebraic_cofire": 39,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 51,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 22,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "independent_uniform",
+      "pair": "F1_F4",
+      "precision": "float32",
+      "pure_algebraic_cofire": 21,
+      "pure_algebraic_same_fraction": 0.9047619047619048,
+      "schwarzschild_cofire": 12,
+      "schwarzschild_same_fraction": 0.75,
+      "sr_cofire": 6,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "independent_uniform",
+      "pair": "F2_F4",
+      "precision": "float32",
+      "pure_algebraic_cofire": 12,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 13,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 19,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "independent_uniform",
+      "pair": "F1_F2",
+      "precision": "float64",
+      "pure_algebraic_cofire": 37,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 57,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 24,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "independent_uniform",
+      "pair": "F1_F4",
+      "precision": "float64",
+      "pure_algebraic_cofire": 20,
+      "pure_algebraic_same_fraction": 0.85,
+      "schwarzschild_cofire": 12,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 4,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "independent_uniform",
+      "pair": "F2_F4",
+      "precision": "float64",
+      "pure_algebraic_cofire": 13,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 19,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 17,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "reference",
+      "pair": "F1_F2",
+      "precision": "float32",
+      "pure_algebraic_cofire": 37,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 15,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 28,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "reference",
+      "pair": "F1_F4",
+      "precision": "float32",
+      "pure_algebraic_cofire": 17,
+      "pure_algebraic_same_fraction": 0.8823529411764706,
+      "schwarzschild_cofire": 32,
+      "schwarzschild_same_fraction": 0.5625,
+      "sr_cofire": 5,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "reference",
+      "pair": "F2_F4",
+      "precision": "float32",
+      "pure_algebraic_cofire": 14,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 2,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 23,
+      "sr_same_fraction": 0.9565217391304348
+    },
+    {
+      "grid": "reference",
+      "pair": "F1_F2",
+      "precision": "float64",
+      "pure_algebraic_cofire": 39,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 16,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 34,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "reference",
+      "pair": "F1_F4",
+      "precision": "float64",
+      "pure_algebraic_cofire": 25,
+      "pure_algebraic_same_fraction": 0.72,
+      "schwarzschild_cofire": 48,
+      "schwarzschild_same_fraction": 0.4791666666666667,
+      "sr_cofire": 4,
+      "sr_same_fraction": 1.0
+    },
+    {
+      "grid": "reference",
+      "pair": "F2_F4",
+      "precision": "float64",
+      "pure_algebraic_cofire": 17,
+      "pure_algebraic_same_fraction": 1.0,
+      "schwarzschild_cofire": 4,
+      "schwarzschild_same_fraction": 1.0,
+      "sr_cofire": 13,
+      "sr_same_fraction": 0.9230769230769231
+    }
+  ],
+  "per_pair_aggregate_comparison": [
+    {
+      "all_same_aggregate": true,
+      "pair": "F1_F2",
+      "pure_algebraic_aggregate": "grid_stable_polarity_coupling",
+      "same_aggregate": true,
+      "schwarzschild_aggregate": "grid_stable_polarity_coupling",
+      "sr_aggregate": "grid_stable_polarity_coupling"
+    },
+    {
+      "all_same_aggregate": false,
+      "pair": "F1_F4",
+      "pure_algebraic_aggregate": "open_underpowered",
+      "same_aggregate": false,
+      "schwarzschild_aggregate": "depolarized_invariant",
+      "sr_aggregate": "open_underpowered"
+    },
+    {
+      "all_same_aggregate": false,
+      "pair": "F2_F4",
+      "pure_algebraic_aggregate": "open_underpowered",
+      "same_aggregate": false,
+      "schwarzschild_aggregate": "open_underpowered",
+      "sr_aggregate": "reference_grid_only"
+    }
+  ],
+  "sterbenz_boundary_comparison": [
+    {
+      "above_density": 0.88,
+      "below_density": 0.05357142857142857,
+      "boundary": 4.0,
+      "coordinate": "r",
+      "f2_count_above_boundary": 22,
+      "f2_count_below_boundary": 6,
+      "fixture": "schwarzschild",
+      "n_above_boundary": 25,
+      "n_below_boundary": 112,
+      "observed_direction": "above_boundary_higher",
+      "predicted_direction": "above_boundary_higher",
+      "supports_prediction": true
+    },
+    {
+      "above_density": 0.21951219512195122,
+      "below_density": 0.8958333333333334,
+      "boundary": 0.7071067811865476,
+      "coordinate": "beta",
+      "f2_count_above_boundary": 9,
+      "f2_count_below_boundary": 86,
+      "fixture": "sr",
+      "n_above_boundary": 41,
+      "n_below_boundary": 96,
+      "observed_direction": "below_boundary_higher",
+      "predicted_direction": "below_boundary_higher",
+      "supports_prediction": true
+    },
+    {
+      "above_density": 0.1323529411764706,
+      "below_density": 0.7971014492753623,
+      "boundary": 0.5,
+      "coordinate": "x",
+      "f2_count_above_boundary": 9,
+      "f2_count_below_boundary": 55,
+      "fixture": "pure_algebraic",
+      "n_above_boundary": 68,
+      "n_below_boundary": 69,
+      "observed_direction": "below_boundary_higher",
+      "predicted_direction": "below_boundary_higher",
+      "supports_prediction": true
+    }
+  ]
+}

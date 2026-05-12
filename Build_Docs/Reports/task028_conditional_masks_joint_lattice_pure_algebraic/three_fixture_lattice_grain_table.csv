@@ -1,0 +1,5 @@
+form,precision,schwarzschild_classification,schwarzschild_nonzero,schwarzschild_distinct_levels,schwarzschild_integer_residual_max,sr_classification,sr_nonzero,sr_distinct_levels,sr_integer_residual_max,pure_algebraic_classification,pure_algebraic_nonzero,pure_algebraic_distinct_levels,pure_algebraic_integer_residual_max
+F1,float64,lattice_integer,69,2,0.0,lattice_integer,34,3,0.0,lattice_integer,70,2,0.0
+F2,float64,non_integer_lattice,28,5,0.5,non_integer_lattice,95,5,0.5,non_integer_lattice,64,8,0.25
+F3,float64,lattice_empty,0,0,0.0,lattice_empty,0,0,0.0,lattice_empty,0,0,0.0
+F4,float64,lattice_integer,92,35,0.0,lattice_integer,27,10,0.0,lattice_integer,40,11,0.0

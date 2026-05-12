@@ -1,0 +1,2523 @@
+{
+  "campaign": "task028_joint_signed_lattice_analysis",
+  "entries": [
+    {
+      "conditional_summaries": {
+        "F1F2_polarity_given_F4_level_band": {
+          "F4_abs_1_to_4": {
+            "aligned": 1,
+            "opposed": 0,
+            "single_or_silent": 22
+          },
+          "F4_abs_4_5_to_16": {
+            "aligned": 0,
+            "opposed": 0,
+            "single_or_silent": 18
+          },
+          "F4_abs_gt_16": {
+            "aligned": 0,
+            "opposed": 0,
+            "single_or_silent": 39
+          },
+          "F4_zero": {
+            "aligned": 14,
+            "opposed": 0,
+            "single_or_silent": 43
+          }
+        },
+        "F2_level_given_F1_minus1": {
+          "-1": 5,
+          "-2": 1,
+          "0": 18
+        },
+        "F2_level_given_F1_plus1": {
+          "+1": 4,
+          "+2": 5,
+          "0": 26
+        }
+      },
+      "fixture": "schwarzschild",
+      "joint_states": [
+        {
+          "count": 21,
+          "example_indices": [
+            27,
+            30,
+            32,
+            37,
+            52
+          ],
+          "fraction": 0.15328467153284672,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=0,S4=0"
+        },
+        {
+          "count": 8,
+          "example_indices": [
+            42,
+            49,
+            67,
+            73,
+            84
+          ],
+          "fraction": 0.058394160583941604,
+          "state_key": "L1=+1,L2=0,L4=0,S1=+,S2=0,S4=0"
+        },
+        {
+          "count": 5,
+          "example_indices": [
+            112,
+            122,
+            125,
+            132,
+            136
+          ],
+          "fraction": 0.0364963503649635,
+          "state_key": "L1=-1,L2=-1,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 5,
+          "example_indices": [
+            57,
+            70,
+            85,
+            98,
+            111
+          ],
+          "fraction": 0.0364963503649635,
+          "state_key": "L1=-1,L2=0,L4=0,S1=-,S2=0,S4=0"
+        },
+        {
+          "count": 5,
+          "example_indices": [
+            60,
+            66,
+            68,
+            72,
+            75
+          ],
+          "fraction": 0.0364963503649635,
+          "state_key": "L1=0,L2=0,L4=+4,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            116,
+            119,
+            124,
+            135
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=+1,L2=+1,L4=0,S1=+,S2=+,S4=0"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            96,
+            99,
+            101,
+            109
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=+1,L2=+2,L4=0,S1=+,S2=+,S4=0"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            118,
+            123,
+            127,
+            130
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=0,L2=-0.5,L4=0,S1=0,S2=-,S4=0"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            82,
+            83,
+            92,
+            93
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=0,L2=0,L4=+2,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            38,
+            48,
+            63,
+            69
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=0,L2=0,L4=+8,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            87,
+            89,
+            90,
+            95
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=0,L2=0,L4=-2,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            39,
+            45,
+            58
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=0,L2=0,L4=-16,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            104,
+            105
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=+1,L2=0,L4=+2,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            62,
+            64
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=-1,L2=0,L4=+16,S1=-,S2=0,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            40,
+            51
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=-1,L2=0,L4=+24,S1=-,S2=0,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            59,
+            77
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=-1,L2=0,L4=+4,S1=-,S2=0,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            117,
+            133
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=+0.5,L4=0,S1=0,S2=+,S4=0"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            31,
+            54
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=+16,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            18,
+            29
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=-112,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            28,
+            50
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=-24,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            26,
+            47
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=-32,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            33,
+            36
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=-48,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            24,
+            35
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=-8,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            129,
+            131
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=+,S4=0"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            97
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=+2,L4=+2,S1=+,S2=+,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            1
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=+1136,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            65
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=+16,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            9
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=+176,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            56
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=+20,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            44
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=+32,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            11
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=+336,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            78
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=+4,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            41
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=+40,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            8
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=+416,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            74
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=+8,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            22
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=+80,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            12
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=-32,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            71
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=-4,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            20
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=-56,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            34
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=-8,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            10
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=-96,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            108
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=-2,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            13
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=0,L4=+104,S1=-,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            23
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=0,L4=+48,S1=-,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            19
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=0,L4=+88,S1=-,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            25
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=0,L4=-128,S1=-,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            79
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=0,L4=-4,S1=-,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            17
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=0,L4=-56,S1=-,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            46
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=0,L4=-8,S1=-,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            120
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=-0.5,L4=-1,S1=0,S2=-,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            4
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+176,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            43
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+32,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            21
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+40,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            5
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+48,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            3
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+560,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            2
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+832,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            0
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-1024,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            55
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-12,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            14
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-128,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            53
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-20,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            7
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-240,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            61
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-4,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            16
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-40,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            15
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-64,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            6
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-96,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            134
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=-,S4=0"
+        }
+      ],
+      "marginals": {
+        "by_F1_level": {
+          "+1": 35,
+          "-1": 24,
+          "0": 78
+        },
+        "by_F2_level": {
+          "+0.5": 2,
+          "+1": 4,
+          "+2": 5,
+          "-0.5": 5,
+          "-1": 5,
+          "-2": 1,
+          "0": 115
+        },
+        "by_F4_level": {
+          "+104": 1,
+          "+1136": 1,
+          "+16": 5,
+          "+176": 2,
+          "+2": 7,
+          "+20": 1,
+          "+24": 2,
+          "+32": 2,
+          "+336": 1,
+          "+4": 8,
+          "+40": 2,
+          "+416": 1,
+          "+48": 2,
+          "+560": 1,
+          "+8": 5,
+          "+80": 1,
+          "+832": 1,
+          "+88": 1,
+          "-1": 1,
+          "-1024": 1,
+          "-112": 2,
+          "-12": 1,
+          "-128": 2,
+          "-16": 3,
+          "-2": 4,
+          "-20": 1,
+          "-24": 2,
+          "-240": 1,
+          "-32": 3,
+          "-4": 3,
+          "-40": 1,
+          "-48": 2,
+          "-56": 2,
+          "-64": 1,
+          "-8": 4,
+          "-96": 2,
+          "0": 57
+        },
+        "by_polarity_state": {
+          "F1F2_aligned_F4_aligned": 1,
+          "F1F2_aligned_F4_silent": 14,
+          "F1_only": 13,
+          "F2_only": 9,
+          "F4_only": 47,
+          "all_silent": 21,
+          "mixed_partial": 32
+        }
+      },
+      "n_cells": 137,
+      "precision": "float32"
+    },
+    {
+      "conditional_summaries": {
+        "F1F2_polarity_given_F4_level_band": {
+          "F4_abs_1_to_4": {
+            "aligned": 1,
+            "opposed": 0,
+            "single_or_silent": 28
+          },
+          "F4_abs_4_5_to_16": {
+            "aligned": 0,
+            "opposed": 0,
+            "single_or_silent": 27
+          },
+          "F4_abs_gt_16": {
+            "aligned": 0,
+            "opposed": 0,
+            "single_or_silent": 36
+          },
+          "F4_zero": {
+            "aligned": 15,
+            "opposed": 0,
+            "single_or_silent": 30
+          }
+        },
+        "F2_level_given_F1_minus1": {
+          "-0.5": 2,
+          "-1": 2,
+          "-1.5": 1,
+          "-2": 4,
+          "0": 26
+        },
+        "F2_level_given_F1_plus1": {
+          "+0.5": 3,
+          "+1": 2,
+          "+2": 2,
+          "0": 27
+        }
+      },
+      "fixture": "schwarzschild",
+      "joint_states": [
+        {
+          "count": 15,
+          "example_indices": [
+            22,
+            75,
+            87,
+            90,
+            91
+          ],
+          "fraction": 0.10948905109489052,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=0,S4=0"
+        },
+        {
+          "count": 7,
+          "example_indices": [
+            15,
+            18,
+            20,
+            46,
+            58
+          ],
+          "fraction": 0.051094890510948905,
+          "state_key": "L1=0,L2=0,L4=-8,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 5,
+          "example_indices": [
+            48,
+            61,
+            80,
+            88,
+            95
+          ],
+          "fraction": 0.0364963503649635,
+          "state_key": "L1=-1,L2=0,L4=0,S1=-,S2=0,S4=0"
+        },
+        {
+          "count": 5,
+          "example_indices": [
+            59,
+            66,
+            70,
+            73,
+            74
+          ],
+          "fraction": 0.0364963503649635,
+          "state_key": "L1=0,L2=0,L4=+4,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            69,
+            72,
+            78,
+            81
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=+1,L2=0,L4=-4,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            103,
+            104,
+            106,
+            108
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=-1,L2=-2,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            77,
+            79,
+            85,
+            89
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=-1,L2=0,L4=-4,S1=-,S2=0,S4=-"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            126,
+            128,
+            130,
+            134
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=0,L2=-0.5,L4=0,S1=0,S2=-,S4=0"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            13,
+            41,
+            45,
+            50
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=0,L2=0,L4=+8,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            112,
+            115,
+            119
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=+1,L2=+0.5,L4=0,S1=+,S2=+,S4=0"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            94,
+            96,
+            102
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=+1,L2=0,L4=+2,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            27,
+            62,
+            76
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=+1,L2=0,L4=+8,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            34,
+            43,
+            51
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=-1,L2=0,L4=+32,S1=-,S2=0,S4=+"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            120,
+            122,
+            125
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=0,L2=+0.5,L4=0,S1=0,S2=+,S4=0"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            116,
+            118,
+            131
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=0,L2=-0.5,L4=-1,S1=0,S2=-,S4=-"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            113,
+            121
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=+1,L2=+1,L4=0,S1=+,S2=+,S4=0"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            40,
+            47
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=+1,L2=0,L4=+40,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            55,
+            64
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=+1,L2=0,L4=-12,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            31,
+            33
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=+1,L2=0,L4=-16,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            123,
+            136
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=-1,L2=-0.5,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            117,
+            135
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=-1,L2=-1,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            8,
+            37
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=-1,L2=0,L4=+48,S1=-,S2=0,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            23,
+            67
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=-1,L2=0,L4=+8,S1=-,S2=0,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            36,
+            60
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=-1,L2=0,L4=-16,S1=-,S2=0,S4=-"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            93,
+            101
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=-1,L2=0,L4=-2,S1=-,S2=0,S4=-"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            39,
+            49
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=-1,L2=0,L4=-8,S1=-,S2=0,S4=-"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            83,
+            105
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=+2,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            25,
+            28
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=+96,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            63,
+            71
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=-4,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            129,
+            133
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=-,S4=0"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            107
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=+2,L4=+2,S1=+,S2=+,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            110
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=+2,L4=0,S1=+,S2=+,S4=0"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            24
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=+32,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            57
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=+4,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            11
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=-144,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            86
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=-2,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            30
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=-24,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            6
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=-32,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            38
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=-40,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            1
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=-512,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            32
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=-56,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            21
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=-96,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            82
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+1,L2=0,L4=0,S1=+,S2=0,S4=0"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            132
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=-1.5,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            10
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=0,L4=+112,S1=-,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            14
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=0,L4=+136,S1=-,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            12
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=0,L4=-40,S1=-,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            44
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=0,L4=-48,S1=-,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            16
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+136,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            19
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+152,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            42
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+16,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            9
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+176,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            0
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+192,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            54
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+20,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            35
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+24,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            4
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+320,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            26
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+40,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            2
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+416,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            5
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+448,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            17
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+72,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            53
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-12,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            7
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-144,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            52
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-16,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            84
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-2,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            56
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-20,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            3
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-288,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            29
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-40,S1=0,S2=0,S4=-"
+        }
+      ],
+      "marginals": {
+        "by_F1_level": {
+          "+1": 34,
+          "-1": 35,
+          "0": 68
+        },
+        "by_F2_level": {
+          "+0.5": 6,
+          "+1": 2,
+          "+2": 2,
+          "-0.5": 9,
+          "-1": 2,
+          "-1.5": 1,
+          "-2": 4,
+          "0": 111
+        },
+        "by_F4_level": {
+          "+112": 1,
+          "+136": 2,
+          "+152": 1,
+          "+16": 1,
+          "+176": 1,
+          "+192": 1,
+          "+2": 6,
+          "+20": 1,
+          "+24": 1,
+          "+32": 4,
+          "+320": 1,
+          "+4": 6,
+          "+40": 3,
+          "+416": 1,
+          "+448": 1,
+          "+48": 2,
+          "+72": 1,
+          "+8": 9,
+          "+96": 2,
+          "-1": 3,
+          "-12": 3,
+          "-144": 2,
+          "-16": 5,
+          "-2": 4,
+          "-20": 1,
+          "-24": 1,
+          "-288": 1,
+          "-32": 1,
+          "-4": 10,
+          "-40": 3,
+          "-48": 1,
+          "-512": 1,
+          "-56": 1,
+          "-8": 9,
+          "-96": 1,
+          "0": 45
+        },
+        "by_polarity_state": {
+          "F1F2_aligned_F4_aligned": 1,
+          "F1F2_aligned_F4_silent": 15,
+          "F1_only": 6,
+          "F2_only": 9,
+          "F4_only": 41,
+          "all_silent": 15,
+          "mixed_partial": 50
+        }
+      },
+      "n_cells": 137,
+      "precision": "float64"
+    },
+    {
+      "conditional_summaries": {
+        "F1F2_polarity_given_F4_level_band": {
+          "F4_zero": {
+            "aligned": 12,
+            "opposed": 0,
+            "single_or_silent": 125
+          }
+        },
+        "F2_level_given_F1_minus1": {},
+        "F2_level_given_F1_plus1": {}
+      },
+      "fixture": "schwarzschild",
+      "joint_states": [
+        {
+          "count": 51,
+          "example_indices": [
+            28,
+            32,
+            37,
+            38,
+            42
+          ],
+          "fraction": 0.3722627737226277,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=0,S4=0"
+        },
+        {
+          "count": 17,
+          "example_indices": [
+            1,
+            4,
+            8,
+            9,
+            11
+          ],
+          "fraction": 0.12408759124087591,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 14,
+          "example_indices": [
+            0,
+            2,
+            3,
+            5,
+            6
+          ],
+          "fraction": 0.10218978102189781,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 11,
+          "example_indices": [
+            31,
+            40,
+            41,
+            49,
+            51
+          ],
+          "fraction": 0.08029197080291971,
+          "state_key": "L1=0,L2=0,L4=0,S1=+,S2=0,S4=+"
+        },
+        {
+          "count": 11,
+          "example_indices": [
+            29,
+            35,
+            36,
+            50,
+            53
+          ],
+          "fraction": 0.08029197080291971,
+          "state_key": "L1=0,L2=0,L4=0,S1=-,S2=0,S4=0"
+        },
+        {
+          "count": 8,
+          "example_indices": [
+            15,
+            20,
+            26,
+            30,
+            52
+          ],
+          "fraction": 0.058394160583941604,
+          "state_key": "L1=0,L2=0,L4=0,S1=+,S2=0,S4=-"
+        },
+        {
+          "count": 8,
+          "example_indices": [
+            7,
+            21,
+            24,
+            33,
+            44
+          ],
+          "fraction": 0.058394160583941604,
+          "state_key": "L1=0,L2=0,L4=0,S1=-,S2=0,S4=-"
+        },
+        {
+          "count": 7,
+          "example_indices": [
+            114,
+            119,
+            125,
+            128,
+            132
+          ],
+          "fraction": 0.051094890510948905,
+          "state_key": "L1=0,L2=0,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            27,
+            45,
+            65,
+            67
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=0,L2=0,L4=0,S1=+,S2=0,S4=0"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            111,
+            120
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=0,S1=+,S2=+,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            118,
+            130
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=0,S1=+,S2=+,S4=0"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            112
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=0,S1=-,S2=-,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            46
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=0,S1=-,S2=0,S4=+"
+        }
+      ],
+      "marginals": {
+        "by_F1_level": {
+          "0": 137
+        },
+        "by_F2_level": {
+          "0": 137
+        },
+        "by_F4_level": {
+          "0": 137
+        },
+        "by_polarity_state": {
+          "F1F2_aligned_F4_aligned": 3,
+          "F1F2_aligned_F4_silent": 9,
+          "F1_only": 15,
+          "F4_only": 31,
+          "all_silent": 51,
+          "mixed_partial": 28
+        }
+      },
+      "n_cells": 137,
+      "precision": "decimal_50"
+    },
+    {
+      "conditional_summaries": {
+        "F1F2_polarity_given_F4_level_band": {
+          "F4_abs_1_to_4": {
+            "aligned": 5,
+            "opposed": 0,
+            "single_or_silent": 33
+          },
+          "F4_abs_4_5_to_16": {
+            "aligned": 0,
+            "opposed": 0,
+            "single_or_silent": 1
+          },
+          "F4_abs_gt_16": {
+            "aligned": 0,
+            "opposed": 0,
+            "single_or_silent": 3
+          },
+          "F4_zero": {
+            "aligned": 23,
+            "opposed": 0,
+            "single_or_silent": 72
+          }
+        },
+        "F2_level_given_F1_minus1": {
+          "-0.5": 4,
+          "-1": 13,
+          "-1.5": 1
+        },
+        "F2_level_given_F1_plus1": {}
+      },
+      "fixture": "sr",
+      "joint_states": [
+        {
+          "count": 26,
+          "example_indices": [
+            54,
+            56,
+            63,
+            74,
+            83
+          ],
+          "fraction": 0.1897810218978102,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=0,S4=0"
+        },
+        {
+          "count": 13,
+          "example_indices": [
+            3,
+            4,
+            17,
+            22,
+            23
+          ],
+          "fraction": 0.0948905109489051,
+          "state_key": "L1=0,L2=+0.5,L4=0,S1=0,S2=+,S4=0"
+        },
+        {
+          "count": 10,
+          "example_indices": [
+            1,
+            8,
+            19,
+            25,
+            28
+          ],
+          "fraction": 0.072992700729927,
+          "state_key": "L1=-1,L2=-1,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 10,
+          "example_indices": [
+            0,
+            2,
+            35,
+            37,
+            41
+          ],
+          "fraction": 0.072992700729927,
+          "state_key": "L1=0,L2=-0.5,L4=0,S1=0,S2=-,S4=0"
+        },
+        {
+          "count": 9,
+          "example_indices": [
+            6,
+            52,
+            53,
+            59,
+            68
+          ],
+          "fraction": 0.06569343065693431,
+          "state_key": "L1=0,L2=+1,L4=0,S1=0,S2=+,S4=0"
+        },
+        {
+          "count": 6,
+          "example_indices": [
+            11,
+            15,
+            31,
+            38,
+            55
+          ],
+          "fraction": 0.043795620437956206,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=+,S4=0"
+        },
+        {
+          "count": 5,
+          "example_indices": [
+            32,
+            57,
+            67,
+            78,
+            91
+          ],
+          "fraction": 0.0364963503649635,
+          "state_key": "L1=0,L2=+0.5,L4=+1,S1=0,S2=+,S4=+"
+        },
+        {
+          "count": 5,
+          "example_indices": [
+            119,
+            120,
+            124,
+            125,
+            126
+          ],
+          "fraction": 0.0364963503649635,
+          "state_key": "L1=0,L2=0,L4=-2,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            5,
+            16,
+            18,
+            40
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=-1,L2=-0.5,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            24,
+            50,
+            70,
+            82
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=0,L2=-0.5,L4=-1,S1=0,S2=-,S4=-"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            128,
+            129,
+            131,
+            133
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=0,L2=0,L4=+4,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            9,
+            21,
+            49,
+            58
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=-,S4=0"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            7,
+            10,
+            34
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=+2,L2=+1,L4=0,S1=+,S2=+,S4=0"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            12,
+            13,
+            77
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=-1,L2=-1,L4=-1,S1=-,S2=-,S4=-"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            80,
+            81,
+            90
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=-2,L2=-1.5,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            42,
+            43,
+            66
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=0,L2=+1,L4=+1,S1=0,S2=+,S4=+"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            20,
+            64,
+            65
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=0,L2=0,L4=+1,S1=0,S2=+,S4=+"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            102,
+            122,
+            127
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=0,L2=0,L4=+2,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            14,
+            30
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=+2,L2=+1.5,L4=0,S1=+,S2=+,S4=0"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            98,
+            107
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=+2,L4=0,S1=0,S2=+,S4=0"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            103,
+            106
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=-2,L4=0,S1=0,S2=-,S4=0"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            69,
+            73
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=-1,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            62
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+2,L2=+1,L4=+1,S1=+,S2=+,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            33
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=-1.5,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            76
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-2,L2=-1.5,L4=-1,S1=-,S2=-,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            116
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=+2,L4=+2,S1=0,S2=+,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            108
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=-2,L4=-2,S1=0,S2=-,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            46
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+1,S1=0,S2=-,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            132
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+12,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            135
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+120,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            136
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+24256,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            134
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+40,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            118
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-4,S1=0,S2=0,S4=-"
+        }
+      ],
+      "marginals": {
+        "by_F1_level": {
+          "+2": 6,
+          "-1": 18,
+          "-2": 4,
+          "0": 109
+        },
+        "by_F2_level": {
+          "+0.5": 18,
+          "+1": 16,
+          "+1.5": 2,
+          "+2": 3,
+          "-0.5": 18,
+          "-1": 13,
+          "-1.5": 5,
+          "-2": 3,
+          "0": 59
+        },
+        "by_F4_level": {
+          "+1": 13,
+          "+12": 1,
+          "+120": 1,
+          "+2": 4,
+          "+24256": 1,
+          "+4": 4,
+          "+40": 1,
+          "-1": 10,
+          "-2": 6,
+          "-4": 1,
+          "0": 95
+        },
+        "by_polarity_state": {
+          "F1F2_aligned_F4_aligned": 5,
+          "F1F2_aligned_F4_silent": 23,
+          "F2_only": 46,
+          "F4_only": 19,
+          "all_silent": 26,
+          "mixed_partial": 18
+        }
+      },
+      "n_cells": 137,
+      "precision": "float32"
+    },
+    {
+      "conditional_summaries": {
+        "F1F2_polarity_given_F4_level_band": {
+          "F4_abs_1_to_4": {
+            "aligned": 4,
+            "opposed": 0,
+            "single_or_silent": 19
+          },
+          "F4_abs_4_5_to_16": {
+            "aligned": 0,
+            "opposed": 0,
+            "single_or_silent": 1
+          },
+          "F4_abs_gt_16": {
+            "aligned": 0,
+            "opposed": 0,
+            "single_or_silent": 3
+          },
+          "F4_zero": {
+            "aligned": 30,
+            "opposed": 0,
+            "single_or_silent": 80
+          }
+        },
+        "F2_level_given_F1_minus1": {
+          "-0.5": 3,
+          "-1": 15,
+          "-1.5": 4
+        },
+        "F2_level_given_F1_plus1": {}
+      },
+      "fixture": "sr",
+      "joint_states": [
+        {
+          "count": 28,
+          "example_indices": [
+            54,
+            73,
+            74,
+            80,
+            81
+          ],
+          "fraction": 0.20437956204379562,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=0,S4=0"
+        },
+        {
+          "count": 14,
+          "example_indices": [
+            2,
+            5,
+            21,
+            24,
+            28
+          ],
+          "fraction": 0.10218978102189781,
+          "state_key": "L1=-1,L2=-1,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 12,
+          "example_indices": [
+            1,
+            10,
+            11,
+            13,
+            19
+          ],
+          "fraction": 0.08759124087591241,
+          "state_key": "L1=0,L2=+0.5,L4=0,S1=0,S2=+,S4=0"
+        },
+        {
+          "count": 11,
+          "example_indices": [
+            20,
+            26,
+            35,
+            41,
+            57
+          ],
+          "fraction": 0.08029197080291971,
+          "state_key": "L1=0,L2=-0.5,L4=0,S1=0,S2=-,S4=0"
+        },
+        {
+          "count": 7,
+          "example_indices": [
+            17,
+            31,
+            45,
+            47,
+            55
+          ],
+          "fraction": 0.051094890510948905,
+          "state_key": "L1=0,L2=+1,L4=0,S1=0,S2=+,S4=0"
+        },
+        {
+          "count": 7,
+          "example_indices": [
+            0,
+            9,
+            27,
+            33,
+            38
+          ],
+          "fraction": 0.051094890510948905,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=+,S4=0"
+        },
+        {
+          "count": 6,
+          "example_indices": [
+            3,
+            7,
+            14,
+            34,
+            40
+          ],
+          "fraction": 0.043795620437956206,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=-,S4=0"
+        },
+        {
+          "count": 5,
+          "example_indices": [
+            96,
+            97,
+            104,
+            105,
+            112
+          ],
+          "fraction": 0.0364963503649635,
+          "state_key": "L1=0,L2=+2,L4=0,S1=0,S2=+,S4=0"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            58,
+            65,
+            69,
+            88
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=+2,L2=+1.5,L4=0,S1=+,S2=+,S4=0"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            16,
+            18,
+            25,
+            42
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=-1,L2=-1.5,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 4,
+          "example_indices": [
+            101,
+            106,
+            110,
+            111
+          ],
+          "fraction": 0.029197080291970802,
+          "state_key": "L1=0,L2=-2,L4=0,S1=0,S2=-,S4=0"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            4,
+            22,
+            49
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=+2,L2=+1,L4=0,S1=+,S2=+,S4=0"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            12,
+            23,
+            37
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=-1,L2=-0.5,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            15,
+            68,
+            75
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=0,L2=-0.5,L4=-1,S1=0,S2=-,S4=-"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            44,
+            56,
+            60
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=0,L2=0,L4=-1,S1=0,S2=-,S4=-"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            98,
+            118,
+            119
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=0,L2=0,L4=-2,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            128,
+            129,
+            130
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=0,L2=0,L4=-4,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            64,
+            91
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=+2,L2=+1.5,L4=+1,S1=+,S2=+,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            52,
+            72
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=-2,L2=-1.5,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            6,
+            66
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=+0.5,L4=+1,S1=0,S2=+,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            100,
+            115
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=+2,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 2,
+          "example_indices": [
+            131,
+            132
+          ],
+          "fraction": 0.014598540145985401,
+          "state_key": "L1=0,L2=0,L4=+4,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            43
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=+2,L2=+1,L4=+1,S1=+,S2=+,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            29
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=-1,L2=-1,L4=-1,S1=-,S2=-,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            8
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=+0.5,L4=-1,S1=0,S2=+,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            135
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+120,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            133
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=+8,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            134
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-24,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 1,
+          "example_indices": [
+            136
+          ],
+          "fraction": 0.0072992700729927005,
+          "state_key": "L1=0,L2=0,L4=-65536,S1=0,S2=0,S4=-"
+        }
+      ],
+      "marginals": {
+        "by_F1_level": {
+          "+2": 10,
+          "-1": 22,
+          "-2": 2,
+          "0": 103
+        },
+        "by_F2_level": {
+          "+0.5": 15,
+          "+1": 11,
+          "+1.5": 6,
+          "+2": 5,
+          "-0.5": 17,
+          "-1": 15,
+          "-1.5": 6,
+          "-2": 4,
+          "0": 58
+        },
+        "by_F4_level": {
+          "+1": 5,
+          "+120": 1,
+          "+2": 2,
+          "+4": 2,
+          "+8": 1,
+          "-1": 8,
+          "-2": 3,
+          "-24": 1,
+          "-4": 3,
+          "-65536": 1,
+          "0": 110
+        },
+        "by_polarity_state": {
+          "F1F2_aligned_F4_aligned": 4,
+          "F1F2_aligned_F4_silent": 30,
+          "F2_only": 52,
+          "F4_only": 14,
+          "all_silent": 28,
+          "mixed_partial": 9
+        }
+      },
+      "n_cells": 137,
+      "precision": "float64"
+    },
+    {
+      "conditional_summaries": {
+        "F1F2_polarity_given_F4_level_band": {
+          "F4_zero": {
+            "aligned": 21,
+            "opposed": 0,
+            "single_or_silent": 116
+          }
+        },
+        "F2_level_given_F1_minus1": {},
+        "F2_level_given_F1_plus1": {}
+      },
+      "fixture": "sr",
+      "joint_states": [
+        {
+          "count": 35,
+          "example_indices": [
+            27,
+            44,
+            45,
+            56,
+            61
+          ],
+          "fraction": 0.25547445255474455,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=0,S4=0"
+        },
+        {
+          "count": 25,
+          "example_indices": [
+            39,
+            47,
+            51,
+            52,
+            60
+          ],
+          "fraction": 0.18248175182481752,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=0,S4=-"
+        },
+        {
+          "count": 18,
+          "example_indices": [
+            46,
+            55,
+            58,
+            62,
+            63
+          ],
+          "fraction": 0.13138686131386862,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=0,S4=+"
+        },
+        {
+          "count": 11,
+          "example_indices": [
+            0,
+            1,
+            11,
+            20,
+            21
+          ],
+          "fraction": 0.08029197080291971,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=+,S4=+"
+        },
+        {
+          "count": 11,
+          "example_indices": [
+            8,
+            18,
+            19,
+            35,
+            36
+          ],
+          "fraction": 0.08029197080291971,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=+,S4=0"
+        },
+        {
+          "count": 8,
+          "example_indices": [
+            28,
+            32,
+            54,
+            57,
+            75
+          ],
+          "fraction": 0.058394160583941604,
+          "state_key": "L1=0,L2=0,L4=0,S1=-,S2=-,S4=0"
+        },
+        {
+          "count": 8,
+          "example_indices": [
+            2,
+            9,
+            14,
+            15,
+            23
+          ],
+          "fraction": 0.058394160583941604,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=-,S4=-"
+        },
+        {
+          "count": 7,
+          "example_indices": [
+            6,
+            10,
+            16,
+            25,
+            37
+          ],
+          "fraction": 0.051094890510948905,
+          "state_key": "L1=0,L2=0,L4=0,S1=-,S2=-,S4=+"
+        },
+        {
+          "count": 6,
+          "example_indices": [
+            3,
+            12,
+            22,
+            43,
+            59
+          ],
+          "fraction": 0.043795620437956206,
+          "state_key": "L1=0,L2=0,L4=0,S1=-,S2=-,S4=-"
+        },
+        {
+          "count": 5,
+          "example_indices": [
+            4,
+            5,
+            13,
+            17,
+            31
+          ],
+          "fraction": 0.0364963503649635,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=+,S4=-"
+        },
+        {
+          "count": 3,
+          "example_indices": [
+            7,
+            33,
+            41
+          ],
+          "fraction": 0.021897810218978103,
+          "state_key": "L1=0,L2=0,L4=0,S1=0,S2=-,S4=+"
+        }
+      ],
+      "marginals": {
+        "by_F1_level": {
+          "0": 137
+        },
+        "by_F2_level": {
+          "0": 137
+        },
+        "by_F4_level": {
+          "0": 137
+        },
+        "by_polarity_state": {
+          "F1F2_aligned_F4_aligned": 6,
+          "F1F2_aligned_F4_opposed": 7,
+          "F1F2_aligned_F4_silent": 8,
+          "F2_only": 11,
+          "F4_only": 43,
+          "all_silent": 35,
+          "mixed_partial": 27
+        }
+      },
+      "n_cells": 137,
+      "precision": "decimal_50"
+    }
+  ],
+  "fixtures": [
+    "schwarzschild",
+    "sr"
+  ],
+  "headline_findings": [
+    "schwarzschild float32: states=66, top=L1=0,L2=0,L4=0,S1=0,S2=0,S4=0 count=21",
+    "schwarzschild float64: states=67, top=L1=0,L2=0,L4=0,S1=0,S2=0,S4=0 count=15",
+    "schwarzschild decimal_50: states=13, top=L1=0,L2=0,L4=0,S1=0,S2=0,S4=0 count=51",
+    "sr float32: states=33, top=L1=0,L2=0,L4=0,S1=0,S2=0,S4=0 count=26",
+    "sr float64: states=29, top=L1=0,L2=0,L4=0,S1=0,S2=0,S4=0 count=28",
+    "sr decimal_50: states=11, top=L1=0,L2=0,L4=0,S1=0,S2=0,S4=0 count=35"
+  ],
+  "precisions": [
+    "float32",
+    "float64",
+    "decimal_50"
+  ]
+}
