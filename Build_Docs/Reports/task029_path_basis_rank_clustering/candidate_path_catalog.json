@@ -1,0 +1,295 @@
+{
+  "campaign": "task029_candidate_path_catalog",
+  "fixtures": [
+    "schwarzschild",
+    "sr",
+    "pure_algebraic"
+  ],
+  "path_count": 45,
+  "paths": [
+    {
+      "description": "R squared minus direct f",
+      "fixture": "schwarzschild",
+      "label": "F1",
+      "rewrite_class": "canonical"
+    },
+    {
+      "description": "R squared minus one plus x term",
+      "fixture": "schwarzschild",
+      "label": "F2",
+      "rewrite_class": "canonical"
+    },
+    {
+      "description": "R minus square root of direct f",
+      "fixture": "schwarzschild",
+      "label": "F3",
+      "rewrite_class": "canonical"
+    },
+    {
+      "description": "R minus square root of alternate f routing",
+      "fixture": "schwarzschild",
+      "label": "F4",
+      "rewrite_class": "canonical"
+    },
+    {
+      "description": "negative direct f plus R squared",
+      "fixture": "schwarzschild",
+      "label": "P_sign_a",
+      "rewrite_class": "sign_reordering"
+    },
+    {
+      "description": "R squared plus negative one plus x term",
+      "fixture": "schwarzschild",
+      "label": "P_sign_b",
+      "rewrite_class": "sign_reordering"
+    },
+    {
+      "description": "signed compound subtraction of negative one plus f",
+      "fixture": "schwarzschild",
+      "label": "P_sign_c",
+      "rewrite_class": "sign_reordering"
+    },
+    {
+      "description": "R minus square root of second alternate f routing",
+      "fixture": "schwarzschild",
+      "label": "P_factor_b",
+      "rewrite_class": "factored_f_routing"
+    },
+    {
+      "description": "product of conjugate root difference and root sum",
+      "fixture": "schwarzschild",
+      "label": "P_diff_squares",
+      "rewrite_class": "difference_of_squares"
+    },
+    {
+      "description": "twice R squared minus twice direct f",
+      "fixture": "schwarzschild",
+      "label": "P_scaled_2",
+      "rewrite_class": "scaled_identity"
+    },
+    {
+      "description": "half R squared minus half direct f",
+      "fixture": "schwarzschild",
+      "label": "P_scaled_half",
+      "rewrite_class": "scaled_identity"
+    },
+    {
+      "description": "explicit R times R minus direct f",
+      "fixture": "schwarzschild",
+      "label": "P_distrib_mul",
+      "rewrite_class": "distributive_rewrite"
+    },
+    {
+      "description": "R squared minus product of two direct square roots",
+      "fixture": "schwarzschild",
+      "label": "P_distrib_sqrt_mul",
+      "rewrite_class": "distributive_rewrite"
+    },
+    {
+      "description": "R squared minus one plus one minus direct f",
+      "fixture": "schwarzschild",
+      "label": "P_compound_split",
+      "rewrite_class": "compound_routing"
+    },
+    {
+      "description": "R squared minus direct f plus neutral add",
+      "fixture": "schwarzschild",
+      "label": "P_compound_zero",
+      "rewrite_class": "compound_routing"
+    },
+    {
+      "description": "R squared minus direct f",
+      "fixture": "sr",
+      "label": "F1",
+      "rewrite_class": "canonical"
+    },
+    {
+      "description": "R squared minus one plus x term",
+      "fixture": "sr",
+      "label": "F2",
+      "rewrite_class": "canonical"
+    },
+    {
+      "description": "R minus square root of direct f",
+      "fixture": "sr",
+      "label": "F3",
+      "rewrite_class": "canonical"
+    },
+    {
+      "description": "R minus square root of alternate f routing",
+      "fixture": "sr",
+      "label": "F4",
+      "rewrite_class": "canonical"
+    },
+    {
+      "description": "negative direct f plus R squared",
+      "fixture": "sr",
+      "label": "P_sign_a",
+      "rewrite_class": "sign_reordering"
+    },
+    {
+      "description": "R squared plus negative one plus x term",
+      "fixture": "sr",
+      "label": "P_sign_b",
+      "rewrite_class": "sign_reordering"
+    },
+    {
+      "description": "signed compound subtraction of negative one plus f",
+      "fixture": "sr",
+      "label": "P_sign_c",
+      "rewrite_class": "sign_reordering"
+    },
+    {
+      "description": "R minus square root of second alternate f routing",
+      "fixture": "sr",
+      "label": "P_factor_b",
+      "rewrite_class": "factored_f_routing"
+    },
+    {
+      "description": "product of conjugate root difference and root sum",
+      "fixture": "sr",
+      "label": "P_diff_squares",
+      "rewrite_class": "difference_of_squares"
+    },
+    {
+      "description": "twice R squared minus twice direct f",
+      "fixture": "sr",
+      "label": "P_scaled_2",
+      "rewrite_class": "scaled_identity"
+    },
+    {
+      "description": "half R squared minus half direct f",
+      "fixture": "sr",
+      "label": "P_scaled_half",
+      "rewrite_class": "scaled_identity"
+    },
+    {
+      "description": "explicit R times R minus direct f",
+      "fixture": "sr",
+      "label": "P_distrib_mul",
+      "rewrite_class": "distributive_rewrite"
+    },
+    {
+      "description": "R squared minus product of two direct square roots",
+      "fixture": "sr",
+      "label": "P_distrib_sqrt_mul",
+      "rewrite_class": "distributive_rewrite"
+    },
+    {
+      "description": "R squared minus one plus one minus direct f",
+      "fixture": "sr",
+      "label": "P_compound_split",
+      "rewrite_class": "compound_routing"
+    },
+    {
+      "description": "R squared minus direct f plus neutral add",
+      "fixture": "sr",
+      "label": "P_compound_zero",
+      "rewrite_class": "compound_routing"
+    },
+    {
+      "description": "R squared minus direct f",
+      "fixture": "pure_algebraic",
+      "label": "F1",
+      "rewrite_class": "canonical"
+    },
+    {
+      "description": "R squared minus one plus x term",
+      "fixture": "pure_algebraic",
+      "label": "F2",
+      "rewrite_class": "canonical"
+    },
+    {
+      "description": "R minus square root of direct f",
+      "fixture": "pure_algebraic",
+      "label": "F3",
+      "rewrite_class": "canonical"
+    },
+    {
+      "description": "R minus square root of alternate f routing",
+      "fixture": "pure_algebraic",
+      "label": "F4",
+      "rewrite_class": "canonical"
+    },
+    {
+      "description": "negative direct f plus R squared",
+      "fixture": "pure_algebraic",
+      "label": "P_sign_a",
+      "rewrite_class": "sign_reordering"
+    },
+    {
+      "description": "R squared plus negative one plus x term",
+      "fixture": "pure_algebraic",
+      "label": "P_sign_b",
+      "rewrite_class": "sign_reordering"
+    },
+    {
+      "description": "signed compound subtraction of negative one plus f",
+      "fixture": "pure_algebraic",
+      "label": "P_sign_c",
+      "rewrite_class": "sign_reordering"
+    },
+    {
+      "description": "R minus square root of second alternate f routing",
+      "fixture": "pure_algebraic",
+      "label": "P_factor_b",
+      "rewrite_class": "factored_f_routing"
+    },
+    {
+      "description": "product of conjugate root difference and root sum",
+      "fixture": "pure_algebraic",
+      "label": "P_diff_squares",
+      "rewrite_class": "difference_of_squares"
+    },
+    {
+      "description": "twice R squared minus twice direct f",
+      "fixture": "pure_algebraic",
+      "label": "P_scaled_2",
+      "rewrite_class": "scaled_identity"
+    },
+    {
+      "description": "half R squared minus half direct f",
+      "fixture": "pure_algebraic",
+      "label": "P_scaled_half",
+      "rewrite_class": "scaled_identity"
+    },
+    {
+      "description": "explicit R times R minus direct f",
+      "fixture": "pure_algebraic",
+      "label": "P_distrib_mul",
+      "rewrite_class": "distributive_rewrite"
+    },
+    {
+      "description": "R squared minus product of two direct square roots",
+      "fixture": "pure_algebraic",
+      "label": "P_distrib_sqrt_mul",
+      "rewrite_class": "distributive_rewrite"
+    },
+    {
+      "description": "R squared minus one plus one minus direct f",
+      "fixture": "pure_algebraic",
+      "label": "P_compound_split",
+      "rewrite_class": "compound_routing"
+    },
+    {
+      "description": "R squared minus direct f plus neutral add",
+      "fixture": "pure_algebraic",
+      "label": "P_compound_zero",
+      "rewrite_class": "compound_routing"
+    }
+  ],
+  "per_fixture_counts": {
+    "pure_algebraic": 15,
+    "schwarzschild": 15,
+    "sr": 15
+  },
+  "rewrite_classes": [
+    "canonical",
+    "sign_reordering",
+    "factored_f_routing",
+    "difference_of_squares",
+    "scaled_identity",
+    "distributive_rewrite",
+    "compound_routing"
+  ]
+}

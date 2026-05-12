@@ -1,0 +1,212 @@
+{
+  "campaign": "task029_basis_rank_comparison",
+  "cut_threshold": 0.1,
+  "f5_rewrite_class_sets": {
+    "pure_algebraic": [
+      "compound_routing",
+      "factored_f_routing",
+      "scaled_identity",
+      "sign_reordering"
+    ],
+    "schwarzschild": [
+      "compound_routing",
+      "distributive_rewrite",
+      "scaled_identity",
+      "sign_reordering"
+    ],
+    "sr": [
+      "compound_routing",
+      "distributive_rewrite",
+      "scaled_identity",
+      "sign_reordering"
+    ]
+  },
+  "f5_rewrite_classes_cross_fixture_consistent": false,
+  "fixtures": [
+    "schwarzschild",
+    "sr",
+    "pure_algebraic"
+  ],
+  "headline_classification": "basis_rank_divergent",
+  "headline_reasons": [
+    "basis ranks by fixture: {'schwarzschild': 8, 'sr': 9, 'pure_algebraic': 8}"
+  ],
+  "per_fixture": {
+    "pure_algebraic": {
+      "basis_rank": 8,
+      "candidate_F5_paths": [
+        "P_compound_split",
+        "P_sign_c",
+        "P_factor_b",
+        "P_scaled_2",
+        "P_scaled_half"
+      ],
+      "candidate_F5_rewrite_classes": [
+        "compound_routing",
+        "factored_f_routing",
+        "scaled_identity",
+        "sign_reordering"
+      ],
+      "canonical_anchor_clusters": {
+        "F1": 1,
+        "F2": 2,
+        "F3": 3,
+        "F4": 4
+      },
+      "cluster_members": {
+        "1": [
+          "F1",
+          "P_compound_zero",
+          "P_distrib_mul",
+          "P_sign_a"
+        ],
+        "2": [
+          "F2",
+          "P_sign_b"
+        ],
+        "3": [
+          "F3",
+          "P_diff_squares",
+          "P_distrib_sqrt_mul"
+        ],
+        "4": [
+          "F4"
+        ],
+        "5": [
+          "P_compound_split",
+          "P_sign_c"
+        ],
+        "6": [
+          "P_factor_b"
+        ],
+        "7": [
+          "P_scaled_2"
+        ],
+        "8": [
+          "P_scaled_half"
+        ]
+      },
+      "cut_threshold": 0.1,
+      "f1_f4_self_consistent": true
+    },
+    "schwarzschild": {
+      "basis_rank": 8,
+      "candidate_F5_paths": [
+        "P_compound_split",
+        "P_sign_c",
+        "P_distrib_sqrt_mul",
+        "P_scaled_2",
+        "P_scaled_half"
+      ],
+      "candidate_F5_rewrite_classes": [
+        "compound_routing",
+        "distributive_rewrite",
+        "scaled_identity",
+        "sign_reordering"
+      ],
+      "canonical_anchor_clusters": {
+        "F1": 1,
+        "F2": 2,
+        "F3": 3,
+        "F4": 4
+      },
+      "cluster_members": {
+        "1": [
+          "F1",
+          "P_compound_zero",
+          "P_distrib_mul",
+          "P_sign_a"
+        ],
+        "2": [
+          "F2",
+          "P_sign_b"
+        ],
+        "3": [
+          "F3",
+          "P_diff_squares",
+          "P_factor_b"
+        ],
+        "4": [
+          "F4"
+        ],
+        "5": [
+          "P_compound_split",
+          "P_sign_c"
+        ],
+        "6": [
+          "P_distrib_sqrt_mul"
+        ],
+        "7": [
+          "P_scaled_2"
+        ],
+        "8": [
+          "P_scaled_half"
+        ]
+      },
+      "cut_threshold": 0.1,
+      "f1_f4_self_consistent": true
+    },
+    "sr": {
+      "basis_rank": 9,
+      "candidate_F5_paths": [
+        "P_compound_split",
+        "P_sign_c",
+        "P_compound_zero",
+        "P_distrib_mul",
+        "P_sign_a",
+        "P_distrib_sqrt_mul",
+        "P_scaled_2",
+        "P_scaled_half"
+      ],
+      "candidate_F5_rewrite_classes": [
+        "compound_routing",
+        "distributive_rewrite",
+        "scaled_identity",
+        "sign_reordering"
+      ],
+      "canonical_anchor_clusters": {
+        "F1": 1,
+        "F2": 2,
+        "F3": 3,
+        "F4": 4
+      },
+      "cluster_members": {
+        "1": [
+          "F1"
+        ],
+        "2": [
+          "F2",
+          "P_sign_b"
+        ],
+        "3": [
+          "F3",
+          "P_diff_squares",
+          "P_factor_b"
+        ],
+        "4": [
+          "F4"
+        ],
+        "5": [
+          "P_compound_split",
+          "P_sign_c"
+        ],
+        "6": [
+          "P_compound_zero",
+          "P_distrib_mul",
+          "P_sign_a"
+        ],
+        "7": [
+          "P_distrib_sqrt_mul"
+        ],
+        "8": [
+          "P_scaled_2"
+        ],
+        "9": [
+          "P_scaled_half"
+        ]
+      },
+      "cut_threshold": 0.1,
+      "f1_f4_self_consistent": true
+    }
+  }
+}

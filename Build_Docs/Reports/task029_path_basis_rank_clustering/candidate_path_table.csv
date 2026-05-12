@@ -1,0 +1,46 @@
+fixture,label,rewrite_class,description
+schwarzschild,F1,canonical,R squared minus direct f
+schwarzschild,F2,canonical,R squared minus one plus x term
+schwarzschild,F3,canonical,R minus square root of direct f
+schwarzschild,F4,canonical,R minus square root of alternate f routing
+schwarzschild,P_sign_a,sign_reordering,negative direct f plus R squared
+schwarzschild,P_sign_b,sign_reordering,R squared plus negative one plus x term
+schwarzschild,P_sign_c,sign_reordering,signed compound subtraction of negative one plus f
+schwarzschild,P_factor_b,factored_f_routing,R minus square root of second alternate f routing
+schwarzschild,P_diff_squares,difference_of_squares,product of conjugate root difference and root sum
+schwarzschild,P_scaled_2,scaled_identity,twice R squared minus twice direct f
+schwarzschild,P_scaled_half,scaled_identity,half R squared minus half direct f
+schwarzschild,P_distrib_mul,distributive_rewrite,explicit R times R minus direct f
+schwarzschild,P_distrib_sqrt_mul,distributive_rewrite,R squared minus product of two direct square roots
+schwarzschild,P_compound_split,compound_routing,R squared minus one plus one minus direct f
+schwarzschild,P_compound_zero,compound_routing,R squared minus direct f plus neutral add
+sr,F1,canonical,R squared minus direct f
+sr,F2,canonical,R squared minus one plus x term
+sr,F3,canonical,R minus square root of direct f
+sr,F4,canonical,R minus square root of alternate f routing
+sr,P_sign_a,sign_reordering,negative direct f plus R squared
+sr,P_sign_b,sign_reordering,R squared plus negative one plus x term
+sr,P_sign_c,sign_reordering,signed compound subtraction of negative one plus f
+sr,P_factor_b,factored_f_routing,R minus square root of second alternate f routing
+sr,P_diff_squares,difference_of_squares,product of conjugate root difference and root sum
+sr,P_scaled_2,scaled_identity,twice R squared minus twice direct f
+sr,P_scaled_half,scaled_identity,half R squared minus half direct f
+sr,P_distrib_mul,distributive_rewrite,explicit R times R minus direct f
+sr,P_distrib_sqrt_mul,distributive_rewrite,R squared minus product of two direct square roots
+sr,P_compound_split,compound_routing,R squared minus one plus one minus direct f
+sr,P_compound_zero,compound_routing,R squared minus direct f plus neutral add
+pure_algebraic,F1,canonical,R squared minus direct f
+pure_algebraic,F2,canonical,R squared minus one plus x term
+pure_algebraic,F3,canonical,R minus square root of direct f
+pure_algebraic,F4,canonical,R minus square root of alternate f routing
+pure_algebraic,P_sign_a,sign_reordering,negative direct f plus R squared
+pure_algebraic,P_sign_b,sign_reordering,R squared plus negative one plus x term
+pure_algebraic,P_sign_c,sign_reordering,signed compound subtraction of negative one plus f
+pure_algebraic,P_factor_b,factored_f_routing,R minus square root of second alternate f routing
+pure_algebraic,P_diff_squares,difference_of_squares,product of conjugate root difference and root sum
+pure_algebraic,P_scaled_2,scaled_identity,twice R squared minus twice direct f
+pure_algebraic,P_scaled_half,scaled_identity,half R squared minus half direct f
+pure_algebraic,P_distrib_mul,distributive_rewrite,explicit R times R minus direct f
+pure_algebraic,P_distrib_sqrt_mul,distributive_rewrite,R squared minus product of two direct square roots
+pure_algebraic,P_compound_split,compound_routing,R squared minus one plus one minus direct f
+pure_algebraic,P_compound_zero,compound_routing,R squared minus direct f plus neutral add

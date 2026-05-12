@@ -1,0 +1,13 @@
+fixture,cut_threshold,cluster_count,f1_f4_self_consistent,candidate_F5_paths
+schwarzschild,0.05,8,True,P_compound_split P_sign_c P_distrib_sqrt_mul P_scaled_2 P_scaled_half
+schwarzschild,0.1,8,True,P_compound_split P_sign_c P_distrib_sqrt_mul P_scaled_2 P_scaled_half
+schwarzschild,0.15,7,True,P_compound_split P_sign_c P_distrib_sqrt_mul P_scaled_2 P_scaled_half
+schwarzschild,0.2,6,True,P_compound_split P_sign_c P_distrib_sqrt_mul
+sr,0.05,9,True,P_compound_split P_sign_c P_compound_zero P_distrib_mul P_sign_a P_distrib_sqrt_mul P_scaled_2 P_scaled_half
+sr,0.1,9,True,P_compound_split P_sign_c P_compound_zero P_distrib_mul P_sign_a P_distrib_sqrt_mul P_scaled_2 P_scaled_half
+sr,0.15,9,True,P_compound_split P_sign_c P_compound_zero P_distrib_mul P_sign_a P_distrib_sqrt_mul P_scaled_2 P_scaled_half
+sr,0.2,7,True,P_compound_split P_sign_c P_compound_zero P_distrib_mul P_scaled_2 P_scaled_half P_sign_a P_distrib_sqrt_mul
+pure_algebraic,0.05,8,True,P_compound_split P_sign_c P_factor_b P_scaled_2 P_scaled_half
+pure_algebraic,0.1,8,True,P_compound_split P_sign_c P_factor_b P_scaled_2 P_scaled_half
+pure_algebraic,0.15,8,True,P_compound_split P_sign_c P_factor_b P_scaled_2 P_scaled_half
+pure_algebraic,0.2,6,True,P_compound_split P_sign_c P_factor_b
