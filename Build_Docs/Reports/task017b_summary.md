@@ -105,5 +105,5 @@ rather than being retrofitted into 017b.
 - `PYTHONPATH=src python -m lloyd_v4.evals.multi_precision_campaign --output /tmp/multi_precision_repeat.json`: passed.
 - `diff Build_Docs/Reports/task017b_multi_precision_instrument_model/campaign_output.json /tmp/multi_precision_repeat.json`: passed.
 - `git diff --check`: passed.
-- Git commit: pending final amend.
-- Git push: pending final push.
+- Implementation commit: `e598e6ea5e0b4864459acf164ca9b0d23e1a2c7f`.
+- Git push: confirmed in final handoff after pushing the task commits.
