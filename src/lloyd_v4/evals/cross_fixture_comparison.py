@@ -7,6 +7,11 @@ from pathlib import Path
 
 from lloyd_v4.core.serialization import to_json_safe
 
+from .cbrt_four_form import four_form_float64 as cbrt_float64
+from .cbrt_lattice_campaign import DEFAULT_OUTPUT as CBRT_LATTICE_OUTPUT
+from .cbrt_lattice_campaign import write_campaign_output as write_cbrt_lattice_output
+from .cbrt_polarity_grid_stability import DEFAULT_OUTPUT as CBRT_POLARITY_OUTPUT
+from .cbrt_polarity_grid_stability import write_campaign_output as write_cbrt_polarity_output
 from .multi_precision_four_form import four_form_float64 as schwarzschild_float64
 from .pure_algebraic_four_form import four_form_float64 as pure_float64
 from .pure_algebraic_four_form import x_grid
@@ -42,6 +47,10 @@ def load_fixture_results(fixture: str) -> dict[str, object]:
         return _read_json(SR_POLARITY_OUTPUT)
     if fixture == "pure_algebraic":
         return _read_json(PURE_POLARITY_OUTPUT)
+    if fixture == "cbrt_chain":
+        if not CBRT_POLARITY_OUTPUT.is_file():
+            write_cbrt_polarity_output(CBRT_POLARITY_OUTPUT)
+        return _read_json(CBRT_POLARITY_OUTPUT)
     raise ValueError(f"unknown fixture: {fixture}")
 
 
@@ -97,12 +106,16 @@ def _load_lattice_results(fixture_names: tuple[str, ...]) -> dict[str, dict[str,
         write_sr_lattice_output(SR_LATTICE_OUTPUT)
     if "pure_algebraic" in fixture_names and not PURE_LATTICE_OUTPUT.is_file():
         write_pure_lattice_output(PURE_LATTICE_OUTPUT)
+    if "cbrt_chain" in fixture_names and not CBRT_LATTICE_OUTPUT.is_file():
+        write_cbrt_lattice_output(CBRT_LATTICE_OUTPUT)
     result = {
         "schwarzschild": _read_json(SCHWARZSCHILD_LATTICE_OUTPUT),
         "sr": _read_json(SR_LATTICE_OUTPUT),
     }
     if "pure_algebraic" in fixture_names:
         result["pure_algebraic"] = _read_json(PURE_LATTICE_OUTPUT)
+    if "cbrt_chain" in fixture_names:
+        result["cbrt_chain"] = _read_json(CBRT_LATTICE_OUTPUT)
     return result
 
 
@@ -119,6 +132,8 @@ def _per_pair_aggregate_comparison(polarity: dict[str, dict[str, object]], fixtu
         }
         if "pure_algebraic" in statuses:
             row["pure_algebraic_aggregate"] = statuses["pure_algebraic"]
+        if "cbrt_chain" in statuses:
+            row["cbrt_chain_aggregate"] = statuses["cbrt_chain"]
         rows.append(row)
     return rows
 
@@ -180,6 +195,12 @@ def _sterbenz_boundary_comparison(fixture_names: tuple[str, ...]) -> list[dict[s
         below = tuple(value for value in pure_values if value <= boundary)
         above = tuple(value for value in pure_values if value > boundary)
         rows.append(_sterbenz_row("pure_algebraic", "x", boundary, below, above, lambda value: pure_float64(value)["F2"], "below_boundary_higher"))
+    if "cbrt_chain" in fixture_names:
+        cbrt_values = x_grid()
+        boundary = 0.5
+        below = tuple(value for value in cbrt_values if value <= boundary)
+        above = tuple(value for value in cbrt_values if value > boundary)
+        rows.append(_sterbenz_row("cbrt_chain", "x", boundary, below, above, lambda value: cbrt_float64(value)["F2"], "below_boundary_higher"))
     return rows
 
 

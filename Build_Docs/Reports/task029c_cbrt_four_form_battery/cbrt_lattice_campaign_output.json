@@ -1,0 +1,304 @@
+{
+  "by_form": {
+    "F1": {
+      "by_precision": {
+        "float32": {
+          "candidate_classification": "lattice_integer",
+          "level_histogram": {
+            "-1": 39,
+            "-2": 8,
+            "1": 38,
+            "2": 5
+          },
+          "level_integer_residual_max": 0.0,
+          "level_integer_residual_median": 0.0,
+          "level_jump_distribution": [
+            1.0,
+            2.0,
+            1.0
+          ],
+          "level_max": 2.0,
+          "level_min": -2.0,
+          "n_distinct_levels": 4,
+          "n_nonzero": 90,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "large_x": 4,
+            "mid_x": 4,
+            "small_x": 4
+          }
+        },
+        "float64": {
+          "candidate_classification": "lattice_integer",
+          "level_histogram": {
+            "-1": 27,
+            "-2": 29,
+            "-3": 6,
+            "-4": 9,
+            "-5": 4,
+            "-6": 1,
+            "-7": 2,
+            "1": 21,
+            "2": 11,
+            "3": 6,
+            "4": 2
+          },
+          "level_integer_residual_max": 0.0,
+          "level_integer_residual_median": 0.0,
+          "level_jump_distribution": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "level_max": 4.0,
+          "level_min": -7.0,
+          "n_distinct_levels": 11,
+          "n_nonzero": 118,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "large_x": 9,
+            "mid_x": 6,
+            "small_x": 8
+          }
+        }
+      }
+    },
+    "F2": {
+      "by_precision": {
+        "float32": {
+          "candidate_classification": "non_integer_lattice",
+          "level_histogram": {
+            "-0.5": 7,
+            "-1": 12,
+            "-1.5": 5,
+            "-2": 9,
+            "-4": 1,
+            "0": 6,
+            "0.5": 10,
+            "1": 10,
+            "1.5": 6,
+            "2": 5,
+            "4": 2
+          },
+          "level_integer_residual_max": 0.25,
+          "level_integer_residual_median": 0.0,
+          "level_jump_distribution": [
+            2.0,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            2.0
+          ],
+          "level_max": 4.0,
+          "level_min": -4.0,
+          "n_distinct_levels": 11,
+          "n_nonzero": 73,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "large_x": 2,
+            "mid_x": 8,
+            "small_x": 9
+          }
+        },
+        "float64": {
+          "candidate_classification": "non_integer_lattice",
+          "level_histogram": {
+            "-0.5": 4,
+            "-1": 6,
+            "-1.5": 2,
+            "-2": 25,
+            "-2.5": 2,
+            "-3": 2,
+            "-4": 16,
+            "-8": 1,
+            "0": 3,
+            "0.5": 5,
+            "1": 10,
+            "1.5": 5,
+            "2": 6,
+            "2.5": 3,
+            "3": 5,
+            "3.5": 1,
+            "4": 2
+          },
+          "level_integer_residual_max": 0.25,
+          "level_integer_residual_median": 0.0,
+          "level_jump_distribution": [
+            4.0,
+            1.0,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "level_max": 4.0,
+          "level_min": -8.0,
+          "n_distinct_levels": 17,
+          "n_nonzero": 98,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "large_x": 2,
+            "mid_x": 11,
+            "small_x": 14
+          }
+        }
+      }
+    },
+    "F3": {
+      "by_precision": {
+        "float32": {
+          "candidate_classification": "lattice_empty",
+          "level_histogram": {},
+          "level_integer_residual_max": 0.0,
+          "level_integer_residual_median": null,
+          "level_jump_distribution": [],
+          "level_max": null,
+          "level_min": null,
+          "n_distinct_levels": 0,
+          "n_nonzero": 0,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "large_x": 0,
+            "mid_x": 0,
+            "small_x": 0
+          }
+        },
+        "float64": {
+          "candidate_classification": "lattice_empty",
+          "level_histogram": {},
+          "level_integer_residual_max": 0.0,
+          "level_integer_residual_median": null,
+          "level_jump_distribution": [],
+          "level_max": null,
+          "level_min": null,
+          "n_distinct_levels": 0,
+          "n_nonzero": 0,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "large_x": 0,
+            "mid_x": 0,
+            "small_x": 0
+          }
+        }
+      }
+    },
+    "F4": {
+      "by_precision": {
+        "float32": {
+          "candidate_classification": "lattice_integer",
+          "level_histogram": {
+            "-1": 3,
+            "-16": 1,
+            "-2": 3,
+            "-24": 1,
+            "-4": 2,
+            "-8": 1,
+            "-80": 1,
+            "1": 3,
+            "16": 1,
+            "2": 3,
+            "4": 5,
+            "64": 1,
+            "8": 3
+          },
+          "level_integer_residual_max": 0.0,
+          "level_integer_residual_median": 0.0,
+          "level_jump_distribution": [
+            56.0,
+            8.0,
+            8.0,
+            4.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            4.0,
+            8.0,
+            48.0
+          ],
+          "level_max": 64.0,
+          "level_min": -80.0,
+          "n_distinct_levels": 13,
+          "n_nonzero": 28,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "large_x": 9,
+            "mid_x": 3,
+            "small_x": 1
+          }
+        },
+        "float64": {
+          "candidate_classification": "lattice_integer",
+          "level_histogram": {
+            "-1": 4,
+            "-12": 1,
+            "-16": 1,
+            "-2": 2,
+            "-24": 1,
+            "-4": 4,
+            "-8": 1,
+            "1": 7,
+            "2": 3,
+            "32": 1,
+            "4": 4,
+            "64": 1,
+            "8": 1
+          },
+          "level_integer_residual_max": 0.0,
+          "level_integer_residual_median": 0.0,
+          "level_jump_distribution": [
+            8.0,
+            4.0,
+            4.0,
+            4.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            4.0,
+            24.0,
+            32.0
+          ],
+          "level_max": 64.0,
+          "level_min": -24.0,
+          "n_distinct_levels": 13,
+          "n_nonzero": 31,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "large_x": 9,
+            "mid_x": 6,
+            "small_x": 2
+          }
+        }
+      }
+    }
+  },
+  "campaign": "task029c_cbrt_lattice_campaign",
+  "x_count": 137,
+  "x_max": 0.99,
+  "x_min": 0.01
+}
