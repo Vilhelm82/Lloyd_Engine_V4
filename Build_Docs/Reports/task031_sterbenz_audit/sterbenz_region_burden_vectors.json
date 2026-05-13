@@ -1,0 +1,282 @@
+{
+  "burden_vectors": {
+    "c1_reference": {
+      "b_k_ci_lower": 9.032766904621212e-34,
+      "b_k_ci_upper": 0.7324814638547709,
+      "b_k_point_estimate": 0.7324814637856604,
+      "calibration_zero_preserved": false,
+      "fixture_name": "pure_algebraic",
+      "lattice_class": "non_integer_lattice",
+      "max_integer_residual": 0.25,
+      "operation_chain_depth": 2,
+      "path_name": "c1_reference",
+      "polarity_class": "grid_stable_polarity_coupling",
+      "provenance": {
+        "b_k_ci_lower": {
+          "field_path_in_json": "fits.c1_reference.sterbenz_region.b_k_ci_95[0]",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "b_k_ci_upper": {
+          "field_path_in_json": "fits.c1_reference.sterbenz_region.b_k_ci_95[1]",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "b_k_point_estimate": {
+          "field_path_in_json": "fits.c1_reference.sterbenz_region.fit.b_k",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "calibration_zero_preserved": {
+          "computed_method": "task031_candidate_identity_table",
+          "source_file": "src/lloyd_v4/evals/sterbenz_audit/rewrite_candidates.py"
+        },
+        "lattice_class": {
+          "field_path_in_json": "lattice.c1_reference.sterbenz_region.candidate_classification",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "max_integer_residual": {
+          "field_path_in_json": "lattice.c1_reference.sterbenz_region.level_integer_residual_max",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "operation_chain_depth": {
+          "computed_method": "task031_static_operation_count",
+          "source_file": "src/lloyd_v4/evals/sterbenz_audit/rewrite_candidates.py"
+        },
+        "polarity_class": {
+          "field_path_in_json": "polarity.c1_reference.sterbenz_region.aggregate",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        }
+      }
+    },
+    "c2_reassociated": {
+      "b_k_ci_lower": 9.04837490577596e-34,
+      "b_k_ci_upper": 0.6398595836348638,
+      "b_k_point_estimate": 0.6398595836166981,
+      "calibration_zero_preserved": false,
+      "fixture_name": "pure_algebraic",
+      "lattice_class": "integer_lattice",
+      "max_integer_residual": 0.0,
+      "operation_chain_depth": 2,
+      "path_name": "c2_reassociated",
+      "polarity_class": "grid_stable_polarity_coupling",
+      "provenance": {
+        "b_k_ci_lower": {
+          "field_path_in_json": "fits.c2_reassociated.sterbenz_region.b_k_ci_95[0]",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "b_k_ci_upper": {
+          "field_path_in_json": "fits.c2_reassociated.sterbenz_region.b_k_ci_95[1]",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "b_k_point_estimate": {
+          "field_path_in_json": "fits.c2_reassociated.sterbenz_region.fit.b_k",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "calibration_zero_preserved": {
+          "computed_method": "task031_candidate_identity_table",
+          "source_file": "src/lloyd_v4/evals/sterbenz_audit/rewrite_candidates.py"
+        },
+        "lattice_class": {
+          "field_path_in_json": "lattice.c2_reassociated.sterbenz_region.candidate_classification",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "max_integer_residual": {
+          "field_path_in_json": "lattice.c2_reassociated.sterbenz_region.level_integer_residual_max",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "operation_chain_depth": {
+          "computed_method": "task031_static_operation_count",
+          "source_file": "src/lloyd_v4/evals/sterbenz_audit/rewrite_candidates.py"
+        },
+        "polarity_class": {
+          "field_path_in_json": "polarity.c2_reassociated.sterbenz_region.aggregate",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        }
+      }
+    },
+    "c3_factored": {
+      "b_k_ci_lower": 7.187919748902714e-34,
+      "b_k_ci_upper": 0.6124186555734085,
+      "b_k_point_estimate": 0.6124186554909158,
+      "calibration_zero_preserved": false,
+      "fixture_name": "pure_algebraic",
+      "lattice_class": "non_integer_lattice",
+      "max_integer_residual": 0.25,
+      "operation_chain_depth": 4,
+      "path_name": "c3_factored",
+      "polarity_class": "grid_stable_polarity_coupling",
+      "provenance": {
+        "b_k_ci_lower": {
+          "field_path_in_json": "fits.c3_factored.sterbenz_region.b_k_ci_95[0]",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "b_k_ci_upper": {
+          "field_path_in_json": "fits.c3_factored.sterbenz_region.b_k_ci_95[1]",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "b_k_point_estimate": {
+          "field_path_in_json": "fits.c3_factored.sterbenz_region.fit.b_k",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "calibration_zero_preserved": {
+          "computed_method": "task031_candidate_identity_table",
+          "source_file": "src/lloyd_v4/evals/sterbenz_audit/rewrite_candidates.py"
+        },
+        "lattice_class": {
+          "field_path_in_json": "lattice.c3_factored.sterbenz_region.candidate_classification",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "max_integer_residual": {
+          "field_path_in_json": "lattice.c3_factored.sterbenz_region.level_integer_residual_max",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "operation_chain_depth": {
+          "computed_method": "task031_static_operation_count",
+          "source_file": "src/lloyd_v4/evals/sterbenz_audit/rewrite_candidates.py"
+        },
+        "polarity_class": {
+          "field_path_in_json": "polarity.c3_factored.sterbenz_region.aggregate",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        }
+      }
+    },
+    "c4_power_operator": {
+      "b_k_ci_lower": 9.032766904621212e-34,
+      "b_k_ci_upper": 0.7324814638547709,
+      "b_k_point_estimate": 0.7324814637856604,
+      "calibration_zero_preserved": false,
+      "fixture_name": "pure_algebraic",
+      "lattice_class": "non_integer_lattice",
+      "max_integer_residual": 0.25,
+      "operation_chain_depth": 2,
+      "path_name": "c4_power_operator",
+      "polarity_class": "grid_stable_polarity_coupling",
+      "provenance": {
+        "b_k_ci_lower": {
+          "field_path_in_json": "fits.c4_power_operator.sterbenz_region.b_k_ci_95[0]",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "b_k_ci_upper": {
+          "field_path_in_json": "fits.c4_power_operator.sterbenz_region.b_k_ci_95[1]",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "b_k_point_estimate": {
+          "field_path_in_json": "fits.c4_power_operator.sterbenz_region.fit.b_k",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "calibration_zero_preserved": {
+          "computed_method": "task031_candidate_identity_table",
+          "source_file": "src/lloyd_v4/evals/sterbenz_audit/rewrite_candidates.py"
+        },
+        "lattice_class": {
+          "field_path_in_json": "lattice.c4_power_operator.sterbenz_region.candidate_classification",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "max_integer_residual": {
+          "field_path_in_json": "lattice.c4_power_operator.sterbenz_region.level_integer_residual_max",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "operation_chain_depth": {
+          "computed_method": "task031_static_operation_count",
+          "source_file": "src/lloyd_v4/evals/sterbenz_audit/rewrite_candidates.py"
+        },
+        "polarity_class": {
+          "field_path_in_json": "polarity.c4_power_operator.sterbenz_region.aggregate",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        }
+      }
+    },
+    "c5_identity_padded": {
+      "b_k_ci_lower": 9.032766904621212e-34,
+      "b_k_ci_upper": 0.7324814638547709,
+      "b_k_point_estimate": 0.7324814637856604,
+      "calibration_zero_preserved": false,
+      "fixture_name": "pure_algebraic",
+      "lattice_class": "non_integer_lattice",
+      "max_integer_residual": 0.25,
+      "operation_chain_depth": 3,
+      "path_name": "c5_identity_padded",
+      "polarity_class": "grid_stable_polarity_coupling",
+      "provenance": {
+        "b_k_ci_lower": {
+          "field_path_in_json": "fits.c5_identity_padded.sterbenz_region.b_k_ci_95[0]",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "b_k_ci_upper": {
+          "field_path_in_json": "fits.c5_identity_padded.sterbenz_region.b_k_ci_95[1]",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "b_k_point_estimate": {
+          "field_path_in_json": "fits.c5_identity_padded.sterbenz_region.fit.b_k",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "calibration_zero_preserved": {
+          "computed_method": "task031_candidate_identity_table",
+          "source_file": "src/lloyd_v4/evals/sterbenz_audit/rewrite_candidates.py"
+        },
+        "lattice_class": {
+          "field_path_in_json": "lattice.c5_identity_padded.sterbenz_region.candidate_classification",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "max_integer_residual": {
+          "field_path_in_json": "lattice.c5_identity_padded.sterbenz_region.level_integer_residual_max",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "operation_chain_depth": {
+          "computed_method": "task031_static_operation_count",
+          "source_file": "src/lloyd_v4/evals/sterbenz_audit/rewrite_candidates.py"
+        },
+        "polarity_class": {
+          "field_path_in_json": "polarity.c5_identity_padded.sterbenz_region.aggregate",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        }
+      }
+    },
+    "c6_decimal_emulated": {
+      "b_k_ci_lower": 1.9284960341538937e-33,
+      "b_k_ci_upper": 0.599080404563481,
+      "b_k_point_estimate": 0.599080404014236,
+      "calibration_zero_preserved": false,
+      "fixture_name": "pure_algebraic",
+      "lattice_class": "non_integer_lattice",
+      "max_integer_residual": 0.25,
+      "operation_chain_depth": 3,
+      "path_name": "c6_decimal_emulated",
+      "polarity_class": "grid_stable_polarity_coupling",
+      "provenance": {
+        "b_k_ci_lower": {
+          "field_path_in_json": "fits.c6_decimal_emulated.sterbenz_region.b_k_ci_95[0]",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "b_k_ci_upper": {
+          "field_path_in_json": "fits.c6_decimal_emulated.sterbenz_region.b_k_ci_95[1]",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "b_k_point_estimate": {
+          "field_path_in_json": "fits.c6_decimal_emulated.sterbenz_region.fit.b_k",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "calibration_zero_preserved": {
+          "computed_method": "task031_candidate_identity_table",
+          "source_file": "src/lloyd_v4/evals/sterbenz_audit/rewrite_candidates.py"
+        },
+        "lattice_class": {
+          "field_path_in_json": "lattice.c6_decimal_emulated.sterbenz_region.candidate_classification",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "max_integer_residual": {
+          "field_path_in_json": "lattice.c6_decimal_emulated.sterbenz_region.level_integer_residual_max",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        },
+        "operation_chain_depth": {
+          "computed_method": "task031_static_operation_count",
+          "source_file": "src/lloyd_v4/evals/sterbenz_audit/rewrite_candidates.py"
+        },
+        "polarity_class": {
+          "field_path_in_json": "polarity.c6_decimal_emulated.sterbenz_region.aggregate",
+          "report_path": "Build_Docs/Reports/task031_sterbenz_audit/measurement_aggregate.json"
+        }
+      }
+    }
+  },
+  "region": "sterbenz_region",
+  "task": "task031_sterbenz_audit"
+}

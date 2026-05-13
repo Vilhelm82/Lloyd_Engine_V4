@@ -1,0 +1,1694 @@
+{
+  "frontier": {
+    "dominated_candidates": {
+      "c1_reference": [
+        "c2_reassociated"
+      ],
+      "c3_factored": [
+        "c1_reference",
+        "c2_reassociated",
+        "c4_power_operator",
+        "c5_identity_padded",
+        "c6_decimal_emulated"
+      ],
+      "c4_power_operator": [
+        "c2_reassociated"
+      ],
+      "c5_identity_padded": [
+        "c1_reference",
+        "c2_reassociated",
+        "c4_power_operator"
+      ],
+      "c6_decimal_emulated": [
+        "c1_reference",
+        "c2_reassociated",
+        "c4_power_operator"
+      ]
+    },
+    "frontier_members": [
+      "c2_reassociated"
+    ],
+    "incomparable_pairs": [],
+    "pairwise_dominance": {
+      "c1_reference": {
+        "c1_reference": {
+          "interpretation": "self",
+          "outcome": "forms_structurally_tied"
+        },
+        "c2_reassociated": {
+          "interpretation": "right_dominates_left",
+          "outcome": "accepted",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.6398595836166981,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "candidate_lattice_rank_lower",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "candidate_better"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.0,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 2,
+              "required": true,
+              "status": "tied"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c3_factored": {
+          "interpretation": "left_dominates_right",
+          "outcome": "rejected",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.6124186554909158,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 4,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 2,
+              "required": true,
+              "status": "reference_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c4_power_operator": {
+          "interpretation": "tied",
+          "outcome": "forms_structurally_tied",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 2,
+              "required": true,
+              "status": "tied"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c5_identity_padded": {
+          "interpretation": "left_dominates_right",
+          "outcome": "rejected",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 3,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 2,
+              "required": true,
+              "status": "reference_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c6_decimal_emulated": {
+          "interpretation": "left_dominates_right",
+          "outcome": "rejected",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.599080404014236,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 3,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 2,
+              "required": true,
+              "status": "reference_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        }
+      },
+      "c2_reassociated": {
+        "c1_reference": {
+          "interpretation": "left_dominates_right",
+          "outcome": "rejected",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.6398595836166981,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "reference_lattice_rank_lower",
+              "reference_value": "integer_lattice",
+              "required": true,
+              "status": "reference_better"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 0.0,
+              "required": true,
+              "status": "reference_better"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 2,
+              "required": true,
+              "status": "tied"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c2_reassociated": {
+          "interpretation": "self",
+          "outcome": "forms_structurally_tied"
+        },
+        "c3_factored": {
+          "interpretation": "left_dominates_right",
+          "outcome": "rejected",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.6124186554909158,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.6398595836166981,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "reference_lattice_rank_lower",
+              "reference_value": "integer_lattice",
+              "required": true,
+              "status": "reference_better"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 0.0,
+              "required": true,
+              "status": "reference_better"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 4,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 2,
+              "required": true,
+              "status": "reference_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c4_power_operator": {
+          "interpretation": "left_dominates_right",
+          "outcome": "rejected",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.6398595836166981,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "reference_lattice_rank_lower",
+              "reference_value": "integer_lattice",
+              "required": true,
+              "status": "reference_better"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 0.0,
+              "required": true,
+              "status": "reference_better"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 2,
+              "required": true,
+              "status": "tied"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c5_identity_padded": {
+          "interpretation": "left_dominates_right",
+          "outcome": "rejected",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.6398595836166981,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "reference_lattice_rank_lower",
+              "reference_value": "integer_lattice",
+              "required": true,
+              "status": "reference_better"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 0.0,
+              "required": true,
+              "status": "reference_better"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 3,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 2,
+              "required": true,
+              "status": "reference_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c6_decimal_emulated": {
+          "interpretation": "left_dominates_right",
+          "outcome": "rejected",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.599080404014236,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.6398595836166981,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "reference_lattice_rank_lower",
+              "reference_value": "integer_lattice",
+              "required": true,
+              "status": "reference_better"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 0.0,
+              "required": true,
+              "status": "reference_better"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 3,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 2,
+              "required": true,
+              "status": "reference_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        }
+      },
+      "c3_factored": {
+        "c1_reference": {
+          "interpretation": "right_dominates_left",
+          "outcome": "accepted",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.6124186554909158,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 4,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c2_reassociated": {
+          "interpretation": "right_dominates_left",
+          "outcome": "accepted",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.6398595836166981,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.6124186554909158,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "candidate_lattice_rank_lower",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "candidate_better"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.0,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 4,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c3_factored": {
+          "interpretation": "self",
+          "outcome": "forms_structurally_tied"
+        },
+        "c4_power_operator": {
+          "interpretation": "right_dominates_left",
+          "outcome": "accepted",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.6124186554909158,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 4,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c5_identity_padded": {
+          "interpretation": "right_dominates_left",
+          "outcome": "accepted",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.6124186554909158,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 3,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 4,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c6_decimal_emulated": {
+          "interpretation": "right_dominates_left",
+          "outcome": "accepted",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.599080404014236,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.6124186554909158,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 3,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 4,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        }
+      },
+      "c4_power_operator": {
+        "c1_reference": {
+          "interpretation": "tied",
+          "outcome": "forms_structurally_tied",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 2,
+              "required": true,
+              "status": "tied"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c2_reassociated": {
+          "interpretation": "right_dominates_left",
+          "outcome": "accepted",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.6398595836166981,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "candidate_lattice_rank_lower",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "candidate_better"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.0,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 2,
+              "required": true,
+              "status": "tied"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c3_factored": {
+          "interpretation": "left_dominates_right",
+          "outcome": "rejected",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.6124186554909158,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 4,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 2,
+              "required": true,
+              "status": "reference_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c4_power_operator": {
+          "interpretation": "self",
+          "outcome": "forms_structurally_tied"
+        },
+        "c5_identity_padded": {
+          "interpretation": "left_dominates_right",
+          "outcome": "rejected",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 3,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 2,
+              "required": true,
+              "status": "reference_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c6_decimal_emulated": {
+          "interpretation": "left_dominates_right",
+          "outcome": "rejected",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.599080404014236,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 3,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 2,
+              "required": true,
+              "status": "reference_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        }
+      },
+      "c5_identity_padded": {
+        "c1_reference": {
+          "interpretation": "right_dominates_left",
+          "outcome": "accepted",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 3,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c2_reassociated": {
+          "interpretation": "right_dominates_left",
+          "outcome": "accepted",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.6398595836166981,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "candidate_lattice_rank_lower",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "candidate_better"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.0,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 3,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c3_factored": {
+          "interpretation": "left_dominates_right",
+          "outcome": "rejected",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.6124186554909158,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 4,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 3,
+              "required": true,
+              "status": "reference_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c4_power_operator": {
+          "interpretation": "right_dominates_left",
+          "outcome": "accepted",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 3,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c5_identity_padded": {
+          "interpretation": "self",
+          "outcome": "forms_structurally_tied"
+        },
+        "c6_decimal_emulated": {
+          "interpretation": "tied",
+          "outcome": "forms_structurally_tied",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.599080404014236,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.7324814637856604,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 3,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 3,
+              "required": true,
+              "status": "tied"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        }
+      },
+      "c6_decimal_emulated": {
+        "c1_reference": {
+          "interpretation": "right_dominates_left",
+          "outcome": "accepted",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.599080404014236,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 3,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c2_reassociated": {
+          "interpretation": "right_dominates_left",
+          "outcome": "accepted",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.6398595836166981,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.599080404014236,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "candidate_lattice_rank_lower",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "candidate_better"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.0,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 3,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c3_factored": {
+          "interpretation": "left_dominates_right",
+          "outcome": "rejected",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.6124186554909158,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.599080404014236,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 4,
+              "direction": "lower",
+              "reason": "reference_value_lower",
+              "reference_value": 3,
+              "required": true,
+              "status": "reference_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c4_power_operator": {
+          "interpretation": "right_dominates_left",
+          "outcome": "accepted",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.599080404014236,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 2,
+              "direction": "lower",
+              "reason": "candidate_value_lower",
+              "reference_value": 3,
+              "required": true,
+              "status": "candidate_better"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c5_identity_padded": {
+          "interpretation": "tied",
+          "outcome": "forms_structurally_tied",
+          "per_dimension": {
+            "b_k_point_estimate": {
+              "candidate_value": 0.7324814637856604,
+              "direction": "lower_with_ci",
+              "reason": "confidence_intervals_overlap",
+              "reference_value": 0.599080404014236,
+              "required": true,
+              "status": "tied"
+            },
+            "calibration_zero_preserved": {
+              "candidate_value": false,
+              "direction": "equal_required",
+              "reason": "required_values_match",
+              "reference_value": false,
+              "required": true,
+              "status": "tied"
+            },
+            "lattice_class": {
+              "candidate_value": "non_integer_lattice",
+              "direction": "lower_lattice_rank",
+              "reason": "equal_lattice_rank",
+              "reference_value": "non_integer_lattice",
+              "required": true,
+              "status": "tied"
+            },
+            "max_integer_residual": {
+              "candidate_value": 0.25,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 0.25,
+              "required": true,
+              "status": "tied"
+            },
+            "operation_chain_depth": {
+              "candidate_value": 3,
+              "direction": "lower",
+              "reason": "equal_values",
+              "reference_value": 3,
+              "required": true,
+              "status": "tied"
+            },
+            "polarity_class": {
+              "candidate_value": "grid_stable_polarity_coupling",
+              "direction": "paired_equal",
+              "reason": "required_values_match",
+              "reference_value": "grid_stable_polarity_coupling",
+              "required": true,
+              "status": "tied"
+            }
+          }
+        },
+        "c6_decimal_emulated": {
+          "interpretation": "self",
+          "outcome": "forms_structurally_tied"
+        }
+      }
+    }
+  },
+  "headline_classification": "sterbenz_dominated_by_alternative",
+  "region": "sterbenz_region",
+  "task": "task031_sterbenz_audit"
+}
