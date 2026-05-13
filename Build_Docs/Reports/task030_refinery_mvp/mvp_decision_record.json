@@ -1,0 +1,179 @@
+{
+  "admissibility": {
+    "candidate_value": "matched",
+    "mismatch_field": "none",
+    "reference_value": "matched",
+    "status": "admissible"
+  },
+  "burden_vectors": {
+    "candidate": {
+      "b_k_ci_lower": 4.058963392730887e-101,
+      "b_k_ci_upper": 0.28291099494431743,
+      "b_k_point_estimate": 0.28291099494381716,
+      "calibration_zero_preserved": false,
+      "fixture_name": "pure_algebraic",
+      "lattice_class": "integer_lattice",
+      "max_integer_residual": 0.0,
+      "operation_chain_depth": 1,
+      "path_name": "F1",
+      "polarity_class": "grid_stable_polarity_coupling",
+      "provenance": {
+        "b_k_ci_lower": {
+          "field_path_in_json": "fits.pure_algebraic.F1.regular_region.b_k_ci_95[0]",
+          "report_path": "Build_Docs/Reports/task017c_multi_precision_theorem2/precision_aggregate.json"
+        },
+        "b_k_ci_upper": {
+          "field_path_in_json": "fits.pure_algebraic.F1.regular_region.b_k_ci_95[1]",
+          "report_path": "Build_Docs/Reports/task017c_multi_precision_theorem2/precision_aggregate.json"
+        },
+        "b_k_point_estimate": {
+          "field_path_in_json": "fits.pure_algebraic.F1.regular_region.fit.b_k",
+          "report_path": "Build_Docs/Reports/task017c_multi_precision_theorem2/precision_aggregate.json"
+        },
+        "calibration_zero_preserved": {
+          "computed_method": "task030_path_identity_table",
+          "source_file": "src/lloyd_v4/evals/pure_algebraic_four_form.py"
+        },
+        "lattice_class": {
+          "field_path_in_json": "by_form.F1.by_precision.float64.candidate_classification",
+          "report_path": "Build_Docs/Reports/task028_conditional_masks_joint_lattice_pure_algebraic/pure_algebraic_lattice_campaign_output.json"
+        },
+        "max_integer_residual": {
+          "field_path_in_json": "by_form.F1.by_precision.float64.level_integer_residual_max",
+          "report_path": "Build_Docs/Reports/task028_conditional_masks_joint_lattice_pure_algebraic/pure_algebraic_lattice_campaign_output.json"
+        },
+        "operation_chain_depth": {
+          "computed_method": "task030_static_operation_count",
+          "source_file": "src/lloyd_v4/evals/pure_algebraic_four_form.py"
+        },
+        "polarity_class": {
+          "field_path_in_json": "aggregate_classifications.F1_F2.aggregate",
+          "report_path": "Build_Docs/Reports/task028_conditional_masks_joint_lattice_pure_algebraic/pure_algebraic_polarity_grid_stability.json"
+        }
+      }
+    },
+    "reference": {
+      "b_k_ci_lower": 2.727537910596299e-101,
+      "b_k_ci_upper": 0.3638034361837702,
+      "b_k_point_estimate": 0.3638034361836378,
+      "calibration_zero_preserved": false,
+      "fixture_name": "pure_algebraic",
+      "lattice_class": "non_integer_lattice",
+      "max_integer_residual": 0.25,
+      "operation_chain_depth": 2,
+      "path_name": "F2",
+      "polarity_class": "grid_stable_polarity_coupling",
+      "provenance": {
+        "b_k_ci_lower": {
+          "field_path_in_json": "fits.pure_algebraic.F2.regular_region.b_k_ci_95[0]",
+          "report_path": "Build_Docs/Reports/task017c_multi_precision_theorem2/precision_aggregate.json"
+        },
+        "b_k_ci_upper": {
+          "field_path_in_json": "fits.pure_algebraic.F2.regular_region.b_k_ci_95[1]",
+          "report_path": "Build_Docs/Reports/task017c_multi_precision_theorem2/precision_aggregate.json"
+        },
+        "b_k_point_estimate": {
+          "field_path_in_json": "fits.pure_algebraic.F2.regular_region.fit.b_k",
+          "report_path": "Build_Docs/Reports/task017c_multi_precision_theorem2/precision_aggregate.json"
+        },
+        "calibration_zero_preserved": {
+          "computed_method": "task030_path_identity_table",
+          "source_file": "src/lloyd_v4/evals/pure_algebraic_four_form.py"
+        },
+        "lattice_class": {
+          "field_path_in_json": "by_form.F2.by_precision.float64.candidate_classification",
+          "report_path": "Build_Docs/Reports/task028_conditional_masks_joint_lattice_pure_algebraic/pure_algebraic_lattice_campaign_output.json"
+        },
+        "max_integer_residual": {
+          "field_path_in_json": "by_form.F2.by_precision.float64.level_integer_residual_max",
+          "report_path": "Build_Docs/Reports/task028_conditional_masks_joint_lattice_pure_algebraic/pure_algebraic_lattice_campaign_output.json"
+        },
+        "operation_chain_depth": {
+          "computed_method": "task030_static_operation_count",
+          "source_file": "src/lloyd_v4/evals/pure_algebraic_four_form.py"
+        },
+        "polarity_class": {
+          "field_path_in_json": "aggregate_classifications.F1_F2.aggregate",
+          "report_path": "Build_Docs/Reports/task028_conditional_masks_joint_lattice_pure_algebraic/pure_algebraic_polarity_grid_stability.json"
+        }
+      }
+    }
+  },
+  "candidate_form": {
+    "calibration_status": "non_calibration",
+    "declared_algebraic_identity": "pure_algebraic_zero_constraint",
+    "domain_stratum_label": "canonical_137_point_domain",
+    "fixture_name": "pure_algebraic",
+    "operand_grid_label": "pure_algebraic_x_grid_137",
+    "path_name": "F1"
+  },
+  "comparison": {
+    "outcome": "accepted",
+    "per_dimension": {
+      "b_k_point_estimate": {
+        "candidate_value": 0.28291099494381716,
+        "direction": "lower_with_ci",
+        "reason": "confidence_intervals_overlap",
+        "reference_value": 0.3638034361836378,
+        "required": true,
+        "status": "tied"
+      },
+      "calibration_zero_preserved": {
+        "candidate_value": false,
+        "direction": "equal_required",
+        "reason": "required_values_match",
+        "reference_value": false,
+        "required": true,
+        "status": "tied"
+      },
+      "lattice_class": {
+        "candidate_value": "integer_lattice",
+        "direction": "lower_lattice_rank",
+        "reason": "candidate_lattice_rank_lower",
+        "reference_value": "non_integer_lattice",
+        "required": true,
+        "status": "candidate_better"
+      },
+      "max_integer_residual": {
+        "candidate_value": 0.0,
+        "direction": "lower",
+        "reason": "candidate_value_lower",
+        "reference_value": 0.25,
+        "required": true,
+        "status": "candidate_better"
+      },
+      "operation_chain_depth": {
+        "candidate_value": 1,
+        "direction": "lower",
+        "reason": "candidate_value_lower",
+        "reference_value": 2,
+        "required": true,
+        "status": "candidate_better"
+      },
+      "polarity_class": {
+        "candidate_value": "grid_stable_polarity_coupling",
+        "direction": "paired_equal",
+        "reason": "required_values_match",
+        "reference_value": "grid_stable_polarity_coupling",
+        "required": true,
+        "status": "tied"
+      }
+    }
+  },
+  "final_outcome": "accepted",
+  "headline_classification": "mvp_validates_decision_law",
+  "match_against_pre_registration": true,
+  "pre_registration": {
+    "commit": "b907d93",
+    "expected_outcome": "accepted"
+  },
+  "reference_form": {
+    "calibration_status": "non_calibration",
+    "declared_algebraic_identity": "pure_algebraic_zero_constraint",
+    "domain_stratum_label": "canonical_137_point_domain",
+    "fixture_name": "pure_algebraic",
+    "operand_grid_label": "pure_algebraic_x_grid_137",
+    "path_name": "F2"
+  },
+  "task": "task030_refinery_mvp"
+}
