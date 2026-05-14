@@ -16,3 +16,6 @@ where = ["src"]
 pythonpath = ["src"]
 testpaths = ["tests"]
 addopts = "-q"
+markers = [
+    "slow: campaign/report regression tests that are useful for release verification but expensive during rapid iteration",
+]
