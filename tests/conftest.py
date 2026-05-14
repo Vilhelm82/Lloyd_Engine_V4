@@ -18,6 +18,7 @@ SLOW_TEST_FILES = {
     "test_task031_sterbenz_audit.py",
     "test_task032_quartic_lattice_grain_discrimination.py",
     "test_task033_schwarzschild_cbrt_transformed_n3.py",
+    "test_task034_schwarzschild_quartic_transformed_n4.py",
 }
 
 

@@ -1,0 +1,358 @@
+{
+  "by_form": {
+    "F1": {
+      "by_precision": {
+        "float32": {
+          "candidate_classification": "lattice_integer",
+          "level_histogram": {
+            "-1": 21,
+            "-2": 23,
+            "-3": 8,
+            "1": 27,
+            "2": 17,
+            "3": 4,
+            "4": 2
+          },
+          "level_integer_residual_max": 0.0,
+          "level_integer_residual_median": 0.0,
+          "level_jump_distribution": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "level_max": 4.0,
+          "level_min": -3.0,
+          "n_distinct_levels": 7,
+          "n_nonzero": 102,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "far": 4,
+            "middle": 6,
+            "near": 7
+          }
+        },
+        "float64": {
+          "candidate_classification": "lattice_integer",
+          "level_histogram": {
+            "-1": 26,
+            "-2": 15,
+            "-3": 6,
+            "-4": 2,
+            "1": 29,
+            "2": 14,
+            "3": 9
+          },
+          "level_integer_residual_max": 0.0,
+          "level_integer_residual_median": 0.0,
+          "level_jump_distribution": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "level_max": 3.0,
+          "level_min": -4.0,
+          "n_distinct_levels": 7,
+          "n_nonzero": 101,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "far": 6,
+            "middle": 7,
+            "near": 6
+          }
+        }
+      }
+    },
+    "F2": {
+      "by_precision": {
+        "float32": {
+          "candidate_classification": "non_integer_lattice",
+          "level_histogram": {
+            "-0.5": 2,
+            "-1": 5,
+            "-2": 10,
+            "-2.5": 2,
+            "-4": 1,
+            "0.5": 2,
+            "1": 6,
+            "2": 4,
+            "2.5": 1,
+            "4": 2
+          },
+          "level_integer_residual_max": 0.25,
+          "level_integer_residual_median": 0.0,
+          "level_jump_distribution": [
+            1.5,
+            0.5,
+            1.0,
+            0.5,
+            1.0,
+            0.5,
+            1.0,
+            0.5,
+            1.5
+          ],
+          "level_max": 4.0,
+          "level_min": -4.0,
+          "n_distinct_levels": 10,
+          "n_nonzero": 35,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "far": 8,
+            "middle": 4,
+            "near": 0
+          }
+        },
+        "float64": {
+          "candidate_classification": "non_integer_lattice",
+          "level_histogram": {
+            "-0.5": 5,
+            "-1": 2,
+            "-1.5": 4,
+            "-2": 5,
+            "-2.5": 1,
+            "-4": 3,
+            "0": 1,
+            "0.5": 5,
+            "1": 1,
+            "1.5": 1,
+            "2": 5,
+            "4": 4
+          },
+          "level_integer_residual_max": 0.25,
+          "level_integer_residual_median": 0.0,
+          "level_jump_distribution": [
+            1.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            2.0
+          ],
+          "level_max": 4.0,
+          "level_min": -4.0,
+          "n_distinct_levels": 12,
+          "n_nonzero": 37,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "far": 12,
+            "middle": 3,
+            "near": 0
+          }
+        }
+      }
+    },
+    "F3": {
+      "by_precision": {
+        "float32": {
+          "candidate_classification": "lattice_empty",
+          "level_histogram": {},
+          "level_integer_residual_max": 0.0,
+          "level_integer_residual_median": null,
+          "level_jump_distribution": [],
+          "level_max": null,
+          "level_min": null,
+          "n_distinct_levels": 0,
+          "n_nonzero": 0,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "far": 0,
+            "middle": 0,
+            "near": 0
+          }
+        },
+        "float64": {
+          "candidate_classification": "lattice_empty",
+          "level_histogram": {},
+          "level_integer_residual_max": 0.0,
+          "level_integer_residual_median": null,
+          "level_jump_distribution": [],
+          "level_max": null,
+          "level_min": null,
+          "n_distinct_levels": 0,
+          "n_nonzero": 0,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "far": 0,
+            "middle": 0,
+            "near": 0
+          }
+        }
+      }
+    },
+    "F4": {
+      "by_precision": {
+        "float32": {
+          "candidate_classification": "lattice_integer",
+          "level_histogram": {
+            "-1": 1,
+            "-128": 1,
+            "-16": 5,
+            "-160": 1,
+            "-192": 4,
+            "-2": 1,
+            "-2304": 1,
+            "-24": 1,
+            "-32": 5,
+            "-4": 2,
+            "-448": 1,
+            "-64": 5,
+            "-8": 4,
+            "-96": 2,
+            "1152": 1,
+            "128": 2,
+            "16": 6,
+            "160": 1,
+            "1728": 1,
+            "2": 1,
+            "24": 1,
+            "2432": 1,
+            "32": 3,
+            "320": 2,
+            "4": 2,
+            "48": 3,
+            "576": 1,
+            "64": 3,
+            "704": 1,
+            "8": 7
+          },
+          "level_integer_residual_max": 0.0,
+          "level_integer_residual_median": 0.0,
+          "level_jump_distribution": [
+            1856.0,
+            256.0,
+            32.0,
+            32.0,
+            32.0,
+            32.0,
+            32.0,
+            8.0,
+            8.0,
+            8.0,
+            4.0,
+            2.0,
+            1.0,
+            3.0,
+            2.0,
+            4.0,
+            8.0,
+            8.0,
+            8.0,
+            16.0,
+            16.0,
+            64.0,
+            32.0,
+            160.0,
+            256.0,
+            128.0,
+            448.0,
+            576.0,
+            704.0
+          ],
+          "level_max": 2432.0,
+          "level_min": -2304.0,
+          "n_distinct_levels": 30,
+          "n_nonzero": 70,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "far": 1,
+            "middle": 12,
+            "near": 21
+          }
+        },
+        "float64": {
+          "candidate_classification": "lattice_integer",
+          "level_histogram": {
+            "-1": 1,
+            "-1152": 1,
+            "-16": 9,
+            "-160": 1,
+            "-2": 1,
+            "-24": 2,
+            "-256": 2,
+            "-32": 3,
+            "-4": 2,
+            "-48": 1,
+            "-576": 1,
+            "-64": 4,
+            "-8": 6,
+            "-80": 1,
+            "128": 2,
+            "16": 5,
+            "160": 1,
+            "192": 1,
+            "2": 4,
+            "224": 3,
+            "32": 6,
+            "320": 1,
+            "384": 1,
+            "4": 1,
+            "48": 2,
+            "64": 2,
+            "640": 1,
+            "8": 7,
+            "896": 2,
+            "96": 1
+          },
+          "level_integer_residual_max": 0.0,
+          "level_integer_residual_median": 0.0,
+          "level_jump_distribution": [
+            576.0,
+            320.0,
+            96.0,
+            80.0,
+            16.0,
+            16.0,
+            16.0,
+            8.0,
+            8.0,
+            8.0,
+            4.0,
+            2.0,
+            1.0,
+            3.0,
+            2.0,
+            4.0,
+            8.0,
+            16.0,
+            16.0,
+            16.0,
+            32.0,
+            32.0,
+            32.0,
+            32.0,
+            32.0,
+            96.0,
+            64.0,
+            256.0,
+            256.0
+          ],
+          "level_max": 896.0,
+          "level_min": -1152.0,
+          "n_distinct_levels": 30,
+          "n_nonzero": 75,
+          "n_total": 137,
+          "regional_distinct_level_counts": {
+            "far": 2,
+            "middle": 10,
+            "near": 22
+          }
+        }
+      }
+    }
+  },
+  "campaign": "task034_schwarzschild_quartic_lattice_campaign",
+  "r_count": 137,
+  "r_max": 10.0,
+  "r_min": 2.005
+}
