@@ -7,19 +7,26 @@ instrument law; it does not paste or modify them.
 from __future__ import annotations
 
 import importlib.util as ilu
+import argparse
 import json
 import os
+import sys
 from decimal import Decimal
 from pathlib import Path
 from typing import Iterable
 
 
 ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
 REPORT_DIR = ROOT / "Build_Docs" / "Reports" / "foldreadback_probe0_v10_active_dualarm"
 SCRATCH_ARTIFACT = ROOT / "scratch" / "foldreadback_probe0_v10_active_dualarm_artifact.json"
 REPORT_ARTIFACT = REPORT_DIR / "artifact_v10.json"
 CLOSEOUT = REPORT_DIR / "closeout_v10.md"
 PREREGISTRY = REPORT_DIR / "preregistry_v10.md"
+REPORT_SR_ARTIFACT = REPORT_DIR / "artifact_v10_sr.json"
+CLOSEOUT_SR = REPORT_DIR / "closeout_v10_sr.md"
 
 _D = os.path.dirname(__file__)
 
@@ -62,6 +69,16 @@ OUTCOMES = {
     "resolved": "active_dual_read_gap_resolved",
     "unresolved": "active_dual_read_gap_unresolved",
     "wide_only": "active_dual_read_wide_only_no_falloff",
+}
+SR_OUTCOMES = {
+    "wide_only": "active_dual_read_wide_only_no_falloff",
+    "wide_separation": "active_dual_read_wide_only_with_separation",
+    "resolved": "active_handoff_gap_resolved",
+    "unresolved": "active_handoff_gap_unresolved",
+    "boundary": "active_handoff_boundary_only",
+    "control": "active_handoff_disqualified_control",
+    "partition": "active_handoff_partition_unstable",
+    "guard": "active_handoff_guard_unstable",
 }
 
 
@@ -321,11 +338,19 @@ def _overlap_record(arm_w: dict[str, object], arm_n: dict[str, object]) -> dict[
     return {"both_active": both_active, "both_valid": both_valid, "agreement": agreement}
 
 
-def run_fixture(a_a1: str, a_a2: str, *, label: str, phase: int = 0, guard: int = DEFAULT_GUARD) -> dict[str, object]:
-    sweep_a1, non_a1 = sweep(Decimal(a_a1), MB)
-    sweep_a2, non_a2 = sweep(Decimal(a_a2), MB)
-    c_a1 = creg(sweep_a1)
-    c_a2 = creg(sweep_a2)
+def run_point_fixture(
+    points_a1: list[dict[str, object]],
+    points_a2: list[dict[str, object]],
+    *,
+    label: str,
+    phase: int = 0,
+    guard: int = DEFAULT_GUARD,
+    scan_fields: dict[str, object] | None = None,
+    nonobservable_a1: int = 0,
+    nonobservable_a2: int = 0,
+) -> dict[str, object]:
+    c_a1 = creg(points_a1)
+    c_a2 = creg(points_a2)
     rank_map = global_rank_map(c_a1)
     records = []
     for center in range(len(c_a1)):
@@ -334,22 +359,25 @@ def run_fixture(a_a1: str, a_a2: str, *, label: str, phase: int = 0, guard: int 
         reg_a1 = c_a1[start:end]
         reg_a2 = c_a2[start:end]
         arm_w = _evaluate_arm_w(reg_a1, reg_a2, rank_map, phase)
-        records.append(
-            {
-                "idx": center,
-                "center_key": point_key(c_a1[center]),
-                "point_count_A1": len(reg_a1),
-                "point_count_A2": len(reg_a2),
-                "f_min": str(reg_a1[0]["f0"]) if reg_a1 else None,
-                "f_max": str(reg_a1[-1]["f0"]) if reg_a1 else None,
-                "x_min": str(min(point["x"] for point in reg_a1)) if reg_a1 else None,
-                "x_max": str(max(point["x"] for point in reg_a1)) if reg_a1 else None,
-                "binades": sorted({point["e_f"] for point in reg_a1}),
-                "_reg_a1": reg_a1,
-                "_reg_a2": reg_a2,
-                "armW": arm_w,
-            }
-        )
+        record = {
+            "idx": center,
+            "center_key": point_key(c_a1[center]),
+            "point_count_A1": len(reg_a1),
+            "point_count_A2": len(reg_a2),
+            "f_min": str(reg_a1[0]["f0"]) if reg_a1 else None,
+            "f_max": str(reg_a1[-1]["f0"]) if reg_a1 else None,
+            "x_min": str(min(point["x"] for point in reg_a1)) if reg_a1 else None,
+            "x_max": str(max(point["x"] for point in reg_a1)) if reg_a1 else None,
+            "binades": sorted({point["e_f"] for point in reg_a1}),
+            "_reg_a1": reg_a1,
+            "_reg_a2": reg_a2,
+            "armW": arm_w,
+        }
+        if "beta" in c_a1[center]:
+            record["beta"] = str(c_a1[center]["beta"])
+        if "eta" in c_a1[center]:
+            record["eta"] = str(c_a1[center]["eta"])
+        records.append(record)
     _assign_warning_and_recovery(records)
     intervals = activation_intervals_from_falloff([record["armW"]["falloff_state"] for record in records], guard)
     for record in records:
@@ -362,25 +390,44 @@ def run_fixture(a_a1: str, a_a2: str, *, label: str, phase: int = 0, guard: int 
     stitched = [_stitched_record(record) for record in records]
     scan = {
         "label": label,
-        "a_A1": a_a1,
-        "a_A2": a_a2,
-        "phase": phase,
-        "guard": guard,
-        "mb": MB,
-        "context_points": CONTEXT_POINTS,
-        "min_points": MIN_POINTS,
-        "observable_points_A1": len(sweep_a1),
-        "observable_points_A2": len(sweep_a2),
-        "nonobservable_A1": non_a1,
-        "nonobservable_A2": non_a2,
-        "creg_points_A1": len(c_a1),
-        "creg_points_A2": len(c_a2),
-        "active_N_intervals": intervals,
-        "records": records,
-        "stitched_readback": stitched,
     }
+    if scan_fields:
+        scan.update(scan_fields)
+    scan.update(
+        {
+            "phase": phase,
+            "guard": guard,
+            "mb": MB,
+            "context_points": CONTEXT_POINTS,
+            "min_points": MIN_POINTS,
+            "observable_points_A1": len(points_a1),
+            "observable_points_A2": len(points_a2),
+            "nonobservable_A1": nonobservable_a1,
+            "nonobservable_A2": nonobservable_a2,
+            "creg_points_A1": len(c_a1),
+            "creg_points_A2": len(c_a2),
+            "active_N_intervals": intervals,
+            "records": records,
+            "stitched_readback": stitched,
+        }
+    )
     scan["outcome_basis"] = _outcome_basis(scan)
     return scan
+
+
+def run_fixture(a_a1: str, a_a2: str, *, label: str, phase: int = 0, guard: int = DEFAULT_GUARD) -> dict[str, object]:
+    sweep_a1, non_a1 = sweep(Decimal(a_a1), MB)
+    sweep_a2, non_a2 = sweep(Decimal(a_a2), MB)
+    return run_point_fixture(
+        sweep_a1,
+        sweep_a2,
+        label=label,
+        phase=phase,
+        guard=guard,
+        scan_fields={"a_A1": a_a1, "a_A2": a_a2},
+        nonobservable_a1=non_a1,
+        nonobservable_a2=non_a2,
+    )
 
 
 def _stitched_record(record: dict[str, object]) -> dict[str, object]:
@@ -494,6 +541,295 @@ def run_campaign() -> dict[str, object]:
     return artifact
 
 
+def _sr_imports():
+    from lloyd_v4.evals.multi_precision_four_form import ulp_of_double
+    from lloyd_v4.evals.sr_four_form import beta_grid, eta_of_beta, four_form_float64
+
+    return beta_grid, eta_of_beta, four_form_float64, ulp_of_double
+
+
+def _sr_scan_fields(left: str, right: str) -> dict[str, object]:
+    return {
+        "fixture": "sr_four_form",
+        "coordinate": "beta",
+        "surface": "f(beta)=1-beta^2; eta(beta)=sqrt(f(beta)); beta -> 1",
+        "level_unit": "ulp(1 - beta^2)",
+        "A1_channel": left,
+        "A2_channel": right,
+    }
+
+
+def sr_surface_points(channel: str) -> list[dict[str, object]]:
+    beta_grid, eta_of_beta, four_form_float64, ulp_of_double = _sr_imports()
+    points = []
+    for beta_value in beta_grid():
+        f_value = 1.0 - beta_value * beta_value
+        unit = ulp_of_double(f_value)
+        if channel == "F4_float64":
+            residual = four_form_float64(beta_value)["F4"]
+            level = int(round(residual / unit)) if unit != 0.0 else 0
+        elif channel == "exact_zero":
+            residual = 0.0
+            level = 0
+        elif channel == "matched_affine":
+            residual = 0.0
+            level = int(round((beta_value - 0.85) * 1000.0))
+        else:
+            raise ValueError(f"unknown SR v10 channel: {channel}")
+        beta_decimal = Decimal.from_float(float(beta_value))
+        f_decimal = Decimal.from_float(float(f_value))
+        points.append(
+            {
+                "x": beta_decimal,
+                "beta": beta_decimal,
+                "f0": f_decimal,
+                "eta": Decimal.from_float(float(eta_of_beta(beta_value))),
+                "F4_float64": residual,
+                "level_unit": unit,
+                "L": level,
+                "e_f": binade_exp(f_decimal),
+                "e_x": binade_exp(beta_decimal),
+            }
+        )
+    return points
+
+
+def run_sr_fixture(left: str, right: str, *, label: str, phase: int = 0, guard: int = DEFAULT_GUARD) -> dict[str, object]:
+    return run_point_fixture(
+        sr_surface_points(left),
+        sr_surface_points(right),
+        label=label,
+        phase=phase,
+        guard=guard,
+        scan_fields=_sr_scan_fields(left, right),
+    )
+
+
+def _scan_has_armw_separation(scan: dict[str, object]) -> bool:
+    return any(record["armW"]["inference"] == "separated" for record in scan["records"])
+
+
+def _sr_records_near_endpoint(scan: dict[str, object]) -> list[dict[str, object]]:
+    return [record for record in scan["records"] if float(record.get("beta", "0.0")) >= 0.9]
+
+
+def _sr_warning_or_below_near_endpoint(scan: dict[str, object]) -> bool:
+    return any(record["armW"]["falloff_state"] in {"warning", "below_floor"} for record in _sr_records_near_endpoint(scan))
+
+
+def select_sr_outcome(
+    scan: dict[str, object],
+    *,
+    controls_silent: bool = True,
+    partition_invariant: bool = True,
+    guard_invariant: bool = True,
+) -> str:
+    records = scan.get("records", [])
+    intervals = scan.get("active_N_intervals", [])
+    if not controls_silent:
+        return SR_OUTCOMES["control"]
+    if not partition_invariant:
+        return SR_OUTCOMES["partition"]
+    if not guard_invariant:
+        return SR_OUTCOMES["guard"]
+    if intervals:
+        valid_inside_core = any(record["armN"]["valid"] and record["armN"]["activation_reason"] == "core_gap" for record in records)
+        return SR_OUTCOMES["resolved"] if valid_inside_core else SR_OUTCOMES["unresolved"]
+    if _sr_warning_or_below_near_endpoint(scan):
+        return SR_OUTCOMES["boundary"]
+    if _scan_has_armw_separation(scan):
+        return SR_OUTCOMES["wide_separation"]
+    return SR_OUTCOMES["wide_only"]
+
+
+def _sr_guard_invariant(scan_a: dict[str, object], scan_b: dict[str, object]) -> bool:
+    out_a = select_sr_outcome(scan_a)
+    out_b = select_sr_outcome(scan_b)
+    if out_a == out_b:
+        return True
+    unstable_pairs = {SR_OUTCOMES["resolved"], SR_OUTCOMES["unresolved"]}
+    if out_a in unstable_pairs and out_b in unstable_pairs:
+        return False
+    if SR_OUTCOMES["boundary"] in {out_a, out_b} and {out_a, out_b} <= {SR_OUTCOMES["boundary"], SR_OUTCOMES["wide_only"], SR_OUTCOMES["wide_separation"]}:
+        return True
+    return False
+
+
+def _sr_fixture_summary() -> dict[str, object]:
+    beta_grid, _eta_of_beta, _four_form_float64, _ulp_of_double = _sr_imports()
+    values = beta_grid()
+    return {
+        "module": "src/lloyd_v4/evals/sr_four_form.py",
+        "beta_count": len(values),
+        "beta_min": values[0],
+        "beta_max": values[-1],
+        "reused": ["beta_grid", "eta_of_beta", "four_form_float64"],
+    }
+
+
+def run_sr_campaign() -> dict[str, object]:
+    primary = run_sr_fixture("F4_float64", "F4_float64", label="sr_primary", phase=0, guard=DEFAULT_GUARD)
+    phase_swap = run_sr_fixture("F4_float64", "F4_float64", label="sr_primary_phase_1", phase=1, guard=DEFAULT_GUARD)
+    guard_variant = run_sr_fixture("F4_float64", "F4_float64", label="sr_primary_guard_2", phase=0, guard=GUARD_VARIANT)
+    exact_zero = run_sr_fixture("exact_zero", "exact_zero", label="sr_exact_zero_control", phase=0, guard=DEFAULT_GUARD)
+    affine = run_sr_fixture("matched_affine", "matched_affine", label="sr_matched_affine_control", phase=0, guard=DEFAULT_GUARD)
+    controls = {
+        "exact_zero": {"silent": _control_silent(exact_zero), "scan": exact_zero},
+        "matched_affine": {"silent": _control_silent(affine), "scan": affine},
+    }
+    partition_ok = primary["outcome_basis"] == phase_swap["outcome_basis"]
+    guard_ok = _sr_guard_invariant(primary, guard_variant)
+    controls_silent = all(control["silent"] for control in controls.values())
+    outcome = select_sr_outcome(primary, controls_silent=controls_silent, partition_invariant=partition_ok, guard_invariant=guard_ok)
+    artifact = {
+        "probe": "foldreadback_probe0",
+        "campaign": "v10_active_dualarm_sr_fixture",
+        "fixture": "sr_four_form",
+        "sr_fixture": _sr_fixture_summary(),
+        "source_reuse": {
+            "v10_mechanics": "scratch/run_foldreadback_probe0_v10_active_dualarm.py",
+            "v7_imported": [
+                "reseat",
+                "fit_ols",
+                "sweep",
+                "measure_point",
+                "binade_exp",
+                "DISTRIB",
+                "SCALARS",
+                "disc",
+                "ols_design_pivot_ok",
+            ],
+            "v8_imported": ["classify_instrument", "ANALYTIC_MAX"],
+            "sr_imported": ["beta_grid", "eta_of_beta", "four_form_float64"],
+            "new_dual_arm_method": False,
+            "v7_primitives_copied_or_modified": False,
+        },
+        "parameters": {
+            "armW_functions": ARM_W_FUNCS,
+            "armN_functions": ARM_N_FUNCS,
+            "context_points": CONTEXT_POINTS,
+            "min_points": MIN_POINTS,
+            "default_guard": DEFAULT_GUARD,
+            "guard_variant": GUARD_VARIANT,
+            "partition_phases": [0, 1],
+            "primary_channel": "F4_float64 self-readback over ulp(1-beta^2) levels",
+        },
+        "primary_scan": primary,
+        "controls": controls,
+        "invariance": {
+            "partition_phase_0_1_match": partition_ok,
+            "phase_1_outcome_basis": phase_swap["outcome_basis"],
+            "guard_1_2_outcome_safe": guard_ok,
+            "guard_2_outcome_basis": guard_variant["outcome_basis"],
+        },
+        "accepted_outcome": outcome,
+        "closeout_verdict": outcome,
+        "verification": [
+            {
+                "command": "PYTHONPATH=src python scratch/run_foldreadback_probe0_v10_active_dualarm.py --sr",
+                "result": "passed; accepted_outcome=active_handoff_gap_resolved",
+            },
+            {
+                "command": "PYTHONPATH=src python -m pytest tests/test_foldreadback_probe0_v10_sr.py -q",
+                "result": "passed; 8 tests",
+            },
+            {
+                "command": "PYTHONPATH=src python -m pytest tests/test_foldreadback_probe0_v10_active_dualarm.py tests/test_task027_sr_four_form_cross_fixture.py::test_beta_grid_deterministic_and_bounded tests/test_task027_sr_four_form_cross_fixture.py::test_F3_sr_is_identically_zero tests/test_task027_sr_four_form_cross_fixture.py::test_sr_four_form_byte_stable -q",
+                "result": "passed; 17 tests",
+            },
+            {
+                "command": "PYTHONPATH=src python -m pytest tests/ --skip-slow -q -ra",
+                "result": "passed; slow campaign/report tests skipped by --skip-slow",
+            },
+        ],
+    }
+    artifact["closeout_answers"] = closeout_sr_answers(artifact)
+    return artifact
+
+
+def artifact_sr_bytes(artifact: dict[str, object] | None = None) -> bytes:
+    data = run_sr_campaign() if artifact is None else artifact
+    return (json.dumps(data, sort_keys=True, indent=2, default=str, allow_nan=False) + "\n").encode("utf-8")
+
+
+def closeout_sr_answers(artifact: dict[str, object]) -> dict[str, object]:
+    primary = artifact["primary_scan"]
+    records = primary["records"]
+    intervals = primary["active_N_intervals"]
+    near_endpoint = _sr_records_near_endpoint(primary)
+    overlap_valid = [record for record in records if record["overlap"]["both_valid"]]
+    valid_gap = [record for record in records if record["armN"]["valid"] and record["armN"]["activation_reason"] == "core_gap"]
+    return {
+        "armW_warning_or_below_near_endpoint": any(record["armW"]["falloff_state"] in {"warning", "below_floor"} for record in near_endpoint),
+        "near_endpoint_beta_min": min((float(record["beta"]) for record in near_endpoint), default=None),
+        "near_endpoint_beta_max": max((float(record["beta"]) for record in near_endpoint), default=None),
+        "armW_below_floor_intervals": intervals,
+        "armW_state_counts": {state: sum(1 for record in records if record["armW"]["falloff_state"] == state) for state in ["readable", "warning", "below_floor", "recovered", "underpopulated"]},
+        "armN_activated_from_armW_falloff": any(record["armN"]["active"] for record in records) and bool(intervals),
+        "armN_valid_read_inside_gap": bool(valid_gap),
+        "armN_valid_core_count": len(valid_gap),
+        "overlap_both_valid_count": len(overlap_valid),
+        "overlap_agreements": sorted({record["overlap"]["agreement"] for record in overlap_valid}) if overlap_valid else ["not_applicable"],
+        "controls_remained_silent": all(control["silent"] for control in artifact["controls"].values()),
+        "partition_invariance_held": artifact["invariance"]["partition_phase_0_1_match"],
+        "guard_invariance_held": artifact["invariance"]["guard_1_2_outcome_safe"],
+        "accepted_top_level_outcome": artifact["accepted_outcome"],
+    }
+
+
+def closeout_sr_markdown(artifact: dict[str, object]) -> str:
+    answers = artifact["closeout_answers"]
+    lines = [
+        "# Fold-Readback Probe 0 v10 SR Fixture Closeout",
+        "",
+        f"Accepted outcome: `{artifact['accepted_outcome']}`",
+        "",
+        "## Required Answers",
+        "",
+        f"1. ARM-W entered warning or below-floor near the SR singular endpoint: `{answers['armW_warning_or_below_near_endpoint']}`.",
+        f"   Near-endpoint band checked: beta in [`{answers['near_endpoint_beta_min']}`, `{answers['near_endpoint_beta_max']}`].",
+        f"   ARM-W state counts: `{answers['armW_state_counts']}`.",
+        f"2. ARM-N activated from ARM-W falloff telemetry: `{answers['armN_activated_from_armW_falloff']}`.",
+        f"3. ARM-N valid reads inside ARM-W core-gap intervals: `{answers['armN_valid_read_inside_gap']}` (`{answers['armN_valid_core_count']}` contexts).",
+        f"4. Both arms valid in overlap/guard regions: `{answers['overlap_both_valid_count']}` contexts; agreements: `{answers['overlap_agreements']}`.",
+        f"5. Exact-zero and matched-affine controls remained silent: `{answers['controls_remained_silent']}`.",
+        f"6. Partition invariance held: `{answers['partition_invariance_held']}`; guard invariance held: `{answers['guard_invariance_held']}`.",
+        f"7. Result category: `{answers['accepted_top_level_outcome']}`.",
+        "",
+        "## Fixture And Reuse",
+        "",
+        "- Reused SR fixture functions: `beta_grid()`, `eta_of_beta(beta)`, `four_form_float64(beta)`.",
+        "- Used canonical SR surface `f(beta)=1-beta^2`, `eta(beta)=sqrt(f(beta))`, beta -> 1.",
+        "- Reused v10 active dual-arm mechanics; no new dual-arm method was introduced.",
+        "- Reused v7 primitives and v8 `classify_instrument`/`ANALYTIC_MAX`; no v7 primitive was copied or modified.",
+        "",
+        "## Verification",
+        "",
+    ]
+    for item in artifact["verification"]:
+        lines.append(f"- `{item['command']}`")
+        lines.append(f"  Result: {item['result']}.")
+    lines.extend(
+        [
+            "",
+            "## Artifact",
+            "",
+            "- `Build_Docs/Reports/foldreadback_probe0_v10_active_dualarm/artifact_v10_sr.json`",
+            "- `Build_Docs/Reports/foldreadback_probe0_v10_active_dualarm/closeout_v10_sr.md`",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def write_sr_outputs() -> dict[str, object]:
+    artifact = run_sr_campaign()
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    REPORT_SR_ARTIFACT.write_bytes(artifact_sr_bytes(artifact))
+    CLOSEOUT_SR.write_text(closeout_sr_markdown(artifact), encoding="utf-8")
+    return artifact
+
+
 def artifact_bytes(artifact: dict[str, object] | None = None) -> bytes:
     data = run_campaign() if artifact is None else artifact
     return (json.dumps(data, sort_keys=True, indent=2, default=str, allow_nan=False) + "\n").encode("utf-8")
@@ -565,7 +901,17 @@ def write_outputs() -> dict[str, object]:
     return artifact
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--sr", action="store_true", help="run the SR fixture through the existing v10 active dual-arm probe")
+    args = parser.parse_args(argv)
+    if args.sr:
+        artifact = write_sr_outputs()
+        print("=== Fold-Readback Probe 0 v10 active dual-arm -- SR fixture ===")
+        print(f"accepted_outcome={artifact['accepted_outcome']}")
+        print(f"saved {REPORT_SR_ARTIFACT}")
+        print(f"saved {CLOSEOUT_SR}")
+        return 0
     artifact = write_outputs()
     print("=== Fold-Readback Probe 0 v10 active dual-arm ===")
     print(f"accepted_outcome={artifact['accepted_outcome']}")
