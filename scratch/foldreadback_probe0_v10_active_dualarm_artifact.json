@@ -1,0 +1,4534 @@
+{
+  "accepted_outcome": "active_dual_read_wide_only_no_falloff",
+  "closeout_answers": {
+    "accepted_top_level_outcome": "active_dual_read_wide_only_no_falloff",
+    "alpha_minus_one_mission_satisfied": false,
+    "armN_activated_from_armW_falloff": false,
+    "armN_valid_read_inside_gap": false,
+    "armW_below_floor_intervals": [],
+    "armW_produced_below_floor": false,
+    "controls_remained_silent": true,
+    "does_not_establish": "alpha-minus-one mission success or fold geometry beyond the predeclared v10 instrument readback.",
+    "guard_invariance_held": true,
+    "overlap_agreements": [
+      "not_applicable"
+    ],
+    "overlap_count": 0,
+    "partition_invariance_held": true
+  },
+  "closeout_verdict": "active_dual_read_wide_only_no_falloff",
+  "controls": {
+    "exact_zero": {
+      "scan": {
+        "a_A1": "0.500",
+        "a_A2": "0.500",
+        "active_N_intervals": [
+          {
+            "active_end": 4,
+            "active_start": 2,
+            "core_end": 3,
+            "core_start": 3,
+            "guard": 1
+          },
+          {
+            "active_end": 13,
+            "active_start": 11,
+            "core_end": 12,
+            "core_start": 12,
+            "guard": 1
+          }
+        ],
+        "context_points": 9,
+        "creg_points_A1": 16,
+        "creg_points_A2": 16,
+        "guard": 1,
+        "label": "exact_zero_control",
+        "mb": 24,
+        "min_points": 5,
+        "nonobservable_A1": 0,
+        "nonobservable_A2": 0,
+        "observable_points_A1": 90,
+        "observable_points_A2": 90,
+        "outcome_basis": {
+          "active_N_intervals": [
+            {
+              "active_end": 4,
+              "active_start": 2,
+              "core_end": 3,
+              "core_start": 3,
+              "guard": 1
+            },
+            {
+              "active_end": 13,
+              "active_start": 11,
+              "core_end": 12,
+              "core_start": 12,
+              "guard": 1
+            }
+          ],
+          "armN_active": [
+            false,
+            false,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            false,
+            false
+          ],
+          "armN_inference": [
+            "untested",
+            "untested",
+            "searched_no_separation",
+            "untested",
+            "searched_no_separation",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "searched_no_separation",
+            "untested",
+            "searched_no_separation",
+            "untested",
+            "untested"
+          ],
+          "armN_valid": [
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false
+          ],
+          "armW_inference": [
+            "searched_no_separation",
+            "searched_no_separation",
+            "searched_no_separation",
+            "untested",
+            "searched_no_separation",
+            "searched_no_separation",
+            "searched_no_separation",
+            "searched_no_separation",
+            "searched_no_separation",
+            "searched_no_separation",
+            "searched_no_separation",
+            "searched_no_separation",
+            "untested",
+            "searched_no_separation",
+            "searched_no_separation",
+            "searched_no_separation"
+          ],
+          "armW_valid": [
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
+            true,
+            true,
+            true
+          ],
+          "falloff_states": [
+            "readable",
+            "readable",
+            "warning",
+            "below_floor",
+            "recovered",
+            "readable",
+            "readable",
+            "readable",
+            "readable",
+            "readable",
+            "readable",
+            "warning",
+            "below_floor",
+            "recovered",
+            "readable",
+            "readable"
+          ],
+          "overlap_agreement": [
+            "not_applicable",
+            "not_applicable",
+            "agree",
+            "underpowered",
+            "agree",
+            "not_applicable",
+            "not_applicable",
+            "not_applicable",
+            "not_applicable",
+            "not_applicable",
+            "not_applicable",
+            "agree",
+            "underpowered",
+            "agree",
+            "not_applicable",
+            "not_applicable"
+          ]
+        },
+        "phase": 0,
+        "records": [
+          {
+            "armN": {
+              "activation_reason": "none",
+              "active": false,
+              "band": {},
+              "discrepancy": {},
+              "inference": "untested",
+              "inference_by_function": {},
+              "instrument": {},
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 1.3333333333333333
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [],
+              "falloff_state": "readable",
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "sign_pattern": "searched_no_separation"
+              },
+              "instrument": {
+                "sign_pattern": "nondegenerate"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": true
+            },
+            "binades": [
+              -50,
+              -47,
+              -44,
+              -40,
+              -37
+            ],
+            "center_key": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+            "f_max": "9.999999960041972002500187954865396022796630859375E-12",
+            "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+            "idx": 0,
+            "overlap": {
+              "agreement": "not_applicable",
+              "both_active": false,
+              "both_valid": false
+            },
+            "point_count_A1": 5,
+            "point_count_A2": 5,
+            "x_max": "0.999999999999999",
+            "x_min": "0.99999999999"
+          },
+          {
+            "armN": {
+              "activation_reason": "none",
+              "active": false,
+              "band": {},
+              "discrepancy": {},
+              "inference": "untested",
+              "inference_by_function": {},
+              "instrument": {},
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.6666666666666666
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [],
+              "falloff_state": "readable",
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "sign_pattern": "searched_no_separation"
+              },
+              "instrument": {
+                "sign_pattern": "nondegenerate"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": true
+            },
+            "binades": [
+              -50,
+              -47,
+              -44,
+              -40,
+              -37,
+              -34
+            ],
+            "center_key": "9.9999998245167004418121337039337959140539169311523437500E-15",
+            "f_max": "1.00000001335143196001808973960578441619873046875E-10",
+            "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+            "idx": 1,
+            "overlap": {
+              "agreement": "not_applicable",
+              "both_active": false,
+              "both_valid": false
+            },
+            "point_count_A1": 6,
+            "point_count_A2": 6,
+            "x_max": "0.999999999999999",
+            "x_min": "0.9999999999"
+          },
+          {
+            "armN": {
+              "activation_reason": "guard",
+              "active": true,
+              "band": {
+                "lattice_rank": 1,
+                "level_histogram": 2.0,
+                "signed_occ": 2.0,
+                "transition": 2.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0.0,
+                "signed_occ": 0.0,
+                "transition": 0.0
+              },
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "lattice_rank": "searched_no_separation",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "nondegenerate",
+                "level_histogram": "saturated",
+                "signed_occ": "saturated",
+                "transition": "saturated"
+              },
+              "valid": true
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.3333333333333333
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "adjacent_to_below_floor"
+              ],
+              "falloff_state": "warning",
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "sign_pattern": "searched_no_separation"
+              },
+              "instrument": {
+                "sign_pattern": "nondegenerate"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": true
+            },
+            "binades": [
+              -50,
+              -47,
+              -44,
+              -40,
+              -37,
+              -34,
+              -30
+            ],
+            "center_key": "9.99999982451670044181213370393379591405391693115234375E-14",
+            "f_max": "9.9999997171806853657471947371959686279296875E-10",
+            "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+            "idx": 2,
+            "overlap": {
+              "agreement": "agree",
+              "both_active": true,
+              "both_valid": true
+            },
+            "point_count_A1": 7,
+            "point_count_A2": 7,
+            "x_max": "0.999999999999999",
+            "x_min": "0.999999999"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 2.0,
+                "signed_occ": 2.0,
+                "transition": 2.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0.0,
+                "signed_occ": 0.0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "saturated",
+                "signed_occ": "saturated",
+                "transition": "saturated"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -50,
+              -47,
+              -44,
+              -40,
+              -37,
+              -34,
+              -30,
+              -27
+            ],
+            "center_key": "9.99999996004197200250018795486539602279663085937500E-13",
+            "f_max": "9.99999993922529029077850282192230224609375E-9",
+            "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+            "idx": 3,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 8,
+            "point_count_A2": 8,
+            "x_max": "0.999999999999999",
+            "x_min": "0.99999999"
+          },
+          {
+            "armN": {
+              "activation_reason": "guard",
+              "active": true,
+              "band": {
+                "lattice_rank": 1,
+                "level_histogram": 2.0,
+                "signed_occ": 2.0,
+                "transition": 2.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0.0,
+                "signed_occ": 0.0,
+                "transition": 0.0
+              },
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "lattice_rank": "searched_no_separation",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "nondegenerate",
+                "level_histogram": "saturated",
+                "signed_occ": "saturated",
+                "transition": "saturated"
+              },
+              "valid": true
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.2
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "readable_after_below_floor"
+              ],
+              "falloff_state": "recovered",
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "sign_pattern": "searched_no_separation"
+              },
+              "instrument": {
+                "sign_pattern": "nondegenerate"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": true
+            },
+            "binades": [
+              -50,
+              -47,
+              -44,
+              -40,
+              -37,
+              -34,
+              -30,
+              -27,
+              -24
+            ],
+            "center_key": "9.999999960041972002500187954865396022796630859375E-12",
+            "f_max": "1.0000000116860974230803549289703369140625E-7",
+            "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+            "idx": 4,
+            "overlap": {
+              "agreement": "agree",
+              "both_active": true,
+              "both_valid": true
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.999999999999999",
+            "x_min": "0.9999999"
+          },
+          {
+            "armN": {
+              "activation_reason": "none",
+              "active": false,
+              "band": {},
+              "discrepancy": {},
+              "inference": "untested",
+              "inference_by_function": {},
+              "instrument": {},
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.2
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [],
+              "falloff_state": "readable",
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "sign_pattern": "searched_no_separation"
+              },
+              "instrument": {
+                "sign_pattern": "nondegenerate"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": true
+            },
+            "binades": [
+              -47,
+              -44,
+              -40,
+              -37,
+              -34,
+              -30,
+              -27,
+              -24,
+              -20
+            ],
+            "center_key": "1.00000001335143196001808973960578441619873046875E-10",
+            "f_max": "9.999999974752427078783512115478515625E-7",
+            "f_min": "9.9999998245167004418121337039337959140539169311523437500E-15",
+            "idx": 5,
+            "overlap": {
+              "agreement": "not_applicable",
+              "both_active": false,
+              "both_valid": false
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.99999999999999",
+            "x_min": "0.999999"
+          },
+          {
+            "armN": {
+              "activation_reason": "none",
+              "active": false,
+              "band": {},
+              "discrepancy": {},
+              "inference": "untested",
+              "inference_by_function": {},
+              "instrument": {},
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.2
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [],
+              "falloff_state": "readable",
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "sign_pattern": "searched_no_separation"
+              },
+              "instrument": {
+                "sign_pattern": "nondegenerate"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": true
+            },
+            "binades": [
+              -44,
+              -40,
+              -37,
+              -34,
+              -30,
+              -27,
+              -24,
+              -20,
+              -17
+            ],
+            "center_key": "9.9999997171806853657471947371959686279296875E-10",
+            "f_max": "0.0000099999997473787516355514526367187500",
+            "f_min": "9.99999982451670044181213370393379591405391693115234375E-14",
+            "idx": 6,
+            "overlap": {
+              "agreement": "not_applicable",
+              "both_active": false,
+              "both_valid": false
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.9999999999999",
+            "x_min": "0.99999"
+          },
+          {
+            "armN": {
+              "activation_reason": "none",
+              "active": false,
+              "band": {},
+              "discrepancy": {},
+              "inference": "untested",
+              "inference_by_function": {},
+              "instrument": {},
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.2
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [],
+              "falloff_state": "readable",
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "sign_pattern": "searched_no_separation"
+              },
+              "instrument": {
+                "sign_pattern": "nondegenerate"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": true
+            },
+            "binades": [
+              -40,
+              -37,
+              -34,
+              -30,
+              -27,
+              -24,
+              -20,
+              -17,
+              -14
+            ],
+            "center_key": "9.99999993922529029077850282192230224609375E-9",
+            "f_max": "0.0000999999974737875163555145263671875",
+            "f_min": "9.99999996004197200250018795486539602279663085937500E-13",
+            "idx": 7,
+            "overlap": {
+              "agreement": "not_applicable",
+              "both_active": false,
+              "both_valid": false
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.999999999999",
+            "x_min": "0.9999"
+          },
+          {
+            "armN": {
+              "activation_reason": "none",
+              "active": false,
+              "band": {},
+              "discrepancy": {},
+              "inference": "untested",
+              "inference_by_function": {},
+              "instrument": {},
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.7
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [],
+              "falloff_state": "readable",
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "sign_pattern": "searched_no_separation"
+              },
+              "instrument": {
+                "sign_pattern": "nondegenerate"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": true
+            },
+            "binades": [
+              -37,
+              -34,
+              -30,
+              -27,
+              -24,
+              -20,
+              -17,
+              -14,
+              -10
+            ],
+            "center_key": "1.0000000116860974230803549289703369140625E-7",
+            "f_max": "0.001000000047497451305389404296875",
+            "f_min": "9.999999960041972002500187954865396022796630859375E-12",
+            "idx": 8,
+            "overlap": {
+              "agreement": "not_applicable",
+              "both_active": false,
+              "both_valid": false
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.99999999999",
+            "x_min": "0.999"
+          },
+          {
+            "armN": {
+              "activation_reason": "none",
+              "active": false,
+              "band": {},
+              "discrepancy": {},
+              "inference": "untested",
+              "inference_by_function": {},
+              "instrument": {},
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.6
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [],
+              "falloff_state": "readable",
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "sign_pattern": "searched_no_separation"
+              },
+              "instrument": {
+                "sign_pattern": "nondegenerate"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": true
+            },
+            "binades": [
+              -34,
+              -30,
+              -27,
+              -24,
+              -20,
+              -17,
+              -14,
+              -10,
+              -7
+            ],
+            "center_key": "9.999999974752427078783512115478515625E-7",
+            "f_max": "0.009999999776482582092285156250",
+            "f_min": "1.00000001335143196001808973960578441619873046875E-10",
+            "idx": 9,
+            "overlap": {
+              "agreement": "not_applicable",
+              "both_active": false,
+              "both_valid": false
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.9999999999",
+            "x_min": "0.99"
+          },
+          {
+            "armN": {
+              "activation_reason": "none",
+              "active": false,
+              "band": {},
+              "discrepancy": {},
+              "inference": "untested",
+              "inference_by_function": {},
+              "instrument": {},
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.7
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [],
+              "falloff_state": "readable",
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "sign_pattern": "searched_no_separation"
+              },
+              "instrument": {
+                "sign_pattern": "nondegenerate"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": true
+            },
+            "binades": [
+              -30,
+              -27,
+              -24,
+              -20,
+              -17,
+              -14,
+              -10,
+              -7,
+              -4
+            ],
+            "center_key": "0.0000099999997473787516355514526367187500",
+            "f_max": "0.100000001490116119384765625",
+            "f_min": "9.9999997171806853657471947371959686279296875E-10",
+            "idx": 10,
+            "overlap": {
+              "agreement": "not_applicable",
+              "both_active": false,
+              "both_valid": false
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.999999999",
+            "x_min": "0.9"
+          },
+          {
+            "armN": {
+              "activation_reason": "guard",
+              "active": true,
+              "band": {
+                "lattice_rank": 1,
+                "level_histogram": 2.0,
+                "signed_occ": 2.0,
+                "transition": 2.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0.0,
+                "signed_occ": 0.0,
+                "transition": 0.0
+              },
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "lattice_rank": "searched_no_separation",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "nondegenerate",
+                "level_histogram": "saturated",
+                "signed_occ": "saturated",
+                "transition": "saturated"
+              },
+              "valid": true
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.2
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "adjacent_to_below_floor"
+              ],
+              "falloff_state": "warning",
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "sign_pattern": "searched_no_separation"
+              },
+              "instrument": {
+                "sign_pattern": "nondegenerate"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": true
+            },
+            "binades": [
+              -27,
+              -24,
+              -20,
+              -17,
+              -14,
+              -10,
+              -7,
+              -4,
+              -2
+            ],
+            "center_key": "0.0000999999974737875163555145263671875",
+            "f_max": "0.3000000119209289550781250",
+            "f_min": "9.99999993922529029077850282192230224609375E-9",
+            "idx": 11,
+            "overlap": {
+              "agreement": "agree",
+              "both_active": true,
+              "both_valid": true
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.99999999",
+            "x_min": "0.7"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 2.0,
+                "signed_occ": 2.0,
+                "transition": 2.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0.0,
+                "signed_occ": 0.0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "saturated",
+                "signed_occ": "saturated",
+                "transition": "saturated"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -24,
+              -20,
+              -17,
+              -14,
+              -10,
+              -7,
+              -4,
+              -2
+            ],
+            "center_key": "0.001000000047497451305389404296875",
+            "f_max": "0.3000000119209289550781250",
+            "f_min": "1.0000000116860974230803549289703369140625E-7",
+            "idx": 12,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 8,
+            "point_count_A2": 8,
+            "x_max": "0.9999999",
+            "x_min": "0.7"
+          },
+          {
+            "armN": {
+              "activation_reason": "guard",
+              "active": true,
+              "band": {
+                "lattice_rank": 1,
+                "level_histogram": 2.0,
+                "signed_occ": 2.0,
+                "transition": 2.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0.0,
+                "signed_occ": 0.0,
+                "transition": 0.0
+              },
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "lattice_rank": "searched_no_separation",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "nondegenerate",
+                "level_histogram": "saturated",
+                "signed_occ": "saturated",
+                "transition": "saturated"
+              },
+              "valid": true
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.3333333333333333
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "readable_after_below_floor"
+              ],
+              "falloff_state": "recovered",
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "sign_pattern": "searched_no_separation"
+              },
+              "instrument": {
+                "sign_pattern": "nondegenerate"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": true
+            },
+            "binades": [
+              -20,
+              -17,
+              -14,
+              -10,
+              -7,
+              -4,
+              -2
+            ],
+            "center_key": "0.009999999776482582092285156250",
+            "f_max": "0.3000000119209289550781250",
+            "f_min": "9.999999974752427078783512115478515625E-7",
+            "idx": 13,
+            "overlap": {
+              "agreement": "agree",
+              "both_active": true,
+              "both_valid": true
+            },
+            "point_count_A1": 7,
+            "point_count_A2": 7,
+            "x_max": "0.999999",
+            "x_min": "0.7"
+          },
+          {
+            "armN": {
+              "activation_reason": "none",
+              "active": false,
+              "band": {},
+              "discrepancy": {},
+              "inference": "untested",
+              "inference_by_function": {},
+              "instrument": {},
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.6666666666666666
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [],
+              "falloff_state": "readable",
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "sign_pattern": "searched_no_separation"
+              },
+              "instrument": {
+                "sign_pattern": "nondegenerate"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": true
+            },
+            "binades": [
+              -17,
+              -14,
+              -10,
+              -7,
+              -4,
+              -2
+            ],
+            "center_key": "0.100000001490116119384765625",
+            "f_max": "0.3000000119209289550781250",
+            "f_min": "0.0000099999997473787516355514526367187500",
+            "idx": 14,
+            "overlap": {
+              "agreement": "not_applicable",
+              "both_active": false,
+              "both_valid": false
+            },
+            "point_count_A1": 6,
+            "point_count_A2": 6,
+            "x_max": "0.99999",
+            "x_min": "0.7"
+          },
+          {
+            "armN": {
+              "activation_reason": "none",
+              "active": false,
+              "band": {},
+              "discrepancy": {},
+              "inference": "untested",
+              "inference_by_function": {},
+              "instrument": {},
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 1.3333333333333333
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [],
+              "falloff_state": "readable",
+              "inference": "searched_no_separation",
+              "inference_by_function": {
+                "sign_pattern": "searched_no_separation"
+              },
+              "instrument": {
+                "sign_pattern": "nondegenerate"
+              },
+              "occupancy_ok": true,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": true
+            },
+            "binades": [
+              -14,
+              -10,
+              -7,
+              -4,
+              -2
+            ],
+            "center_key": "0.3000000119209289550781250",
+            "f_max": "0.3000000119209289550781250",
+            "f_min": "0.0000999999974737875163555145263671875",
+            "idx": 15,
+            "overlap": {
+              "agreement": "not_applicable",
+              "both_active": false,
+              "both_valid": false
+            },
+            "point_count_A1": 5,
+            "point_count_A2": 5,
+            "x_max": "0.9999",
+            "x_min": "0.7"
+          }
+        ],
+        "stitched_readback": [
+          {
+            "armN_inference": "untested",
+            "armW_inference": "searched_no_separation",
+            "center_key": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+            "channels": [
+              "ARM-W"
+            ],
+            "idx": 0,
+            "overlap_agreement": "not_applicable"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "searched_no_separation",
+            "center_key": "9.9999998245167004418121337039337959140539169311523437500E-15",
+            "channels": [
+              "ARM-W"
+            ],
+            "idx": 1,
+            "overlap_agreement": "not_applicable"
+          },
+          {
+            "armN_inference": "searched_no_separation",
+            "armW_inference": "searched_no_separation",
+            "center_key": "9.99999982451670044181213370393379591405391693115234375E-14",
+            "channels": [
+              "ARM-W",
+              "ARM-N"
+            ],
+            "idx": 2,
+            "overlap_agreement": "agree"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "9.99999996004197200250018795486539602279663085937500E-13",
+            "channels": [
+              "none"
+            ],
+            "idx": 3,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "searched_no_separation",
+            "armW_inference": "searched_no_separation",
+            "center_key": "9.999999960041972002500187954865396022796630859375E-12",
+            "channels": [
+              "ARM-W",
+              "ARM-N"
+            ],
+            "idx": 4,
+            "overlap_agreement": "agree"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "searched_no_separation",
+            "center_key": "1.00000001335143196001808973960578441619873046875E-10",
+            "channels": [
+              "ARM-W"
+            ],
+            "idx": 5,
+            "overlap_agreement": "not_applicable"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "searched_no_separation",
+            "center_key": "9.9999997171806853657471947371959686279296875E-10",
+            "channels": [
+              "ARM-W"
+            ],
+            "idx": 6,
+            "overlap_agreement": "not_applicable"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "searched_no_separation",
+            "center_key": "9.99999993922529029077850282192230224609375E-9",
+            "channels": [
+              "ARM-W"
+            ],
+            "idx": 7,
+            "overlap_agreement": "not_applicable"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "searched_no_separation",
+            "center_key": "1.0000000116860974230803549289703369140625E-7",
+            "channels": [
+              "ARM-W"
+            ],
+            "idx": 8,
+            "overlap_agreement": "not_applicable"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "searched_no_separation",
+            "center_key": "9.999999974752427078783512115478515625E-7",
+            "channels": [
+              "ARM-W"
+            ],
+            "idx": 9,
+            "overlap_agreement": "not_applicable"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "searched_no_separation",
+            "center_key": "0.0000099999997473787516355514526367187500",
+            "channels": [
+              "ARM-W"
+            ],
+            "idx": 10,
+            "overlap_agreement": "not_applicable"
+          },
+          {
+            "armN_inference": "searched_no_separation",
+            "armW_inference": "searched_no_separation",
+            "center_key": "0.0000999999974737875163555145263671875",
+            "channels": [
+              "ARM-W",
+              "ARM-N"
+            ],
+            "idx": 11,
+            "overlap_agreement": "agree"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "0.001000000047497451305389404296875",
+            "channels": [
+              "none"
+            ],
+            "idx": 12,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "searched_no_separation",
+            "armW_inference": "searched_no_separation",
+            "center_key": "0.009999999776482582092285156250",
+            "channels": [
+              "ARM-W",
+              "ARM-N"
+            ],
+            "idx": 13,
+            "overlap_agreement": "agree"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "searched_no_separation",
+            "center_key": "0.100000001490116119384765625",
+            "channels": [
+              "ARM-W"
+            ],
+            "idx": 14,
+            "overlap_agreement": "not_applicable"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "searched_no_separation",
+            "center_key": "0.3000000119209289550781250",
+            "channels": [
+              "ARM-W"
+            ],
+            "idx": 15,
+            "overlap_agreement": "not_applicable"
+          }
+        ]
+      },
+      "silent": true
+    },
+    "matched_affine": {
+      "scan": {
+        "a_A1": "1.000",
+        "a_A2": "1.000",
+        "active_N_intervals": [
+          {
+            "active_end": 15,
+            "active_start": 0,
+            "core_end": 15,
+            "core_start": 0,
+            "guard": 1
+          }
+        ],
+        "context_points": 9,
+        "creg_points_A1": 16,
+        "creg_points_A2": 16,
+        "guard": 1,
+        "label": "matched_affine_control",
+        "mb": 24,
+        "min_points": 5,
+        "nonobservable_A1": 0,
+        "nonobservable_A2": 0,
+        "observable_points_A1": 90,
+        "observable_points_A2": 90,
+        "outcome_basis": {
+          "active_N_intervals": [
+            {
+              "active_end": 15,
+              "active_start": 0,
+              "core_end": 15,
+              "core_start": 0,
+              "guard": 1
+            }
+          ],
+          "armN_active": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "armN_inference": [
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested"
+          ],
+          "armN_valid": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "armW_inference": [
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested",
+            "untested"
+          ],
+          "armW_valid": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "falloff_states": [
+            "below_floor",
+            "below_floor",
+            "below_floor",
+            "below_floor",
+            "below_floor",
+            "below_floor",
+            "below_floor",
+            "below_floor",
+            "below_floor",
+            "below_floor",
+            "below_floor",
+            "below_floor",
+            "below_floor",
+            "below_floor",
+            "below_floor",
+            "below_floor"
+          ],
+          "overlap_agreement": [
+            "underpowered",
+            "underpowered",
+            "underpowered",
+            "underpowered",
+            "underpowered",
+            "underpowered",
+            "underpowered",
+            "underpowered",
+            "underpowered",
+            "underpowered",
+            "underpowered",
+            "underpowered",
+            "underpowered",
+            "underpowered",
+            "underpowered",
+            "underpowered"
+          ]
+        },
+        "phase": 0,
+        "records": [
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -50,
+              -47,
+              -44,
+              -40,
+              -37
+            ],
+            "center_key": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+            "f_max": "9.999999960041972002500187954865396022796630859375E-12",
+            "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+            "idx": 0,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 5,
+            "point_count_A2": 5,
+            "x_max": "0.999999999999999",
+            "x_min": "0.99999999999"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -50,
+              -47,
+              -44,
+              -40,
+              -37,
+              -34
+            ],
+            "center_key": "9.9999998245167004418121337039337959140539169311523437500E-15",
+            "f_max": "1.00000001335143196001808973960578441619873046875E-10",
+            "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+            "idx": 1,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 6,
+            "point_count_A2": 6,
+            "x_max": "0.999999999999999",
+            "x_min": "0.9999999999"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -50,
+              -47,
+              -44,
+              -40,
+              -37,
+              -34,
+              -30
+            ],
+            "center_key": "9.99999982451670044181213370393379591405391693115234375E-14",
+            "f_max": "9.9999997171806853657471947371959686279296875E-10",
+            "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+            "idx": 2,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 7,
+            "point_count_A2": 7,
+            "x_max": "0.999999999999999",
+            "x_min": "0.999999999"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -50,
+              -47,
+              -44,
+              -40,
+              -37,
+              -34,
+              -30,
+              -27
+            ],
+            "center_key": "9.99999996004197200250018795486539602279663085937500E-13",
+            "f_max": "9.99999993922529029077850282192230224609375E-9",
+            "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+            "idx": 3,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 8,
+            "point_count_A2": 8,
+            "x_max": "0.999999999999999",
+            "x_min": "0.99999999"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -50,
+              -47,
+              -44,
+              -40,
+              -37,
+              -34,
+              -30,
+              -27,
+              -24
+            ],
+            "center_key": "9.999999960041972002500187954865396022796630859375E-12",
+            "f_max": "1.0000000116860974230803549289703369140625E-7",
+            "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+            "idx": 4,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.999999999999999",
+            "x_min": "0.9999999"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -47,
+              -44,
+              -40,
+              -37,
+              -34,
+              -30,
+              -27,
+              -24,
+              -20
+            ],
+            "center_key": "1.00000001335143196001808973960578441619873046875E-10",
+            "f_max": "9.999999974752427078783512115478515625E-7",
+            "f_min": "9.9999998245167004418121337039337959140539169311523437500E-15",
+            "idx": 5,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.99999999999999",
+            "x_min": "0.999999"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -44,
+              -40,
+              -37,
+              -34,
+              -30,
+              -27,
+              -24,
+              -20,
+              -17
+            ],
+            "center_key": "9.9999997171806853657471947371959686279296875E-10",
+            "f_max": "0.0000099999997473787516355514526367187500",
+            "f_min": "9.99999982451670044181213370393379591405391693115234375E-14",
+            "idx": 6,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.9999999999999",
+            "x_min": "0.99999"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -40,
+              -37,
+              -34,
+              -30,
+              -27,
+              -24,
+              -20,
+              -17,
+              -14
+            ],
+            "center_key": "9.99999993922529029077850282192230224609375E-9",
+            "f_max": "0.0000999999974737875163555145263671875",
+            "f_min": "9.99999996004197200250018795486539602279663085937500E-13",
+            "idx": 7,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.999999999999",
+            "x_min": "0.9999"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -37,
+              -34,
+              -30,
+              -27,
+              -24,
+              -20,
+              -17,
+              -14,
+              -10
+            ],
+            "center_key": "1.0000000116860974230803549289703369140625E-7",
+            "f_max": "0.001000000047497451305389404296875",
+            "f_min": "9.999999960041972002500187954865396022796630859375E-12",
+            "idx": 8,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.99999999999",
+            "x_min": "0.999"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -34,
+              -30,
+              -27,
+              -24,
+              -20,
+              -17,
+              -14,
+              -10,
+              -7
+            ],
+            "center_key": "9.999999974752427078783512115478515625E-7",
+            "f_max": "0.009999999776482582092285156250",
+            "f_min": "1.00000001335143196001808973960578441619873046875E-10",
+            "idx": 9,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.9999999999",
+            "x_min": "0.99"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -30,
+              -27,
+              -24,
+              -20,
+              -17,
+              -14,
+              -10,
+              -7,
+              -4
+            ],
+            "center_key": "0.0000099999997473787516355514526367187500",
+            "f_max": "0.100000001490116119384765625",
+            "f_min": "9.9999997171806853657471947371959686279296875E-10",
+            "idx": 10,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.999999999",
+            "x_min": "0.9"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -27,
+              -24,
+              -20,
+              -17,
+              -14,
+              -10,
+              -7,
+              -4,
+              -2
+            ],
+            "center_key": "0.0000999999974737875163555145263671875",
+            "f_max": "0.3000000119209289550781250",
+            "f_min": "9.99999993922529029077850282192230224609375E-9",
+            "idx": 11,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 9,
+            "point_count_A2": 9,
+            "x_max": "0.99999999",
+            "x_min": "0.7"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -24,
+              -20,
+              -17,
+              -14,
+              -10,
+              -7,
+              -4,
+              -2
+            ],
+            "center_key": "0.001000000047497451305389404296875",
+            "f_max": "0.3000000119209289550781250",
+            "f_min": "1.0000000116860974230803549289703369140625E-7",
+            "idx": 12,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 8,
+            "point_count_A2": 8,
+            "x_max": "0.9999999",
+            "x_min": "0.7"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -20,
+              -17,
+              -14,
+              -10,
+              -7,
+              -4,
+              -2
+            ],
+            "center_key": "0.009999999776482582092285156250",
+            "f_max": "0.3000000119209289550781250",
+            "f_min": "9.999999974752427078783512115478515625E-7",
+            "idx": 13,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 7,
+            "point_count_A2": 7,
+            "x_max": "0.999999",
+            "x_min": "0.7"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -17,
+              -14,
+              -10,
+              -7,
+              -4,
+              -2
+            ],
+            "center_key": "0.100000001490116119384765625",
+            "f_max": "0.3000000119209289550781250",
+            "f_min": "0.0000099999997473787516355514526367187500",
+            "idx": 14,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 6,
+            "point_count_A2": 6,
+            "x_max": "0.99999",
+            "x_min": "0.7"
+          },
+          {
+            "armN": {
+              "activation_reason": "core_gap",
+              "active": true,
+              "band": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "discrepancy": {
+                "lattice_rank": 0,
+                "level_histogram": 0,
+                "signed_occ": 0,
+                "transition": 0.0
+              },
+              "inference": "untested",
+              "inference_by_function": {
+                "lattice_rank": "untested",
+                "level_histogram": "untested",
+                "signed_occ": "untested",
+                "transition": "untested"
+              },
+              "instrument": {
+                "lattice_rank": "collapsed",
+                "level_histogram": "collapsed",
+                "signed_occ": "collapsed",
+                "transition": "collapsed"
+              },
+              "valid": false
+            },
+            "armW": {
+              "active": true,
+              "band": {
+                "sign_pattern": 0.0
+              },
+              "discrepancy": {
+                "sign_pattern": 0.0
+              },
+              "falloff_reason": [
+                "insufficient_occupancy",
+                "instrument_collapsed"
+              ],
+              "falloff_state": "below_floor",
+              "inference": "untested",
+              "inference_by_function": {
+                "sign_pattern": "untested"
+              },
+              "instrument": {
+                "sign_pattern": "collapsed"
+              },
+              "occupancy_ok": false,
+              "ols_margin": null,
+              "ols_ok": true,
+              "valid": false
+            },
+            "binades": [
+              -14,
+              -10,
+              -7,
+              -4,
+              -2
+            ],
+            "center_key": "0.3000000119209289550781250",
+            "f_max": "0.3000000119209289550781250",
+            "f_min": "0.0000999999974737875163555145263671875",
+            "idx": 15,
+            "overlap": {
+              "agreement": "underpowered",
+              "both_active": true,
+              "both_valid": false
+            },
+            "point_count_A1": 5,
+            "point_count_A2": 5,
+            "x_max": "0.9999",
+            "x_min": "0.7"
+          }
+        ],
+        "stitched_readback": [
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+            "channels": [
+              "none"
+            ],
+            "idx": 0,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "9.9999998245167004418121337039337959140539169311523437500E-15",
+            "channels": [
+              "none"
+            ],
+            "idx": 1,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "9.99999982451670044181213370393379591405391693115234375E-14",
+            "channels": [
+              "none"
+            ],
+            "idx": 2,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "9.99999996004197200250018795486539602279663085937500E-13",
+            "channels": [
+              "none"
+            ],
+            "idx": 3,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "9.999999960041972002500187954865396022796630859375E-12",
+            "channels": [
+              "none"
+            ],
+            "idx": 4,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "1.00000001335143196001808973960578441619873046875E-10",
+            "channels": [
+              "none"
+            ],
+            "idx": 5,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "9.9999997171806853657471947371959686279296875E-10",
+            "channels": [
+              "none"
+            ],
+            "idx": 6,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "9.99999993922529029077850282192230224609375E-9",
+            "channels": [
+              "none"
+            ],
+            "idx": 7,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "1.0000000116860974230803549289703369140625E-7",
+            "channels": [
+              "none"
+            ],
+            "idx": 8,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "9.999999974752427078783512115478515625E-7",
+            "channels": [
+              "none"
+            ],
+            "idx": 9,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "0.0000099999997473787516355514526367187500",
+            "channels": [
+              "none"
+            ],
+            "idx": 10,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "0.0000999999974737875163555145263671875",
+            "channels": [
+              "none"
+            ],
+            "idx": 11,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "0.001000000047497451305389404296875",
+            "channels": [
+              "none"
+            ],
+            "idx": 12,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "0.009999999776482582092285156250",
+            "channels": [
+              "none"
+            ],
+            "idx": 13,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "0.100000001490116119384765625",
+            "channels": [
+              "none"
+            ],
+            "idx": 14,
+            "overlap_agreement": "underpowered"
+          },
+          {
+            "armN_inference": "untested",
+            "armW_inference": "untested",
+            "center_key": "0.3000000119209289550781250",
+            "channels": [
+              "none"
+            ],
+            "idx": 15,
+            "overlap_agreement": "underpowered"
+          }
+        ]
+      },
+      "silent": true
+    }
+  },
+  "invariance": {
+    "guard_1_2_outcome_safe": true,
+    "guard_2_outcome_basis": {
+      "active_N_intervals": [],
+      "armN_active": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "armN_inference": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "armN_valid": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "armW_inference": [
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "separated",
+        "separated",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation"
+      ],
+      "armW_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "falloff_states": [
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable"
+      ],
+      "overlap_agreement": [
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable"
+      ]
+    },
+    "partition_phase_0_1_match": true,
+    "phase_1_outcome_basis": {
+      "active_N_intervals": [],
+      "armN_active": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "armN_inference": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "armN_valid": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "armW_inference": [
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "separated",
+        "separated",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation"
+      ],
+      "armW_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "falloff_states": [
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable"
+      ],
+      "overlap_agreement": [
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable"
+      ]
+    }
+  },
+  "parameters": {
+    "armN_functions": [
+      "level_histogram",
+      "transition",
+      "signed_occ",
+      "lattice_rank"
+    ],
+    "armW_functions": [
+      "sign_pattern"
+    ],
+    "context_points": 9,
+    "default_guard": 1,
+    "guard_variant": 2,
+    "min_points": 5,
+    "partition_phases": [
+      0,
+      1
+    ]
+  },
+  "preregistry": "v10_active_dualarm",
+  "primary_scan": {
+    "a_A1": "0.500",
+    "a_A2": "0.501",
+    "active_N_intervals": [],
+    "context_points": 9,
+    "creg_points_A1": 16,
+    "creg_points_A2": 16,
+    "guard": 1,
+    "label": "primary",
+    "mb": 24,
+    "min_points": 5,
+    "nonobservable_A1": 0,
+    "nonobservable_A2": 0,
+    "observable_points_A1": 90,
+    "observable_points_A2": 90,
+    "outcome_basis": {
+      "active_N_intervals": [],
+      "armN_active": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "armN_inference": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "armN_valid": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "armW_inference": [
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "separated",
+        "separated",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation",
+        "searched_no_separation"
+      ],
+      "armW_valid": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "falloff_states": [
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable",
+        "readable"
+      ],
+      "overlap_agreement": [
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable",
+        "not_applicable"
+      ]
+    },
+    "phase": 0,
+    "records": [
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 1.3333333333333333
+          },
+          "discrepancy": {
+            "sign_pattern": 0.0
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "searched_no_separation",
+          "inference_by_function": {
+            "sign_pattern": "searched_no_separation"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -50,
+          -47,
+          -44,
+          -40,
+          -37
+        ],
+        "center_key": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+        "f_max": "9.999999960041972002500187954865396022796630859375E-12",
+        "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+        "idx": 0,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 5,
+        "point_count_A2": 5,
+        "x_max": "0.999999999999999",
+        "x_min": "0.99999999999"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 0.6666666666666666
+          },
+          "discrepancy": {
+            "sign_pattern": 0.3333333333333333
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "searched_no_separation",
+          "inference_by_function": {
+            "sign_pattern": "searched_no_separation"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -50,
+          -47,
+          -44,
+          -40,
+          -37,
+          -34
+        ],
+        "center_key": "9.9999998245167004418121337039337959140539169311523437500E-15",
+        "f_max": "1.00000001335143196001808973960578441619873046875E-10",
+        "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+        "idx": 1,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 6,
+        "point_count_A2": 6,
+        "x_max": "0.999999999999999",
+        "x_min": "0.9999999999"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 0.3333333333333333
+          },
+          "discrepancy": {
+            "sign_pattern": 0.2857142857142857
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "searched_no_separation",
+          "inference_by_function": {
+            "sign_pattern": "searched_no_separation"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -50,
+          -47,
+          -44,
+          -40,
+          -37,
+          -34,
+          -30
+        ],
+        "center_key": "9.99999982451670044181213370393379591405391693115234375E-14",
+        "f_max": "9.9999997171806853657471947371959686279296875E-10",
+        "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+        "idx": 2,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 7,
+        "point_count_A2": 7,
+        "x_max": "0.999999999999999",
+        "x_min": "0.999999999"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 0.5
+          },
+          "discrepancy": {
+            "sign_pattern": 0.25
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "searched_no_separation",
+          "inference_by_function": {
+            "sign_pattern": "searched_no_separation"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -50,
+          -47,
+          -44,
+          -40,
+          -37,
+          -34,
+          -30,
+          -27
+        ],
+        "center_key": "9.99999996004197200250018795486539602279663085937500E-13",
+        "f_max": "9.99999993922529029077850282192230224609375E-9",
+        "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+        "idx": 3,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 8,
+        "point_count_A2": 8,
+        "x_max": "0.999999999999999",
+        "x_min": "0.99999999"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 0.6
+          },
+          "discrepancy": {
+            "sign_pattern": 0.4444444444444444
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "searched_no_separation",
+          "inference_by_function": {
+            "sign_pattern": "searched_no_separation"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -50,
+          -47,
+          -44,
+          -40,
+          -37,
+          -34,
+          -30,
+          -27,
+          -24
+        ],
+        "center_key": "9.999999960041972002500187954865396022796630859375E-12",
+        "f_max": "1.0000000116860974230803549289703369140625E-7",
+        "f_min": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+        "idx": 4,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 9,
+        "point_count_A2": 9,
+        "x_max": "0.999999999999999",
+        "x_min": "0.9999999"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 0.7
+          },
+          "discrepancy": {
+            "sign_pattern": 0.0
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "searched_no_separation",
+          "inference_by_function": {
+            "sign_pattern": "searched_no_separation"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -47,
+          -44,
+          -40,
+          -37,
+          -34,
+          -30,
+          -27,
+          -24,
+          -20
+        ],
+        "center_key": "1.00000001335143196001808973960578441619873046875E-10",
+        "f_max": "9.999999974752427078783512115478515625E-7",
+        "f_min": "9.9999998245167004418121337039337959140539169311523437500E-15",
+        "idx": 5,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 9,
+        "point_count_A2": 9,
+        "x_max": "0.99999999999999",
+        "x_min": "0.999999"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 0.2
+          },
+          "discrepancy": {
+            "sign_pattern": 0.2222222222222222
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "separated",
+          "inference_by_function": {
+            "sign_pattern": "separated"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -44,
+          -40,
+          -37,
+          -34,
+          -30,
+          -27,
+          -24,
+          -20,
+          -17
+        ],
+        "center_key": "9.9999997171806853657471947371959686279296875E-10",
+        "f_max": "0.0000099999997473787516355514526367187500",
+        "f_min": "9.99999982451670044181213370393379591405391693115234375E-14",
+        "idx": 6,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 9,
+        "point_count_A2": 9,
+        "x_max": "0.9999999999999",
+        "x_min": "0.99999"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 0.3
+          },
+          "discrepancy": {
+            "sign_pattern": 0.4444444444444444
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "separated",
+          "inference_by_function": {
+            "sign_pattern": "separated"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -40,
+          -37,
+          -34,
+          -30,
+          -27,
+          -24,
+          -20,
+          -17,
+          -14
+        ],
+        "center_key": "9.99999993922529029077850282192230224609375E-9",
+        "f_max": "0.0000999999974737875163555145263671875",
+        "f_min": "9.99999996004197200250018795486539602279663085937500E-13",
+        "idx": 7,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 9,
+        "point_count_A2": 9,
+        "x_max": "0.999999999999",
+        "x_min": "0.9999"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 0.7
+          },
+          "discrepancy": {
+            "sign_pattern": 0.4444444444444444
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "searched_no_separation",
+          "inference_by_function": {
+            "sign_pattern": "searched_no_separation"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -37,
+          -34,
+          -30,
+          -27,
+          -24,
+          -20,
+          -17,
+          -14,
+          -10
+        ],
+        "center_key": "1.0000000116860974230803549289703369140625E-7",
+        "f_max": "0.001000000047497451305389404296875",
+        "f_min": "9.999999960041972002500187954865396022796630859375E-12",
+        "idx": 8,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 9,
+        "point_count_A2": 9,
+        "x_max": "0.99999999999",
+        "x_min": "0.999"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 0.7
+          },
+          "discrepancy": {
+            "sign_pattern": 0.4444444444444444
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "searched_no_separation",
+          "inference_by_function": {
+            "sign_pattern": "searched_no_separation"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -34,
+          -30,
+          -27,
+          -24,
+          -20,
+          -17,
+          -14,
+          -10,
+          -7
+        ],
+        "center_key": "9.999999974752427078783512115478515625E-7",
+        "f_max": "0.009999999776482582092285156250",
+        "f_min": "1.00000001335143196001808973960578441619873046875E-10",
+        "idx": 9,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 9,
+        "point_count_A2": 9,
+        "x_max": "0.9999999999",
+        "x_min": "0.99"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 1.1
+          },
+          "discrepancy": {
+            "sign_pattern": 0.2222222222222222
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "searched_no_separation",
+          "inference_by_function": {
+            "sign_pattern": "searched_no_separation"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -30,
+          -27,
+          -24,
+          -20,
+          -17,
+          -14,
+          -10,
+          -7,
+          -4
+        ],
+        "center_key": "0.0000099999997473787516355514526367187500",
+        "f_max": "0.100000001490116119384765625",
+        "f_min": "9.9999997171806853657471947371959686279296875E-10",
+        "idx": 10,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 9,
+        "point_count_A2": 9,
+        "x_max": "0.999999999",
+        "x_min": "0.9"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 0.7
+          },
+          "discrepancy": {
+            "sign_pattern": 0.2222222222222222
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "searched_no_separation",
+          "inference_by_function": {
+            "sign_pattern": "searched_no_separation"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -27,
+          -24,
+          -20,
+          -17,
+          -14,
+          -10,
+          -7,
+          -4,
+          -2
+        ],
+        "center_key": "0.0000999999974737875163555145263671875",
+        "f_max": "0.3000000119209289550781250",
+        "f_min": "9.99999993922529029077850282192230224609375E-9",
+        "idx": 11,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 9,
+        "point_count_A2": 9,
+        "x_max": "0.99999999",
+        "x_min": "0.7"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 0.5
+          },
+          "discrepancy": {
+            "sign_pattern": 0.25
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "searched_no_separation",
+          "inference_by_function": {
+            "sign_pattern": "searched_no_separation"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -24,
+          -20,
+          -17,
+          -14,
+          -10,
+          -7,
+          -4,
+          -2
+        ],
+        "center_key": "0.001000000047497451305389404296875",
+        "f_max": "0.3000000119209289550781250",
+        "f_min": "1.0000000116860974230803549289703369140625E-7",
+        "idx": 12,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 8,
+        "point_count_A2": 8,
+        "x_max": "0.9999999",
+        "x_min": "0.7"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 0.3333333333333333
+          },
+          "discrepancy": {
+            "sign_pattern": 0.0
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "searched_no_separation",
+          "inference_by_function": {
+            "sign_pattern": "searched_no_separation"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -20,
+          -17,
+          -14,
+          -10,
+          -7,
+          -4,
+          -2
+        ],
+        "center_key": "0.009999999776482582092285156250",
+        "f_max": "0.3000000119209289550781250",
+        "f_min": "9.999999974752427078783512115478515625E-7",
+        "idx": 13,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 7,
+        "point_count_A2": 7,
+        "x_max": "0.999999",
+        "x_min": "0.7"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 0.6666666666666666
+          },
+          "discrepancy": {
+            "sign_pattern": 0.3333333333333333
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "searched_no_separation",
+          "inference_by_function": {
+            "sign_pattern": "searched_no_separation"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -17,
+          -14,
+          -10,
+          -7,
+          -4,
+          -2
+        ],
+        "center_key": "0.100000001490116119384765625",
+        "f_max": "0.3000000119209289550781250",
+        "f_min": "0.0000099999997473787516355514526367187500",
+        "idx": 14,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 6,
+        "point_count_A2": 6,
+        "x_max": "0.99999",
+        "x_min": "0.7"
+      },
+      {
+        "armN": {
+          "activation_reason": "none",
+          "active": false,
+          "band": {},
+          "discrepancy": {},
+          "inference": "untested",
+          "inference_by_function": {},
+          "instrument": {},
+          "valid": false
+        },
+        "armW": {
+          "active": true,
+          "band": {
+            "sign_pattern": 1.3333333333333333
+          },
+          "discrepancy": {
+            "sign_pattern": 0.39999999999999997
+          },
+          "falloff_reason": [],
+          "falloff_state": "readable",
+          "inference": "searched_no_separation",
+          "inference_by_function": {
+            "sign_pattern": "searched_no_separation"
+          },
+          "instrument": {
+            "sign_pattern": "nondegenerate"
+          },
+          "occupancy_ok": true,
+          "ols_margin": null,
+          "ols_ok": true,
+          "valid": true
+        },
+        "binades": [
+          -14,
+          -10,
+          -7,
+          -4,
+          -2
+        ],
+        "center_key": "0.3000000119209289550781250",
+        "f_max": "0.3000000119209289550781250",
+        "f_min": "0.0000999999974737875163555145263671875",
+        "idx": 15,
+        "overlap": {
+          "agreement": "not_applicable",
+          "both_active": false,
+          "both_valid": false
+        },
+        "point_count_A1": 5,
+        "point_count_A2": 5,
+        "x_max": "0.9999",
+        "x_min": "0.7"
+      }
+    ],
+    "stitched_readback": [
+      {
+        "armN_inference": "untested",
+        "armW_inference": "searched_no_separation",
+        "center_key": "1.0000000036274937255387218471014421083964407444000244140625E-15",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 0,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "searched_no_separation",
+        "center_key": "9.9999998245167004418121337039337959140539169311523437500E-15",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 1,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "searched_no_separation",
+        "center_key": "9.99999982451670044181213370393379591405391693115234375E-14",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 2,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "searched_no_separation",
+        "center_key": "9.99999996004197200250018795486539602279663085937500E-13",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 3,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "searched_no_separation",
+        "center_key": "9.999999960041972002500187954865396022796630859375E-12",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 4,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "searched_no_separation",
+        "center_key": "1.00000001335143196001808973960578441619873046875E-10",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 5,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "separated",
+        "center_key": "9.9999997171806853657471947371959686279296875E-10",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 6,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "separated",
+        "center_key": "9.99999993922529029077850282192230224609375E-9",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 7,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "searched_no_separation",
+        "center_key": "1.0000000116860974230803549289703369140625E-7",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 8,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "searched_no_separation",
+        "center_key": "9.999999974752427078783512115478515625E-7",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 9,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "searched_no_separation",
+        "center_key": "0.0000099999997473787516355514526367187500",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 10,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "searched_no_separation",
+        "center_key": "0.0000999999974737875163555145263671875",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 11,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "searched_no_separation",
+        "center_key": "0.001000000047497451305389404296875",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 12,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "searched_no_separation",
+        "center_key": "0.009999999776482582092285156250",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 13,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "searched_no_separation",
+        "center_key": "0.100000001490116119384765625",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 14,
+        "overlap_agreement": "not_applicable"
+      },
+      {
+        "armN_inference": "untested",
+        "armW_inference": "searched_no_separation",
+        "center_key": "0.3000000119209289550781250",
+        "channels": [
+          "ARM-W"
+        ],
+        "idx": 15,
+        "overlap_agreement": "not_applicable"
+      }
+    ]
+  },
+  "probe": "foldreadback_probe0",
+  "source_reuse": {
+    "v7_imported": [
+      "reseat",
+      "fit_ols",
+      "sweep",
+      "measure_point",
+      "binade_exp",
+      "DISTRIB",
+      "SCALARS",
+      "disc",
+      "ols_design_pivot_ok"
+    ],
+    "v7_primitives_copied_or_modified": false,
+    "v8_imported": [
+      "classify_instrument",
+      "ANALYTIC_MAX"
+    ],
+    "v9_overlap_ontology_in_accepted_logic": false
+  }
+}
